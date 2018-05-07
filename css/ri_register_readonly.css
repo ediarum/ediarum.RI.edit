@@ -1,0 +1,22 @@
+ @import 'ri_register.css';
+
+
+/* READONLY-Ansicht der Register für die Regesta-Imperii-Arbeitsumgebung
+ * 
+ * Berlin-Brandenburgische Akademie der Wissenschaften
+ * TELOTA - The electronic life of the academy
+ * @author:     Stefan Dumont, dumont@bbaw.de
+ * @changed:    06-08-2013
+ */
+
+document {
+    -oxy-editable: false;
+    background-color: transparent;
+    background-image: url('gfx/bg_readonly.png');
+    background-repeat: repeat-y;
+    border-left: 5px solid red;
+}
+
+Regestennummer, RegestennummerFett {
+    display: none;
+}

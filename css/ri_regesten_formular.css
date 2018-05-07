@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "ri_regesten.css";
+@import "ri_regesten_labels.css";
+
+/* Formularansicht für die Regesta-Imperii-Arbeitsumgebung
+ * 
+ * Berlin-Brandenburgische Akademie der Wissenschaften
+ * TELOTA - The electronic life of the academy
+ * @author:     Stefan Dumont, dumont@bbaw.de
+ * @changed:    05-08-2013
+ */
+
+TEI {
+    padding: 0 2em 2em 2em;
+}
+
+div[type="regest"] {
+    background-color: #e0e0e0;
+}
+
+div[type="regest"] div {
+    margin: 1em;
+    border: 1px solid gray;
+    padding: 0.5em;
+    background-color: #fcfcfc;
+}
+
+div[type="regest"] head {
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: gray;
+    color: white;
+}
+
+div p, div q, div ref {
+    background-color: inherit;
+}

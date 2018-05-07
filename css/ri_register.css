@@ -1,0 +1,99 @@
+/* CSS-Ansicht der Register für die Regesta-Imperii-Arbeitsumgebung
+ * 
+ * Berlin-Brandenburgische Akademie der Wissenschaften
+ * TELOTA - The electronic life of the academy
+ * @author:     Stefan Dumont, dumont@bbaw.de
+ * @changed:    25-08-2014
+ */
+
+head {
+	display: none;
+}
+
+body {
+	-oxy-display-tags: none;
+}
+
+section {
+}
+
+Register {
+	font-size: 1.2em;
+	font-weight: bold;
+	-oxy-display-tags: none;
+}
+
+Stufe1:before {
+		content: "\2013  ";
+}
+
+Stufe2:before {
+		content: "\2013  \2013  ";
+} 
+
+Stufe3:before {
+		content: "\2013  \2013  \2013  ";
+}
+
+Stufe4:before {
+		content: "\2013  \2013  \2013  \2013  ";
+}
+
+Stufe5:before {
+		content: "\2013  \2013  \2013  \2013  \2013  ";
+}
+
+Stufe6:before {
+		content: "\2013  \2013  \2013  \2013  \2013  \2013  ";
+}
+
+Stufe1, Stufe2, Stufe3, Stufe4, Stufe5, Stufe6 {
+    display: block; 
+	padding-left: 2em;
+	-oxy-display-tags: none;
+	-oxy-show-placeholder: always;
+}
+
+Inhalt {
+    display: inline;
+	-oxy-placeholder-content: "[Hier Text eingeben]"; 
+    -oxy-display-tags: none;
+}
+
+Stufe0 {
+	display: block;
+	margin: 0.5em 0 0.5em 0;
+	padding: 0.5em 0 0.5em 0;
+	border-bottom: 1px solid silver;
+   /* white-space: -oxy-trim-when-ws-only; auskommentiert aufgrund von Problemen siehe Bug #2361  */
+}
+
+Kursivtext {
+	font-style: italic;
+	-oxy-display-tags: none;
+}
+
+Regestennummer, RegestennummerFett {
+	background-color: #F7F6D7;	
+	-oxy-display-tags: none;
+}
+
+RegestennummerFett {
+	font-weight: bold;
+}
+
+ref {
+	color: #1F5393;
+	-oxy-display-tags: none;
+}
+
+ref[ziel*="0"] {
+	text-decoration: underline;
+	
+}
+
+ref[ziel*="0"]:after {
+	padding-left: 0.3em;
+    content: url('gfx/link.png');
+	link: oxy_concat("https://exist.regesta-imperii.de/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(ziel), 0, 1)), ".xml#") attr(ziel);
+}

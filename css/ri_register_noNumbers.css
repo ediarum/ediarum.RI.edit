@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "ri_register.css";
+
+/* CSS-Ansicht der Register (OHNE Regestennummern) für die Regesta-Imperii-Arbeitsumgebung
+ * 
+ * Berlin-Brandenburgische Akademie der Wissenschaften
+ * TELOTA - The electronic life of the academy
+ * @author:     Stefan Dumont, dumont@bbaw.de
+ * @changed:    05-08-2013
+ */
+
+Regestennummer, 
+RegestennummerFett {
+    display: none;
+}

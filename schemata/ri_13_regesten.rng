@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+    ns="http://www.tei-c.org/ns/1.0">
+    <start>
+            
+        <element name="TEI">
+            <attribute name="doctype" ns="http://www.telota.de">
+                <value>ri_13_regesten</value>
+            </attribute>
+            <element name="teiHeader">
+                <element name="fileDesc">
+                    <element name="titleStmt">
+                        <element name="title"><text /></element>
+                    </element>
+                	<zeroOrMore>
+	                	<element name="editionStmt">
+	                		<oneOrMore>
+	                			<element name="p">
+	                				<zeroOrMore>
+	                					<attribute name="n"><text/></attribute>
+	                				</zeroOrMore>
+	                				<text />
+	                				<zeroOrMore>
+	                					<ref name="ref" />
+	                				</zeroOrMore>
+	                			</element>
+	                		</oneOrMore>
+	                	</element>
+                	</zeroOrMore>
+	                <zeroOrMore>
+	                    <element name="publicationStmt">
+	                    	<zeroOrMore>
+		                        <element name="authority">
+		                            <text />
+		                        </element>
+	                    	</zeroOrMore>
+	                    	<zeroOrMore>
+		                    	<element name="publisher">
+		                    		<text />
+		                    	</element>
+	                    	</zeroOrMore>
+	                    	<zeroOrMore>
+		                    	<element name="availability">
+		                    		<oneOrMore>
+		                    			<element name="p">
+		                    				<zeroOrMore>
+		                    					<attribute name="n"><text/></attribute>
+		                    				</zeroOrMore>
+		                    				<text />
+		                    				<zeroOrMore>
+		                    					<ref name="ref" />
+		                    				</zeroOrMore>
+		                    			</element>
+		                    		</oneOrMore>
+		                    	</element>
+	                    	</zeroOrMore>
+	                    	<zeroOrMore>
+		                    	<element name="date">
+		                    		<text />
+		                    	</element>
+	                    	</zeroOrMore>
+	                    	<zeroOrMore>
+	                    		<element name="p">
+	                    			<text />
+	                    		</element>
+	                    	</zeroOrMore>
+	                    </element>
+                	</zeroOrMore>
+                	<zeroOrMore>
+	                    <element name="sourceDesc">
+	                        <element name="msDesc">
+	                        	<element name="msIdentifier">
+	                        		<element name="repository">
+	                        			<text/>
+	                        		</element>
+	                        		<element name="idno">
+	                        			<attribute name="n"><text/></attribute>
+	                        			<text/>
+	                        		</element>
+	                        		<zeroOrMore>
+	                        			<element name="altIdentifier">
+	                        				<element name="idno">
+	                        					<attribute name="n"><text/></attribute>
+	                        					<text/>
+	                        				</element>
+	                        			</element>
+	                        		</zeroOrMore>
+	                        	</element>
+	                        </element>
+	                    </element>
+                	</zeroOrMore>
+                </element>
+            	<zeroOrMore>
+	            	<element name="profileDesc">
+	            		<element name="creation">
+	            			<attribute name="n"><data type="integer" /></attribute>
+	            			<attribute name="when"><data type="date" /></attribute>
+	            		</element>
+	            	</element>
+            	</zeroOrMore>
+            	<zeroOrMore>
+	            	<element name="revisionDesc">
+	            		<element name="change">
+	            			<attribute name="n"><data type="integer" /></attribute>
+	            			<attribute name="when"><data type="date" /></attribute>
+	            		</element>
+	            	</element>
+            	</zeroOrMore>
+            </element>
+            <element name="text">
+                <element name="body">
+                    <element name="div">
+                        <attribute name="type">
+                            <value>regesten</value>
+                        </attribute>
+                        <oneOrMore>
+                            <ref name="regest" />
+                        </oneOrMore>
+                    </element>
+                </element>
+            </element>
+        </element>
+        
+    </start>
+    
+    <define name="regest">
+        <element name="div" ns="http://www.tei-c.org/ns/1.0">
+            <attribute name="type">
+                <value>regest</value>
+            </attribute>
+            <attribute name="id" ns="http://www.w3.org/XML/1998/namespace"><data type="ID" /></attribute>
+            <element name="head">
+            	<zeroOrMore>
+            		<element name="idno">
+            			<text />
+            		</element>
+            	</zeroOrMore>
+                <element name="persName">
+                    <attribute name="role">
+                        <value>issuer</value>
+                    </attribute>
+                    <text />
+                    <zeroOrMore>
+                        <ref name="note" />
+                    </zeroOrMore>
+                </element>
+                <element name="origDate">
+                    <ref name="attr_date" />
+                    <text />
+                    <zeroOrMore>
+                        <ref name="note" />
+                    </zeroOrMore>
+                </element>
+                <element name="origPlace">
+                    <attribute name="key"><text/></attribute>
+                    <text />
+                    <zeroOrMore>
+                        <ref name="note" />
+                    </zeroOrMore>
+                </element>
+            </element>
+            <oneOrMore>
+                <ref name="common_div" />
+            </oneOrMore>
+        </element>
+    </define>
+    
+    <define name="common_div">
+        <element name="div" ns="http://www.tei-c.org/ns/1.0">
+            <choice>
+                <group>
+                    <attribute name="type">
+                        <choice>
+                            <value>regestentext</value>
+                            <value>originaldatierung</value>
+                            <value>kanzleivermerk</value>
+                            <value>ueberlieferung</value>
+                            <value>kommentar</value>
+                            <value>literatur</value>
+                            <value>zeugen</value>
+                            <value>kanzler</value>
+                            <value>schreiber</value>
+                            <value>empfaenger</value>
+                            <value>siegel</value>
+                            <value>incipit</value>
+                            <value>unterschriften</value>
+                        </choice>
+                    </attribute>
+                    <oneOrMore>    
+                        <element name="p">
+                            <ref name="content" />
+                        </element>
+                    </oneOrMore>
+                </group>
+                <group>
+                    <attribute name="type">
+                        <value>externe_verweise</value>
+                    </attribute>
+                    <element name="list">
+                        <oneOrMore>
+                            <element name="item">
+                                <ref name="content" />
+                            </element>
+                        </oneOrMore>
+                    </element>
+                </group>
+            </choice>
+        </element>
+    </define>
+    
+    <define name="content">
+        <interleave>
+            <zeroOrMore>
+                <text />
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="q" />
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="persName" />
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="placeName" />
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref  name="note" />
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="origDate" />
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="ref" />
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="hi" />
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="bibl" />
+            </zeroOrMore>
+        </interleave>
+    </define>
+    
+    <define name="note">
+        <element name="note">
+        	<zeroOrMore>
+        		<attribute name="n">
+        			<text />
+        		</attribute>
+        	</zeroOrMore>
+            <ref name="content" />
+        </element>
+    </define>
+    
+    <define name="origDate">
+        <element name="origDate">
+            <ref name="q"></ref>
+            <text />
+        </element>
+    </define>
+    
+    <define name="q">
+        <element name="q">
+            <interleave>
+                <text />
+                <zeroOrMore>
+                    <ref name="hi" />
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+    
+    <define name="bibl">
+        <element name="bibl">
+            <attribute name="corresp">
+                <text />
+            </attribute>
+            <attribute name="type">
+                <choice>
+                    <value>kurztitel</value>
+                </choice>
+            </attribute>
+            <interleave>
+                <zeroOrMore>
+                    <ref name="persName" />
+                </zeroOrMore>
+                <zeroOrMore>
+                    <text />
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+    
+    <define name="persName">
+        <element name="persName">
+            <choice>
+                <group>
+                    <attribute name="key"><text /></attribute>
+                    <text />
+                </group>
+                <group>
+                    <attribute name="role">
+                        <value>litAuthor</value>
+                    </attribute>
+                    <text />
+                </group>
+            </choice>
+        </element>
+    </define>
+    
+    <define name="placeName">
+        <element name="placeName">
+            <attribute name="key"><text /></attribute>
+            <text />
+        </element>
+    </define>
+    
+    <define name="ref">
+        <element name="ref">
+        	<optional>
+	            <attribute name="type">
+	                <choice>
+	                    <value>druckregest</value>
+	                	<value>external</value>
+	                </choice>
+	            </attribute>
+        	</optional>
+            <attribute name="target">
+                <text />
+            </attribute>
+            <text />
+        </element>
+    </define>
+    
+    <define name="hi">
+        <element name="hi">
+            <attribute name="rend">
+                <choice>
+                    <value>hochgestellt</value>
+                	<value>italic</value>
+                	<value>spaced</value>
+                	<value>sub</value>
+                	<value>strong</value>
+                	<value>smallcaps</value>
+                	<value>underline</value>
+                	<value>sup</value>
+                </choice>
+            </attribute>
+        	<zeroOrMore>
+        		<ref name="ref" />
+        	</zeroOrMore>
+            <text />
+        </element>
+    </define>
+    
+    <define name="attr_date">
+        <attribute name="from">
+        	<optional>
+        		<data type="date" />
+        	</optional>
+        </attribute>
+        <attribute name="to">
+            <optional>
+                <data type="date" />
+            </optional>
+        </attribute>
+    	<zeroOrMore>
+    		<attribute name="n"><data type="integer" /></attribute>
+    	</zeroOrMore>
+    </define>
+</grammar>

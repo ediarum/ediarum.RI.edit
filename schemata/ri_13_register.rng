@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        
+        <element name="document">
+            <attribute name="source"><text /></attribute>
+            <attribute name="time"><text /></attribute>
+            <attribute name="doctype" ns="http://www.telota.de"><text /></attribute>
+            <element name="body">
+                <element name="section">
+                    <attribute name="page">
+                        <value>Same</value>
+                    </attribute>
+                    <element name="Register"><text /></element>
+                    <oneOrMore>
+                        <ref name="stufen" />
+                    </oneOrMore>
+                </element>
+            </element>
+        </element>
+        
+    </start>
+    
+    <define name="stufen">
+        <element name="Stufe0">
+            <ref name="stufen_attributes" />
+            <ref name="content" />
+            <zeroOrMore>
+                <element name="Stufe1">
+                    <ref name="stufen_attributes" />
+                    <ref name="content" />
+                    <zeroOrMore>
+                    <element name="Stufe2">
+                        <ref name="stufen_attributes" />
+                        <ref name="content" />
+                        <zeroOrMore>
+                            <element name="Stufe3">
+                                <ref name="stufen_attributes" />
+                                <ref name="content" />
+                                <zeroOrMore>
+                                    <element name="Stufe4">
+                                        <ref name="stufen_attributes" />
+                                        <ref name="content" />
+                                        <zeroOrMore>
+                                            <element name="Stufe5">
+                                                <ref name="stufen_attributes" />
+                                                <ref name="content" />
+                                                <zeroOrMore>
+                                                    <element name="Stufe6">
+                                                        <ref name="stufen_attributes" />
+                                                        <ref name="content" />
+                                                    </element>
+                                                </zeroOrMore>
+                                            </element>
+                                        </zeroOrMore>
+                                    </element>
+                                </zeroOrMore>
+                            </element>
+                        </zeroOrMore>
+                    </element>
+                    </zeroOrMore>
+                </element>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="stufen_attributes">
+        <attribute name="id">
+            <data type="ID"></data>
+        </attribute>
+        <optional>
+            <attribute name="cruser">
+                <choice>
+                    <value>dumont</value>
+                    <value>kuczera</value>
+                    <value>manz</value>
+                    <value>rübsamen</value>
+                    <value>würz</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="checked">
+                <choice>
+                    <value>yes</value>
+                    <value>no</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <ref name="normdata" />
+        </optional>
+    </define>
+    
+    <define name="normdata">
+        <choice>
+            <group>
+                <attribute name="typ">
+                    <value>ort</value>
+                </attribute>
+                <optional>
+                    <attribute name="geonames">
+                        <text/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="getty">
+                        <text/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <group>
+                        <attribute name="lat">
+                            <text/>
+                        </attribute>
+                        <attribute name="lon">
+                            <text/>
+                        </attribute>
+                    </group>
+                </optional>
+            </group>
+            <group>
+                <attribute name="typ">
+                    <choice>
+                        <value>person</value>
+                    </choice>
+                </attribute>
+                <optional>
+                    <attribute name="gnd">
+                        <text/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="gsn">
+                        <text/>
+                    </attribute>
+                </optional>
+            </group>
+            <group>
+                <attribute name="typ">
+                    <choice>
+                        <value>sache</value>
+                    </choice>
+                </attribute>
+                <optional>
+                    <attribute name="gnd">
+                        <text/>
+                    </attribute>
+                </optional>
+            </group>
+        </choice>
+    </define>
+    
+    <define name="content">
+        <element name="Inhalt"> 
+            <interleave>
+                <zeroOrMore>
+                    <text />
+                </zeroOrMore>
+                <zeroOrMore>
+                    <element name="Kursivtext">
+                        <interleave>
+                            <zeroOrMore>
+                                <text />
+                            </zeroOrMore>
+                            <zeroOrMore>
+                                <ref name="ref" />
+                            </zeroOrMore>
+                        </interleave>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <element name="Regestennummer"><text /></element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <element name="RegestennummerFett"><text /></element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="ref" />  
+                </zeroOrMore>
+            </interleave>
+         </element> 
+    </define>
+    
+    <define name="ref">
+        <element name="ref">
+            <attribute name="ziel"><text /></attribute>
+            <interleave>
+                <zeroOrMore>
+                    <text />
+                </zeroOrMore>
+                <zeroOrMore>
+                    <element name="Kursivtext"><text /></element>    
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+</grammar>

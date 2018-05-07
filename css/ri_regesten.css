@@ -1,0 +1,187 @@
+/* Druckähnliche Ansicht für die Regesta-Imperii-Arbeitsumgebung
+ * 
+ * Berlin-Brandenburgische Akademie der Wissenschaften
+ * TELOTA - The electronic life of the academy
+ * @author:     Stefan Dumont, dumont@bbaw.de
+ * @changed:    05-08-2013
+ */
+
+@namespace xml "http://www.w3.org/XML/1998/namespace";
+@namespace telota "http://www.telota.de";
+
+teiHeader publicationStmt,
+teiHeader sourceDesc {
+    display: none;
+}
+
+teiHeader title {
+    display: block;
+    margin: 2em 0 2em 0;
+    font-size: 1.4em;
+    font-family: Arial,Helvetica,Sans;
+    font-weight: bold;
+}
+
+div[type="regest"] {
+    display: block;
+    margin-bottom: 3em;
+    border-bottom: 1px solid silver;
+    padding-bottom: 1em;
+}
+
+div head {
+   font-size: 1.2em;
+   font-weight: bold;
+}
+
+div head:after {
+    content: " (ID: " oxy_xpath('parent::div/@xml:id') ")";
+    color: silver;
+}
+
+div head persName {
+    -oxy-editable: false;
+    background-color: transparent;
+}
+div head origDate {
+    -oxy-editable: true;
+    -oxy-display-tags: none;
+    -oxy-placeholder-content: "[Austellungsdatum eingeben]";
+}
+div head persName:after,
+div head origDate:after {
+    content: ", ";
+}
+
+div head origPlace {
+    -oxy-editable: true;
+    -oxy-display-tags: none;
+    -oxy-placeholder-content: "[Ausstellungsort eingeben]";
+}
+
+div p,
+div head {
+    display: block;
+    margin-bottom: 1em;
+}
+
+div p {
+    -oxy-placeholder-content: "[Hier Text eingeben]";
+}
+
+div list {
+    display: block;
+}
+
+div list item {
+    display: list-item;
+    margin-left: 2em;
+}
+
+q {
+    font-style: italic;
+    -oxy-display-tags: none;
+}
+
+div[type="regestentext"] origDate {
+    border-bottom: 1px dotted black;
+    -oxy-display-tags: none;
+}
+
+persName {
+    background-color: #eeebf3; 
+    -oxy-display-tags: none;
+}
+
+persName[key*="0"]:after {
+    content: url('gfx/persName.png');
+    link: oxy_concat("https://exist.regesta-imperii.de/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(key), 0, 1)), ".xml#") attr(key);
+    padding-left: 0.3em;
+}
+
+persName[role="litAuthor"] {
+    text-transform: uppercase;
+    background-color: transparent;
+}
+
+placeName {
+    background-color: #EDFFF1;
+    -oxy-display-tags: none;
+}
+
+placeName[key*="0"]:after {
+    content: url('gfx/placeName.png');
+    link: oxy_concat("https://exist.regesta-imperii.de/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(key), 0, 1)), ".xml#") attr(key);
+    padding-left: 0.3em;
+}
+
+bibl {
+    background-color: #C9E3E8;
+    -oxy-display-tags: none;
+}
+
+bibl[type='kurztitel']:after {
+    content: url('gfx/title_ref_before.png');
+    link: oxy_concat("http://opac.regesta-imperii.de/lang_de/kurztitelsuche_r.php?kurztitel=") attr(corresp);
+    padding-left: 0.3em;
+}
+
+ref {
+    color: #1F5393;
+    -oxy-display-tags: none;
+}
+
+ref[target^="http://"]:after {
+    content: url('gfx/link.png');
+    link: attr(target);
+}
+
+/*note:before {
+    content: oxy_editor(
+            type, button,
+            actionID, "show_note",
+            color, black,
+            transparent, true
+    );
+    background-color: grey;
+    cursor: pointer;
+}*/
+
+note:before {
+    content: "*";
+    background-color: #e0e0e0;
+    color: black;
+}
+
+note {
+    visibility: visible;
+    background-color: #e0e0e0;
+    color: black;
+    -oxy-placeholder-content: "[Hier Anmerkung eingeben]";
+    -oxy-show-placeholder: always;
+    -oxy-display-tags: none;
+}
+
+head note {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+note[telota|show='true'] {
+    visibility: visible;
+}
+
+hi[rend="hochgestellt"] {
+    font-size: 0.6em;
+    vertical-align: top;
+    -oxy-display-tags: none;
+}
+
+div:before {
+    /* border-bottom: 1px solid silver; */
+    padding-bottom: 0.2em;
+    font-family: Arial,Helvetica,Sans;
+    font-size: 0.8em;
+    color: gray;
+}
+

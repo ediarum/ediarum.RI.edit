@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import "ri_register.css";
+
+/* CSS-Ansicht der Register (mit Typ bei jedem Eintrag) für die Regesta-Imperii-Arbeitsumgebung
+ * 
+ * Berlin-Brandenburgische Akademie der Wissenschaften
+ * TELOTA - The electronic life of the academy
+ * @author:     Stefan Dumont, dumont@bbaw.de
+ * @changed:    18-03-2015
+ */
+
+*[gnd] > Inhalt:after {
+    content: " GND: " oxy_xpath("parent::*/@gnd");
+    link: "http://d-nb.info/gnd/" oxy_xpath("parent::*/@gnd");
+    color: gray;
+}
+
+*[gsn] > Inhalt:after {
+    content: " GSN: " oxy_xpath("parent::*/@gsn");
+    link: "http://personendatenbank.germania-sacra.de/index/gsn/" oxy_xpath("parent::*/@gsn");
+    color: gray;
+}
+
+*[gnd][gsn] > Inhalt:after {
+    content: " GND: " oxy_xpath("parent::*/@gnd") ", GSN: " oxy_xpath("parent::*/@gsn");
+    color: gray;
+}
+
+*[geonames] > Inhalt:after {
+    content: " Geonames: " oxy_xpath("parent::*/@geonames");
+    link: "http://geonames.org/" oxy_xpath("parent::*/@geonames");
+    color: gray;
+}
+
+*[getty] > Inhalt:after {
+    content: " Getty-ID: " oxy_xpath("parent::*/@getty");
+    color: gray;
+}
+
+*[getty][geonames] > Inhalt:after {
+    content: " Getty-ID: " oxy_xpath("parent::*/@getty") ", Geonames: " oxy_xpath("parent::*/@geonames");
+    color: gray;
+}
+
+*[lon] > Inhalt:after {
+    content: " Koordinaten: " oxy_xpath("parent::*/@lat") ", " oxy_xpath("parent::*/@lon");
+}
+
+*[lon][geonames] > Inhalt:after {
+    content: " Koordinaten: " oxy_xpath("parent::*/@lat") ", " oxy_xpath("parent::*/@lon") ", Geonames: " oxy_xpath("parent::*/@geonames");
+    color: gray;
+}

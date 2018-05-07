@@ -1,0 +1,64 @@
+/* CSS zum Einblenden der Labels für die Regesta-Imperii-Arbeitsumgebung
+ * 
+ * Berlin-Brandenburgische Akademie der Wissenschaften
+ * TELOTA - The electronic life of the academy
+ * @author:     Stefan Dumont, dumont@bbaw.de
+ * @changed:    05-08-2013
+ */
+
+
+div[type="regestentext"]:before {
+    content: "Regestentext";
+}
+
+div[type="originaldatierung"]:before {
+    content: "Originaldatierung";
+}
+
+div[type="kanzleivermerk"]:before {
+    content: "Kanzleivermerk";
+}
+
+div[type="ueberlieferung"]:before {
+    content: "Überlieferung";
+}
+
+div[type="kommentar"]:before {
+    content: "Kommentar";
+}
+
+div[type="literatur"]:before {
+    content: "Literatur";
+}
+
+div[type="zeugen"]:before {
+    content: "Zeugen";
+}
+
+div[type="kanzler"]:before {
+    content: "Kanzler";
+}
+
+div[type="schreiber"]:before {
+    content: "Schreiber";
+}
+
+div[type="empfaenger"]:before {
+    content: "Empfänger";
+}
+
+div[type="siegel"]:before {
+    content: "Siegel";
+}
+
+div[type="incipit"]:before {
+    content: "Incipit";
+}
+
+div[type="unterschriften"]:before {
+    content: "Unterschriften";
+}
+
+div[type="externe_verweise"]:before {
+    content: "Externe Verweise";
+}

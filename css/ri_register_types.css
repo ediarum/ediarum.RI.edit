@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@import "ri_register.css";
+
+/* CSS-Ansicht der Register (mit Typ bei jedem Eintrag) für die Regesta-Imperii-Arbeitsumgebung
+ * 
+ * Berlin-Brandenburgische Akademie der Wissenschaften
+ * TELOTA - The electronic life of the academy
+ * @author:     Stefan Dumont, dumont@bbaw.de
+ * @changed:    25-08-2014
+ */
+
+*[typ='person'] > Inhalt:before {
+    content: "(P) ";
+    color: gray;
+}
+
+*[typ='ort'] > Inhalt:before {
+    content: "(O) ";
+    color: gray;
+}
+
+*[typ='sache'] > Inhalt:before {
+    content: "(S) ";
+    color: gray;
+}

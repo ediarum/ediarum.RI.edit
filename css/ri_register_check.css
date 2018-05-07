@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import "ri_register.css";
+
+/* CSS-Ansicht für die Überprüfung der Register für die Regesta-Imperii-Arbeitsumgebung
+ * 
+ * Berlin-Brandenburgische Akademie der Wissenschaften
+ * TELOTA - The electronic life of the academy
+ * @author:     Stefan Dumont, dumont@bbaw.de
+ * @changed:    14-08-2013
+ */
+
+Stufe0[checked="no"],
+Stufe1[checked="no"], 
+Stufe2[checked="no"], 
+Stufe3[checked="no"], 
+Stufe4[checked="no"], 
+Stufe5[checked="no"], 
+Stufe6[checked="no"] {
+    background-color: #EAB9B9;
+}
+
+Stufe0[checked="no"]:after,
+Stufe1[checked="no"]:after, 
+Stufe2[checked="no"]:after, 
+Stufe3[checked="no"]:after, 
+Stufe4[checked="no"]:after, 
+Stufe5[checked="no"]:after, 
+Stufe6[checked="no"]:after {
+    content: " (Eingetragen von: " attr(cruser) ")";
+    color: red;
+}

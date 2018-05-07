@@ -1,0 +1,2615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized version="15.1" xml:space="preserve">
+	<map>
+		<entry>
+			<String>document.types</String>
+			<documentTypeDescriptor-array>
+				<documentTypeDescriptor>
+					<field name="name">
+						<String>Regesta Imperii Abt. 13 - Regesten</String>
+					</field>
+					<field name="schemaDescriptor">
+						<docTypeSchema>
+							<field name="type">
+								<Integer>4</Integer>
+							</field>
+							<field name="uri">
+								<String>${framework}/schemata/ri_13_regesten.rng</String>
+							</field>
+						</docTypeSchema>
+					</field>
+					<field name="classpath">
+						<String-array>
+							<String>${framework}/tei.jar</String>
+							<String>${framework}/ediarum.jar</String>
+							<String>${framework}/resources/</String>
+						</String-array>
+					</field>
+					<field name="parentClassLoaderID">
+						<null/>
+					</field>
+					<field name="authorExtensionDescriptor">
+						<authorExtension>
+							<field name="cssDescriptors">
+								<cssFile-array>
+									<cssFile>
+										<field name="href">
+											<String>${framework}/css/ri_regesten_formular.css</String>
+										</field>
+										<field name="title">
+											<String>Formularansicht</String>
+										</field>
+										<field name="alternate">
+											<Boolean>false</Boolean>
+										</field>
+									</cssFile>
+									<cssFile>
+										<field name="href">
+											<String>${framework}/css/ri_regesten_formular_withoutNotes.css</String>
+										</field>
+										<field name="title">
+											<String>Formularansicht ohne Anmerkungen</String>
+										</field>
+										<field name="alternate">
+											<Boolean>true</Boolean>
+										</field>
+									</cssFile>
+									<cssFile>
+										<field name="href">
+											<String>${framework}/css/ri_regesten.css</String>
+										</field>
+										<field name="title">
+											<String>Druckähnliche Ansicht</String>
+										</field>
+										<field name="alternate">
+											<Boolean>true</Boolean>
+										</field>
+									</cssFile>
+								</cssFile-array>
+							</field>
+							<field name="mergeCSSsFromDocument">
+								<Boolean>true</Boolean>
+							</field>
+							<field name="actionDescriptors">
+								<action-array>
+									<action>
+										<field name="id">
+											<String>q</String>
+										</field>
+										<field name="name">
+											<String>Zitat</String>
+										</field>
+										<field name="description">
+											<String>Zitat aus Urkunde auszeichnen</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/ex20.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/ex16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<String>M1 I</String>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::p</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;q xmlns="http://www.tei-c.org/ns/1.0">&lt;/q></String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>div[literatur]</String>
+										</field>
+										<field name="name">
+											<String>Literatur</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="literatur"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="literatur">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="ueberlieferung"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>regest</String>
+										</field>
+										<field name="name">
+											<String>Regest einfügen</String>
+										</field>
+										<field name="description">
+											<String>Neuen Regest nach aktuellen Regest einfügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>first action</String>
+																<String>regest_1</String>
+															</entry>
+															<entry>
+																<String>second action</String>
+																<String>regest_2</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>regest_1</String>
+										</field>
+										<field name="name">
+											<String>Regeststruktur einfügen</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"]</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="ri_prov_${uuid}">
+  &lt;head>
+    &lt;persName role="issuer">${RI_NAME}&lt;/persName>
+    &lt;origDate from="${ask('Ausstellungsdatum in Normschreibweise (Beginn)', generic)}" to="${ask('Ausstellungsdatum in Normschreibweise (Ende)', generic)}">${ask('Ausstellungsdatum', generic)}&lt;/origDate>
+    &lt;origPlace>${ask('Ausstellungsort', generic)}&lt;/origPlace>
+  &lt;/head>
+  &lt;div type="regestentext">&lt;p>${caret}&lt;/p>&lt;/div>
+  &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="kanzleivermerk">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="ueberlieferung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="kommentar">&lt;p>&lt;/p>&lt;/div>
+&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="ri_prov_${uuid}">
+  &lt;head>
+    &lt;persName role="issuer">${RI_NAME}&lt;/persName>
+    &lt;origDate from="${ask('Ausstellungsdatum in Normschreibweise (Beginn)', generic)}" to="${ask('Ausstellungsdatum in Normschreibweise (Ende)', generic)}">${ask('Ausstellungsdatum', generic)}&lt;/origDate>
+    &lt;origPlace>${ask('Ausstellungsort', generic)}&lt;/origPlace>
+  &lt;/head>
+  &lt;div type="regestentext">&lt;p>${caret}&lt;/p>&lt;/div>
+  &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="kanzleivermerk">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="ueberlieferung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="kommentar">&lt;p>&lt;/p>&lt;/div>
+&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>//div[@type="regesten"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as first child</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>regest_2</String>
+										</field>
+										<field name="name">
+											<String>Austellungsort mit Register verlinken</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"]</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>URL</String>
+																<String>${RI_DATACOPY_VIA_REST}${RI_REGISTERPATH}${ask('Buchstaben des zu verlinkenden Registereintrags auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>key</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>@id</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>//span</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//li</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>ancestor-or-self::div[@type="regest"]/head/origPlace</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>loschen_div</String>
+										</field>
+										<field name="name">
+											<String>Abschnitt löschen</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[parent::div[@type="regest"]]</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>script</String>
+																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    version="2.0">
+    &lt;xsl:import href="resources/delete_anything.xsl"/>
+&lt;/xsl:stylesheet></String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>ancestor-or-self::div[parent::div[@type="regest"]]</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>ancestor-or-self::div[parent::div[@type="regest"]]</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>div[zeugen]</String>
+										</field>
+										<field name="name">
+											<String>Zeugen</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="literatur"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="kommentar"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="zeugen">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="ueberlieferung"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="kommentar"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="zeugen">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="literatur"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="zeugen">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="kommentar"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>div[kanzler]</String>
+										</field>
+										<field name="name">
+											<String>Kanzler</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="kanzler"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="literatur"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="kommentar"])  and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="kanzler">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="ueberlieferung"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="kanzler"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="kommentar"])  and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="kanzler">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="literatur"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="kanzler"])  and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="kanzler">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="kommentar"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="kanzler"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="kanzler">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="zeugen"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>div[externe_verweise]</String>
+										</field>
+										<field name="name">
+											<String>Externer Verweis</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="externe_verweise">&lt;list>&lt;item>${caret}&lt;/item>&lt;/list>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"] and ancestor-or-self::item</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0">${caret}&lt;/item></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::item</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0">${caret}&lt;/item></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]/list</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>div[unterschriften]</String>
+										</field>
+										<field name="name">
+											<String>Unterschriften</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"])
+and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="unterschriften">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"])
+and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="unterschriften">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>div[incipit]</String>
+										</field>
+										<field name="name">
+											<String>Incipit</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"])
+and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="incipit">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="incipit">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="incipit">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>div[siegel]</String>
+										</field>
+										<field name="name">
+											<String>Siegel</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])
+and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="siegel">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"] and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="siegel">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="siegel">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="siegel">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="incipit"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>div[empfaenger]</String>
+										</field>
+										<field name="name">
+											<String>Empfänger</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])
+and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="empfaenger">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"] and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="empfaenger">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="empfaenger">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="empfaenger">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="incipit"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="empfaenger">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="siegel"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>div[schreiber]</String>
+										</field>
+										<field name="name">
+											<String>Schreiber</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="schreiber"])
+and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])
+and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="schreiber"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"] and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])
+and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="schreiber"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="schreiber"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="incipit"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="schreiber"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="siegel"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="schreiber"]) </String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>regest_ohne_ort</String>
+										</field>
+										<field name="name">
+											<String>Regest ohne Ausstellungsort einfügen</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"]</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="${id}">
+  &lt;head>
+    &lt;persName role="issuer">${RI_NAME}&lt;/persName>
+    &lt;origDate from="${ask('Ausstellungsdatum in Normschreibweise (Beginn)', generic)}" to="${ask('Ausstellungsdatum in Normschreibweise (Ende)', generic)}">${ask('Ausstellungsdatum', generic)}&lt;/origDate>
+    &lt;origPlace key="noPlace">ohne Ort&lt;/origPlace>
+  &lt;/head>
+  &lt;div type="regestentext">&lt;p>${caret}&lt;/p>&lt;/div>
+  &lt;div type="kanzleivermerk">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="ueberlieferung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="kommentar">&lt;p>&lt;/p>&lt;/div>
+&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>note</String>
+										</field>
+										<field name="name">
+											<String>Anmerkung</String>
+										</field>
+										<field name="description">
+											<String>Anmerkung einfügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/seg-note.gif</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/seg-note16.gif</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::q</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0">${caret}&lt;/note></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::q</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::p 
+or ancestor-or-self::origDate[parent::head]
+or ancestor-or-self::origPlace[parent::head]
+or ancestor-or-self::persName[parent::head]</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0">${caret}&lt;/note></String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>persName</String>
+										</field>
+										<field name="name">
+											<String>Personenname</String>
+										</field>
+										<field name="description">
+											<String>Einen Personennamen auszeichnen</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/persName.gif</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/persName16.gif</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::p</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>URL</String>
+																<String>${RI_DATACOPY_VIA_REST}${RI_REGISTERPATH}${ask('Buchstaben des zu verlinkenden Registereintrags auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='" + @id + "' />"</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>//span</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//li</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>loschen_persName</String>
+										</field>
+										<field name="name">
+											<String>Umgebendes Element löschen</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::persName</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>unwrapElementLocation</String>
+																<String>ancestor-or-self::persName</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.UnwrapTagsOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::placeName</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>unwrapElementLocation</String>
+																<String>ancestor-or-self::placeName</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.UnwrapTagsOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::q and not(ancestor-or-self::origDate)</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>unwrapElementLocation</String>
+																<String>ancestor-or-self::q</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.UnwrapTagsOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>placeName</String>
+										</field>
+										<field name="name">
+											<String>Ortsname</String>
+										</field>
+										<field name="description">
+											<String>Einen Ortsnamen auszeichnen</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/placeName.gif</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/placeName16.gif</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::p</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>URL</String>
+																<String>${RI_DATACOPY_VIA_REST}${RI_REGISTERPATH}${ask('Buchstaben des zu verlinkenden Registereintrags auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;placeName xmlns='http://www.tei-c.org/ns/1.0' key='" + @id + "' />"</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>//span</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//li</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>hi[rend=hoch]</String>
+										</field>
+										<field name="name">
+											<String>Hochgestellte Zahl oder Buchstabe</String>
+										</field>
+										<field name="description">
+											<String>Zahl oder Buchstaben hochstellen</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/hi_sup.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/hi_sup16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::p</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="hochgestellt">&lt;/hi></String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>loeschen_note</String>
+										</field>
+										<field name="name">
+											<String>Anmerkung löschen</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::note</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>script</String>
+																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    version="2.0">
+    &lt;xsl:import href="resources/delete_anything.xsl"/>
+&lt;/xsl:stylesheet></String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>ancestor-or-self::note</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>ancestor-or-self::note</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>loschen_div[regest]</String>
+										</field>
+										<field name="name">
+											<String>Regest löschen</String>
+										</field>
+										<field name="description">
+											<String>Löscht den derzeit ausgewählten Regest komplett</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"]</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>script</String>
+																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    version="2.0">
+    &lt;xsl:import href="resources/delete_anything.xsl"/>
+&lt;/xsl:stylesheet></String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>div[originaldatierung]</String>
+										</field>
+										<field name="name">
+											<String>Originaldatierung</String>
+										</field>
+										<field name="description">
+											<String>Originaldatierung im Regest einfügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type='originaldatierung'])</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div type="originaldatierung" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="regestentext"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>show_note</String>
+										</field>
+										<field name="name">
+											<String>*</String>
+										</field>
+										<field name="description">
+											<String>Zeige Anmerkung</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::note[not(./@telota:show)]</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>editAttribute</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::note</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>show</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String>http://www.telota.de</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>true</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::note[@telota:show='true']</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>editAttribute</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::note</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>show</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String>http://www.telota.de</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>false</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::note[@telota:show='false']</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>editAttribute</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::note</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>show</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String>http://www.telota.de</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>true</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>author</String>
+										</field>
+										<field name="name">
+											<String>Autor</String>
+										</field>
+										<field name="description">
+											<String>Autor in einem Literaturtitel kennzeichnen</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/persName_author.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/persName_author.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::p</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;persName role="litAuthor" xmlns="http://www.tei-c.org/ns/1.0">&lt;/persName></String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>reftest</String>
+										</field>
+										<field name="name">
+											<String>ref</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>URL</String>
+																<String>${RI_DATACOPY_VIA_REST}/indexOfRegests.xml</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;ref xmlns='http://www.tei-c.org/ns/1.0' target='" + @id + "' />"</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>//span</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//li</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>bibl[kurztitel]</String>
+										</field>
+										<field name="name">
+											<String>Kurztitel einfügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen Kurztitel aus dem OPAC mit Link ein</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/name_bibl_RI.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/name_bibl_RI16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::p or ancestor-or-self::item</String>
+													</field>
+													<field name="argValues">
+														<map>
+															<entry>
+																<String>URL</String>
+																<String>http://opac.regesta-imperii.de/xml_kurztitel/${ask('Anfangsbuchstaben des Kurztitels auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
+															</entry>
+															<entry>
+																<String>element</String>
+																<String>"&lt;bibl xmlns='http://www.tei-c.org/ns/1.0' type="kurztitel" corresp='" + @id + "'>" + /span + "&lt;/bibl>"</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>/span</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//li</String>
+															</entry>
+														</map>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+									</action>
+								</action-array>
+							</field>
+							<field name="menubarDescriptor">
+								<menu>
+									<field name="label">
+										<String>Menü</String>
+									</field>
+									<field name="accessKey">
+										<null/>
+									</field>
+									<field name="iconPath">
+										<null/>
+									</field>
+									<field name="menuEntriesDescriptorList">
+										<menuEntry-array/>
+									</field>
+								</menu>
+							</field>
+							<field name="popupMenuDescriptor">
+								<menu>
+									<field name="label">
+										<String>Kontextmenü</String>
+									</field>
+									<field name="accessKey">
+										<null/>
+									</field>
+									<field name="iconPath">
+										<null/>
+									</field>
+									<field name="menuEntriesDescriptorList">
+										<menuEntry-array>
+											<menuItem>
+												<field name="actionID">
+													<String>loschen_persName</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
+													<String>loeschen_note</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
+													<String>loschen_div</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
+													<String>loschen_div[regest]</String>
+												</field>
+											</menuItem>
+										</menuEntry-array>
+									</field>
+								</menu>
+							</field>
+							<field name="toolbarDescriptor">
+								<toolbar>
+									<field name="id">
+										<String>Symbolleiste</String>
+									</field>
+									<field name="type">
+										<Integer>2</Integer>
+									</field>
+									<field name="largeIconPath">
+										<null/>
+									</field>
+									<field name="smallIconPath">
+										<null/>
+									</field>
+									<field name="toolbarEntriesDescriptorList">
+										<toolbarEntry-array>
+											<toolbarItem>
+												<field name="actionID">
+													<String>regest</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbar>
+												<field name="id">
+													<String>Regestenstruktur</String>
+												</field>
+												<field name="type">
+													<Integer>3</Integer>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="toolbarEntriesDescriptorList">
+													<toolbarEntry-array>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[literatur]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[zeugen]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[kanzler]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[schreiber]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[empfaenger]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[siegel]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[incipit]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[unterschriften]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[externe_verweise]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[originaldatierung]</String>
+															</field>
+														</toolbarItem>
+														<toolbarSeparator/>
+														<toolbarItem>
+															<field name="actionID">
+																<String>loschen_div</String>
+															</field>
+														</toolbarItem>
+													</toolbarEntry-array>
+												</field>
+											</toolbar>
+											<toolbarSeparator/>
+											<toolbar>
+												<field name="id">
+													<String>Sonstiges</String>
+												</field>
+												<field name="type">
+													<Integer>3</Integer>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="toolbarEntriesDescriptorList">
+													<toolbarEntry-array>
+														<toolbarItem>
+															<field name="actionID">
+																<String>regest_ohne_ort</String>
+															</field>
+														</toolbarItem>
+													</toolbarEntry-array>
+												</field>
+											</toolbar>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>q</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>note</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>bibl[kurztitel]</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>author</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>hi[rend=hoch]</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>persName</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>placeName</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbar>
+												<field name="id">
+													<String>Löschen</String>
+												</field>
+												<field name="type">
+													<Integer>3</Integer>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="toolbarEntriesDescriptorList">
+													<toolbarEntry-array>
+														<toolbarItem>
+															<field name="actionID">
+																<String>loschen_persName</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>loeschen_note</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>loschen_div</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>loschen_div[regest]</String>
+															</field>
+														</toolbarItem>
+													</toolbarEntry-array>
+												</field>
+											</toolbar>
+										</toolbarEntry-array>
+									</field>
+								</toolbar>
+							</field>
+							<field name="additionalToolbarsDescriptors">
+								<null/>
+							</field>
+							<field name="contextualItems">
+								<contextProvider>
+									<field name="items">
+										<contextItem-array/>
+									</field>
+									<field name="removeItems">
+										<null/>
+									</field>
+								</contextProvider>
+							</field>
+							<field name="tableSupportClassName">
+								<null/>
+							</field>
+							<field name="tableColWidthSupportClassName">
+								<null/>
+							</field>
+							<field name="customReferencesResolver">
+								<null/>
+							</field>
+							<field name="authorExtensionStateListener">
+								<null/>
+							</field>
+							<field name="attributesRecognizer">
+								<null/>
+							</field>
+						</authorExtension>
+					</field>
+					<field name="templatesLocations">
+						<String-array>
+							<String>${frameworkDir}/templates</String>
+						</String-array>
+					</field>
+					<field name="xmlCatalogs">
+						<String-array/>
+					</field>
+					<field name="description">
+						<String></String>
+					</field>
+					<field name="doctypeRules">
+						<documentTypeRule-array>
+							<documentTypeRule>
+								<field name="namespace">
+									<String>*</String>
+								</field>
+								<field name="rootElem">
+									<String>*</String>
+								</field>
+								<field name="fileName">
+									<String>*</String>
+								</field>
+								<field name="publicID">
+									<String>*</String>
+								</field>
+								<field name="javaRuleClass">
+									<String></String>
+								</field>
+								<field name="attributeLocalName">
+									<String>doctype</String>
+								</field>
+								<field name="attributeNamespace">
+									<String>http://www.telota.de</String>
+								</field>
+								<field name="attributeValue">
+									<String>ri_13_regesten</String>
+								</field>
+							</documentTypeRule>
+						</documentTypeRule-array>
+					</field>
+					<field name="scenarios">
+						<scenario-array/>
+					</field>
+					<field name="validationScenarios">
+						<validationScenario-array>
+							<validationScenario>
+								<field name="pairs">
+									<list>
+										<validationUnit>
+											<field name="validationType">
+												<validationUnitType>
+													<field name="validationInputType">
+														<String>text/xml</String>
+													</field>
+												</validationUnitType>
+											</field>
+											<field name="url">
+												<String>${currentFileURL}</String>
+											</field>
+											<field name="validationEngine">
+												<validationEngine>
+													<field name="engineType">
+														<String>&lt;Default engine></String>
+													</field>
+													<field name="allowsAutomaticValidation">
+														<Boolean>true</Boolean>
+													</field>
+												</validationEngine>
+											</field>
+											<field name="allowAutomaticValidation">
+												<Boolean>true</Boolean>
+											</field>
+											<field name="extensions">
+												<null/>
+											</field>
+											<field name="validationSchema">
+												<validationUnitSchema>
+													<field name="dtdSchemaPublicID">
+														<null/>
+													</field>
+													<field name="schematronPhase">
+														<null/>
+													</field>
+													<field name="type">
+														<Integer>4</Integer>
+													</field>
+													<field name="uri">
+														<String>${framework}/schemata/ri_13_regesten.rng</String>
+													</field>
+												</validationUnitSchema>
+											</field>
+										</validationUnit>
+									</list>
+								</field>
+								<field name="type">
+									<String>Validation_scenario</String>
+								</field>
+								<field name="name">
+									<String>Regesta Imperii Abt. 13 - Regesten</String>
+								</field>
+							</validationScenario>
+						</validationScenario-array>
+					</field>
+					<field name="defaultValidationScenarios">
+						<list>
+							<String>Regesta Imperii Abt. 13 - Regesten</String>
+						</list>
+					</field>
+					<field name="defaultTransformationScenarios">
+						<null/>
+					</field>
+					<field name="extensionsBundleClassName">
+						<String>ro.sync.ecss.extensions.tei.TEIP5ExtensionsBundle</String>
+					</field>
+					<field name="useImposedInitialPage">
+						<Boolean>true</Boolean>
+					</field>
+					<field name="imposedInitialPage">
+						<String>Author</String>
+					</field>
+					<field name="elementLocatorExtension">
+						<null/>
+					</field>
+					<field name="schemaManagerFilterExtension">
+						<null/>
+					</field>
+					<field name="authorSWTDndExtension">
+						<null/>
+					</field>
+					<field name="textSWTDndExtension">
+						<null/>
+					</field>
+					<field name="authorSwingDndExtension">
+						<null/>
+					</field>
+					<field name="cssStylesFilterExtension">
+						<null/>
+					</field>
+					<field name="attributesValueEditor">
+						<null/>
+					</field>
+					<field name="priority">
+						<Integer>3</Integer>
+					</field>
+					<field name="xmlNodeCustomizerExtension">
+						<null/>
+					</field>
+					<field name="externalObjectInsertionHandler">
+						<null/>
+					</field>
+					<field name="customAttributeValueEditor">
+						<null/>
+					</field>
+				</documentTypeDescriptor>
+			</documentTypeDescriptor-array>
+		</entry>
+	</map>
+</serialized>

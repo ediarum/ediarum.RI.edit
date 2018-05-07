@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@import "ri_regesten_formular.css";
+
+/* Formularansicht für die Regesta-Imperii-Arbeitsumgebung
+ * 
+ * Berlin-Brandenburgische Akademie der Wissenschaften
+ * TELOTA - The electronic life of the academy
+ * @author:     Stefan Dumont, dumont@bbaw.de
+ * @changed:    05-08-2013
+ */
+
+note {
+    visibility: -oxy-collapse-text;
+}
