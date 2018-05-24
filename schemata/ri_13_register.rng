@@ -1,75 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar 
-    xmlns="http://relaxng.org/ns/structure/1.0"
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     <start>
-        
+
         <element name="document">
-            <attribute name="source"><text /></attribute>
-            <attribute name="time"><text /></attribute>
-            <attribute name="doctype" ns="http://www.telota.de"><text /></attribute>
+            <attribute name="source">
+                <text/>
+            </attribute>
+            <attribute name="time">
+                <text/>
+            </attribute>
+            <attribute name="doctype" ns="http://www.telota.de">
+                <text/>
+            </attribute>
             <element name="body">
                 <element name="section">
                     <attribute name="page">
                         <value>Same</value>
                     </attribute>
-                    <element name="Register"><text /></element>
+                    <element name="Register">
+                        <text/>
+                    </element>
                     <oneOrMore>
-                        <ref name="stufen" />
+                        <ref name="stufen"/>
                     </oneOrMore>
                 </element>
             </element>
         </element>
-        
+
     </start>
-    
+
     <define name="stufen">
         <element name="Stufe0">
-            <ref name="stufen_attributes" />
-            <ref name="content" />
+            <ref name="stufen_attributes"/>
+            <ref name="content"/>
             <zeroOrMore>
                 <element name="Stufe1">
-                    <ref name="stufen_attributes" />
-                    <ref name="content" />
+                    <ref name="stufen_attributes"/>
+                    <ref name="content"/>
                     <zeroOrMore>
-                    <element name="Stufe2">
-                        <ref name="stufen_attributes" />
-                        <ref name="content" />
-                        <zeroOrMore>
-                            <element name="Stufe3">
-                                <ref name="stufen_attributes" />
-                                <ref name="content" />
-                                <zeroOrMore>
-                                    <element name="Stufe4">
-                                        <ref name="stufen_attributes" />
-                                        <ref name="content" />
-                                        <zeroOrMore>
-                                            <element name="Stufe5">
-                                                <ref name="stufen_attributes" />
-                                                <ref name="content" />
-                                                <zeroOrMore>
-                                                    <element name="Stufe6">
-                                                        <ref name="stufen_attributes" />
-                                                        <ref name="content" />
-                                                    </element>
-                                                </zeroOrMore>
-                                            </element>
-                                        </zeroOrMore>
-                                    </element>
-                                </zeroOrMore>
-                            </element>
-                        </zeroOrMore>
-                    </element>
+                        <element name="Stufe2">
+                            <ref name="stufen_attributes"/>
+                            <ref name="content"/>
+                            <zeroOrMore>
+                                <element name="Stufe3">
+                                    <ref name="stufen_attributes"/>
+                                    <ref name="content"/>
+                                    <zeroOrMore>
+                                        <element name="Stufe4">
+                                            <ref name="stufen_attributes"/>
+                                            <ref name="content"/>
+                                            <zeroOrMore>
+                                                <element name="Stufe5">
+                                                  <ref name="stufen_attributes"/>
+                                                  <ref name="content"/>
+                                                  <zeroOrMore>
+                                                  <element name="Stufe6">
+                                                  <ref name="stufen_attributes"/>
+                                                  <ref name="content"/>
+                                                  </element>
+                                                  </zeroOrMore>
+                                                </element>
+                                            </zeroOrMore>
+                                        </element>
+                                    </zeroOrMore>
+                                </element>
+                            </zeroOrMore>
+                        </element>
                     </zeroOrMore>
                 </element>
             </zeroOrMore>
         </element>
     </define>
-    
+
     <define name="stufen_attributes">
         <attribute name="id">
-            <data type="ID"></data>
+            <data type="ID"/>
         </attribute>
         <optional>
             <attribute name="cruser">
@@ -91,10 +98,10 @@
             </attribute>
         </optional>
         <optional>
-            <ref name="normdata" />
+            <ref name="normdata"/>
         </optional>
     </define>
-    
+
     <define name="normdata">
         <choice>
             <group>
@@ -108,6 +115,11 @@
                 </optional>
                 <optional>
                     <attribute name="getty">
+                        <text/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="gnd">
                         <text/>
                     </attribute>
                 </optional>
@@ -153,49 +165,129 @@
             </group>
         </choice>
     </define>
-    
+
     <define name="content">
-        <element name="Inhalt"> 
+        <element name="Inhalt">
             <interleave>
                 <zeroOrMore>
-                    <text />
+                    <text/>
                 </zeroOrMore>
                 <zeroOrMore>
                     <element name="Kursivtext">
                         <interleave>
                             <zeroOrMore>
-                                <text />
+                                <text/>
                             </zeroOrMore>
                             <zeroOrMore>
-                                <ref name="ref" />
+                                <ref name="ref"/>
                             </zeroOrMore>
                         </interleave>
                     </element>
                 </zeroOrMore>
                 <zeroOrMore>
-                    <element name="Regestennummer"><text /></element>
+                    <element name="Regestennummer">
+                        <interleave>
+                            <zeroOrMore><text/></zeroOrMore>
+                            <zeroOrMore>
+                                <ref name="nr"/>
+                            </zeroOrMore>
+                        </interleave>
+                    </element>
                 </zeroOrMore>
                 <zeroOrMore>
-                    <element name="RegestennummerFett"><text /></element>
+                    <element name="RegestennummerFett">
+                        <interleave>
+                            <zeroOrMore><text/></zeroOrMore>
+                            <zeroOrMore>
+                                <ref name="nr"/>
+                            </zeroOrMore>
+                        </interleave>
+                    </element>
                 </zeroOrMore>
                 <zeroOrMore>
-                    <ref name="ref" />  
+                    <ref name="ref"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="nr"/>
                 </zeroOrMore>
             </interleave>
-         </element> 
+        </element>
     </define>
-    
+
     <define name="ref">
         <element name="ref">
-            <attribute name="ziel"><text /></attribute>
+            <attribute name="ziel">
+                <text/>
+            </attribute>
             <interleave>
                 <zeroOrMore>
-                    <text />
+                    <text/>
                 </zeroOrMore>
                 <zeroOrMore>
-                    <element name="Kursivtext"><text /></element>    
+                    <element name="Kursivtext">
+                        <text/>
+                    </element>
                 </zeroOrMore>
             </interleave>
+        </element>
+    </define>
+    <define name="nr">
+        <element name="nr">
+            <optional>
+                <attribute name="type">
+                    <list>
+                        <optional>
+                            <value>austOrt</value>
+                        </optional>
+                        <optional>
+                            <value>verlOrt</value>
+                        </optional>
+                        <optional>
+                            <value>empfaenger</value>
+                        </optional>
+                        <optional>
+                            <value>beguenst</value>
+                        </optional>
+                        <optional>
+                            <value>intervenient</value>
+                        </optional>
+                        <optional>
+                            <value>petent</value>
+                        </optional>
+                        <optional>
+                            <value>zeuge</value>
+                        </optional>
+                        <optional>
+                            <value>p_tot</value>
+                        </optional>
+                        <optional>
+                            <value>p_komment</value>
+                        </optional>
+                        <optional>
+                            <value>nennung</value>
+                        </optional>
+                    </list>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="source_type">
+                    <choice>
+                        <value>D</value>
+                        <value>B</value>
+                        <value>H</value>
+                        <value>F</value>
+                        <value>F?</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="cert">
+                    <choice>
+                        <value>low</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <text/>
         </element>
     </define>
 </grammar>

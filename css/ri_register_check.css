@@ -29,3 +29,7 @@ Stufe6[checked="no"]:after {
     content: " (Eingetragen von: " attr(cruser) ")";
     color: red;
 }
+
+nr:not([type]):not([source_type]) {
+    background-color: FireBrick;
+}

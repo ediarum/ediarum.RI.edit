@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="15.2" xml:space="preserve">
-	<map>
+<serialized version="19.1" xml:space="preserve">
+	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
 				<documentTypeDescriptor>
+					<field name="extensionPatch">
+						<null/>
+					</field>
 					<field name="name">
 						<String>Regesta Imperii Abt. 13 - Register</String>
 					</field>
@@ -84,6 +87,9 @@
 							<field name="mergeCSSsFromDocument">
 								<Boolean>false</Boolean>
 							</field>
+							<field name="multipleAlternateSelectionEnabled">
+								<Boolean>false</Boolean>
+							</field>
 							<field name="actionDescriptors">
 								<action-array>
 									<action>
@@ -115,7 +121,7 @@
 														<String>ancestor-or-self::ref[@ziel='']</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
 																<String> ${RI_DATACOPY_VIA_REST}${RI_REGISTERPATH}${ask('Buchstaben des zu verlinkenden Registereintrags auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
@@ -140,7 +146,7 @@
 																<String>xpath to element of the attribute</String>
 																<String>ancestor-or-self::ref</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
@@ -151,7 +157,7 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
 																<String> ${RI_DATACOPY_VIA_REST}${RI_REGISTERPATH}${ask('Buchstaben des zu verlinkenden Registereintrags auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
@@ -168,13 +174,16 @@
 																<String>node</String>
 																<String>//li</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -206,12 +215,12 @@
 														<String>ancestor-or-self::test</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>unwrapElementLocation</String>
 																<String>ancestor-or-self::test</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.UnwrapTagsOperation</String>
@@ -222,13 +231,16 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map/>
+														<serializableOrderedMap/>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -260,7 +272,7 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>first action</String>
 																<String>stufe-gleiche-ebene_1</String>
@@ -273,13 +285,16 @@
 																<String>third action</String>
 																<String></String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -311,7 +326,7 @@
 														<String>ancestor-or-self::Stufe6</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe6 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe6></String>
@@ -324,7 +339,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -335,7 +350,7 @@
 														<String>ancestor-or-self::Stufe5</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe5 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe5></String>
@@ -348,7 +363,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -359,7 +374,7 @@
 														<String>ancestor-or-self::Stufe4</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe4 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe4></String>
@@ -372,7 +387,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -383,7 +398,7 @@
 														<String>ancestor-or-self::Stufe3</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe3 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe3></String>
@@ -396,7 +411,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -407,7 +422,7 @@
 														<String>ancestor-or-self::Stufe2</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe2 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe2></String>
@@ -420,7 +435,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -431,7 +446,7 @@
 														<String>ancestor-or-self::Stufe1</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe1 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe1></String>
@@ -444,7 +459,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -455,7 +470,7 @@
 														<String>ancestor-or-self::Stufe0</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe0  letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe0></String>
@@ -468,13 +483,16 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -506,18 +524,21 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Kursivtext>&lt;/Kursivtext></String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -549,18 +570,21 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Regestennummer>&lt;/Regestennummer></String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -592,18 +616,21 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;RegestennummerFett>&lt;/RegestennummerFett></String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -635,7 +662,7 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>action</String>
 																<String>Replace</String>
@@ -656,13 +683,16 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::*[@section]</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -694,7 +724,7 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>first action</String>
 																<String>stufe-ebene-darunter_1</String>
@@ -707,13 +737,16 @@
 																<String>third action</String>
 																<String></String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -745,7 +778,7 @@
 														<String>ancestor-or-self::Stufe5</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe6 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe6></String>
@@ -758,7 +791,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -769,7 +802,7 @@
 														<String>ancestor-or-self::Stufe4</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe5 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe5></String>
@@ -782,7 +815,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -793,7 +826,7 @@
 														<String>ancestor-or-self::Stufe3</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe4 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe4></String>
@@ -806,7 +839,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -817,7 +850,7 @@
 														<String>ancestor-or-self::Stufe2</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe3 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe3></String>
@@ -830,7 +863,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -841,7 +874,7 @@
 														<String>ancestor-or-self::Stufe1</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe2 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe2></String>
@@ -854,7 +887,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -865,7 +898,7 @@
 														<String>ancestor-or-self::Stufe0</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe1  letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe1></String>
@@ -878,13 +911,16 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -916,7 +952,7 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>first action</String>
 																<String>stufe-gleiche-ebene-davor_1</String>
@@ -929,13 +965,16 @@
 																<String>third action</String>
 																<String></String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -967,7 +1006,7 @@
 														<String>ancestor-or-self::Stufe6</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe6 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe6></String>
@@ -980,7 +1019,7 @@
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -991,7 +1030,7 @@
 														<String>ancestor-or-self::Stufe5</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe5 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe5></String>
@@ -1004,7 +1043,7 @@
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1015,7 +1054,7 @@
 														<String>ancestor-or-self::Stufe4</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe4 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe4></String>
@@ -1028,7 +1067,7 @@
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1039,7 +1078,7 @@
 														<String>ancestor-or-self::Stufe3</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe3 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe3></String>
@@ -1052,7 +1091,7 @@
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1063,7 +1102,7 @@
 														<String>ancestor-or-self::Stufe2</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe2 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe2></String>
@@ -1076,7 +1115,7 @@
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1087,7 +1126,7 @@
 														<String>ancestor-or-self::Stufe1</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe1 letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe1></String>
@@ -1100,7 +1139,7 @@
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1111,7 +1150,7 @@
 														<String>ancestor-or-self::Stufe0</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;Stufe0  letter="${cfn}" section="${cfd}" cruser="${RI_USERNAME}">&lt;/Stufe0></String>
@@ -1124,13 +1163,16 @@
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1162,12 +1204,12 @@
 														<String>ancestor-or-self::Kursivtext</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>unwrapElementLocation</String>
 																<String>ancestor-or-self::Kursivtext</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.UnwrapTagsOperation</String>
@@ -1178,18 +1220,21 @@
 														<String>ancestor-or-self::ref</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>unwrapElementLocation</String>
 																<String>ancestor-or-self::ref</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.UnwrapTagsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1221,7 +1266,7 @@
 														<String>ancestor-or-self::Stufe6</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -1238,7 +1283,7 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::Stufe6</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
@@ -1249,7 +1294,7 @@
 														<String>ancestor-or-self::Stufe5</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -1266,7 +1311,7 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::Stufe5</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
@@ -1277,7 +1322,7 @@
 														<String>ancestor-or-self::Stufe4</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -1294,7 +1339,7 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::Stufe4</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
@@ -1305,7 +1350,7 @@
 														<String>ancestor-or-self::Stufe3</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -1322,7 +1367,7 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::Stufe3</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
@@ -1333,7 +1378,7 @@
 														<String>ancestor-or-self::Stufe2</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -1350,7 +1395,7 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::Stufe2</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
@@ -1361,7 +1406,7 @@
 														<String>ancestor-or-self::Stufe1</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -1378,7 +1423,7 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::Stufe1</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
@@ -1389,7 +1434,7 @@
 														<String>ancestor-or-self::Stufe0</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -1406,13 +1451,16 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::Stufe0</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1444,7 +1492,7 @@
 														<String>ancestor-or-self::Regestennummer</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -1461,7 +1509,7 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::Regestennummer</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
@@ -1472,7 +1520,7 @@
 														<String>ancestor-or-self::RegestennummerFett</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -1489,13 +1537,16 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::RegestennummerFett</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1527,7 +1578,7 @@
 														<String>ancestor-or-self::*[@checked="no"]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>first action</String>
 																<String>check_1</String>
@@ -1536,13 +1587,16 @@
 																<String>second action</String>
 																<String>check_2</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1574,7 +1628,7 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>elementLocation</String>
 																<String>ancestor-or-self::*[@checked="no"]</String>
@@ -1591,13 +1645,16 @@
 																<String>value</String>
 																<String>${RI_USERNAME}</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1629,7 +1686,7 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
@@ -1646,13 +1703,16 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::*[@checked="no"]</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1684,18 +1744,21 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
 																<String>${RI_EDIARUM_ROUTINEN}register_unchecked_entries.xql?section=${RI_SECTION}</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.OpenURLOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1727,7 +1790,7 @@
 														<String>ancestor-or-self::Stufe6</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -1752,7 +1815,7 @@
 																<String>value</String>
 																<String>person</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -1763,7 +1826,7 @@
 														<String>ancestor-or-self::Stufe5</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -1788,7 +1851,7 @@
 																<String>value</String>
 																<String>person</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -1799,7 +1862,7 @@
 														<String>ancestor-or-self::Stufe4</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -1824,7 +1887,7 @@
 																<String>value</String>
 																<String>person</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -1835,7 +1898,7 @@
 														<String>ancestor-or-self::Stufe3</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -1860,7 +1923,7 @@
 																<String>value</String>
 																<String>person</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -1871,7 +1934,7 @@
 														<String>ancestor-or-self::Stufe2</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -1896,7 +1959,7 @@
 																<String>value</String>
 																<String>person</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -1907,7 +1970,7 @@
 														<String>ancestor-or-self::Stufe1</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -1932,7 +1995,7 @@
 																<String>value</String>
 																<String>person</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -1943,7 +2006,7 @@
 														<String>ancestor-or-self::Stufe0</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -1968,13 +2031,16 @@
 																<String>value</String>
 																<String>person</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2006,7 +2072,7 @@
 														<String>ancestor-or-self::*[matches(local-name(), "Stufe") and (@typ='person' or @typ='sache')][1]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>true</String>
@@ -2027,13 +2093,16 @@
 																<String>value</String>
 																<String>${ask('Bitte tragen Sie die GND-Nummer ohne URL ein', generic)}</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2065,7 +2134,7 @@
 														<String>ancestor-or-self::*[matches(local-name(), "Stufe") and @typ='ort'][1]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>true</String>
@@ -2086,13 +2155,16 @@
 																<String>value</String>
 																<String>${ask('Bitte tragen Sie die Geonames-ID ohne URL ein', generic)}</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2124,7 +2196,7 @@
 														<String>ancestor-or-self::*[matches(local-name(), "Stufe") and @typ='ort'][1]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>true</String>
@@ -2145,13 +2217,16 @@
 																<String>value</String>
 																<String>${ask('Bitte tragen Sie die Getty-ID ohne URL ein', generic)}</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2183,7 +2258,7 @@
 														<String>ancestor-or-self::*[matches(local-name(), "Stufe") and @typ='ort'][1]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>true</String>
@@ -2204,13 +2279,16 @@
 																<String>value</String>
 																<String>${ask('Bitte tragen Sie den Längengrad ein', generic)}</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2242,7 +2320,7 @@
 														<String>ancestor-or-self::*[matches(local-name(), "Stufe") and @typ='ort'][1]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>true</String>
@@ -2263,13 +2341,16 @@
 																<String>value</String>
 																<String>${ask('Bitte tragen Sie den Breitengrad ein', generic)}</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2301,7 +2382,7 @@
 														<String>ancestor-or-self::*[matches(local-name(), "Stufe") and @typ='ort'][1]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>first action</String>
 																<String>@lat</String>
@@ -2310,13 +2391,16 @@
 																<String>second action</String>
 																<String>@lon</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2348,7 +2432,7 @@
 														<String>ancestor-or-self::Stufe6</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2373,7 +2457,7 @@
 																<String>value</String>
 																<String>sache</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2384,7 +2468,7 @@
 														<String>ancestor-or-self::Stufe5</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2409,7 +2493,7 @@
 																<String>value</String>
 																<String>sache</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2420,7 +2504,7 @@
 														<String>ancestor-or-self::Stufe4</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2445,7 +2529,7 @@
 																<String>value</String>
 																<String>sache</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2456,7 +2540,7 @@
 														<String>ancestor-or-self::Stufe3</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2481,7 +2565,7 @@
 																<String>value</String>
 																<String>sache</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2492,7 +2576,7 @@
 														<String>ancestor-or-self::Stufe2</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2517,7 +2601,7 @@
 																<String>value</String>
 																<String>sache</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2528,7 +2612,7 @@
 														<String>ancestor-or-self::Stufe1</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2553,7 +2637,7 @@
 																<String>value</String>
 																<String>sache</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2564,7 +2648,7 @@
 														<String>ancestor-or-self::Stufe0</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2589,13 +2673,16 @@
 																<String>value</String>
 																<String>sache</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2627,7 +2714,7 @@
 														<String>ancestor-or-self::Stufe6</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2652,7 +2739,7 @@
 																<String>value</String>
 																<String>ort</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2663,7 +2750,7 @@
 														<String>ancestor-or-self::Stufe5</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2688,7 +2775,7 @@
 																<String>value</String>
 																<String>ort</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2699,7 +2786,7 @@
 														<String>ancestor-or-self::Stufe4</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2724,7 +2811,7 @@
 																<String>value</String>
 																<String>ort</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2735,7 +2822,7 @@
 														<String>ancestor-or-self::Stufe3</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2760,7 +2847,7 @@
 																<String>value</String>
 																<String>ort</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2771,7 +2858,7 @@
 														<String>ancestor-or-self::Stufe2</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2796,7 +2883,7 @@
 																<String>value</String>
 																<String>ort</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2807,7 +2894,7 @@
 														<String>ancestor-or-self::Stufe1</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2832,7 +2919,7 @@
 																<String>value</String>
 																<String>ort</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -2843,7 +2930,7 @@
 														<String>ancestor-or-self::Stufe0</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>false</String>
@@ -2868,13 +2955,16 @@
 																<String>value</String>
 																<String>ort</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2906,7 +2996,7 @@
 														<String>ancestor-or-self::*[matches(local-name(), "Stufe") and (@typ='person')][1]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>true</String>
@@ -2927,13 +3017,160 @@
 																<String>value</String>
 																<String>${ask('Bitte tragen Sie die Germania-Sacra-Nummer ohne URL ein', generic)}</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>@source_type</String>
+										</field>
+										<field name="name">
+											<String>Quell-Art</String>
+										</field>
+										<field name="description">
+											<String>Attribut »Quell-Art« setzen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::nr and ancestor::*[matches(local-name(), "Stufe")][1]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::nr</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>source_type</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte Quell-Art auswählen', radio, ('D':'Diplom';'B':'Brief';'H':'historiographisch';'F':'Fälschung';'F?':'teilweise Fälschung';'':'ungesetzt'), '')}</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>@cert</String>
+										</field>
+										<field name="name">
+											<String>unsicher</String>
+										</field>
+										<field name="description">
+											<String>Attribut »unsicher« setzen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::nr[not(@cert)] and ancestor::*[matches(local-name(), "Stufe")][1]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::nr</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>cert</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>low</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::nr[@cert] and ancestor::*[matches(local-name(), "Stufe")][1]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::nr</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>cert</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 								</action-array>
@@ -2951,6 +3188,9 @@
 									</field>
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array/>
+									</field>
+									<field name="context">
+										<null/>
 									</field>
 								</menu>
 							</field>
@@ -3005,6 +3245,9 @@
 											</menuItem>
 										</menuEntry-array>
 									</field>
+									<field name="context">
+										<null/>
+									</field>
 								</menu>
 							</field>
 							<field name="toolbarDescriptor">
@@ -3023,6 +3266,18 @@
 									</field>
 									<field name="toolbarEntriesDescriptorList">
 										<toolbarEntry-array>
+											<toolbarItem>
+												<field name="actionID">
+													<String>@source_type</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>@cert</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
 											<toolbar>
 												<field name="id">
 													<String>Neue Stufe</String>
@@ -3239,16 +3494,28 @@
 							<field name="tableSupportClassName">
 								<null/>
 							</field>
+							<field name="tableCellSeparatorSupportClassName">
+								<null/>
+							</field>
 							<field name="tableColWidthSupportClassName">
 								<null/>
 							</field>
 							<field name="customReferencesResolver">
 								<null/>
 							</field>
+							<field name="editPropertiesHandler">
+								<null/>
+							</field>
 							<field name="authorExtensionStateListener">
 								<null/>
 							</field>
 							<field name="attributesRecognizer">
+								<null/>
+							</field>
+							<field name="authorActionEventHandler">
+								<null/>
+							</field>
+							<field name="authorImageDecorator">
 								<null/>
 							</field>
 						</authorExtension>
@@ -3405,8 +3672,11 @@
 					<field name="customAttributeValueEditor">
 						<null/>
 					</field>
+					<field name="textModeExternalObjectInsertionHandler">
+						<null/>
+					</field>
 				</documentTypeDescriptor>
 			</documentTypeDescriptor-array>
 		</entry>
-	</map>
+	</serializableOrderedMap>
 </serialized>
