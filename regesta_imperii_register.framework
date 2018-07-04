@@ -3173,6 +3173,130 @@
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>@wikidata</String>
+										</field>
+										<field name="name">
+											<String>Wikidata-ID</String>
+										</field>
+										<field name="description">
+											<String>Wikidata-ID hinzufügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[matches(local-name(), "Stufe")][1]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::*[matches(local-name(), "Stufe")][1]</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>wikidata</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte tragen Sie die Wikidata-ID ohne URL ein (z.B. Q111111)', generic)}</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>@klosterdb</String>
+										</field>
+										<field name="name">
+											<String>Klosterdb-ID</String>
+										</field>
+										<field name="description">
+											<String>Klosterdb-ID hinzufügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[matches(local-name(), "Stufe") and @typ='ort'][1]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::*[matches(local-name(), "Stufe") and @typ='ort'][1]</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>klosterdb</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte tragen Sie die Klosterdb-ID ohne URL ein', generic)}</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -3358,6 +3482,11 @@
 																<String>@gsn</String>
 															</field>
 														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>@wikidata</String>
+															</field>
+														</toolbarItem>
 														<toolbarSeparator/>
 														<toolbarItem>
 															<field name="actionID">
@@ -3372,6 +3501,11 @@
 														<toolbarItem>
 															<field name="actionID">
 																<String>geocoordinates</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>@klosterdb</String>
 															</field>
 														</toolbarItem>
 													</toolbarEntry-array>

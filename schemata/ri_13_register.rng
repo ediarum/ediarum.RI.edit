@@ -125,6 +125,16 @@
                     </attribute>
                 </optional>
                 <optional>
+                    <attribute name="wikidata">
+                        <text/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="klosterdb">
+                        <text/>
+                    </attribute>
+                </optional>
+                <optional>
                     <group>
                         <attribute name="lat">
                             <text/>
@@ -151,6 +161,11 @@
                         <text/>
                     </attribute>
                 </optional>
+                <optional>
+                    <attribute name="wikidata">
+                        <text/>
+                    </attribute>
+                </optional>
             </group>
             <group>
                 <attribute name="typ">
@@ -160,6 +175,11 @@
                 </attribute>
                 <optional>
                     <attribute name="gnd">
+                        <text/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="wikidata">
                         <text/>
                     </attribute>
                 </optional>
