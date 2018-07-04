@@ -184,6 +184,12 @@
                     </attribute>
                 </optional>
             </group>
+            <attribute name="typ">
+                <choice>
+                    <value>xref</value>
+                    <value>stufe_unclear</value>
+                </choice>
+            </attribute>
         </choice>
     </define>
 
@@ -208,7 +214,9 @@
                 <zeroOrMore>
                     <element name="Regestennummer">
                         <interleave>
-                            <zeroOrMore><text/></zeroOrMore>
+                            <zeroOrMore>
+                                <text/>
+                            </zeroOrMore>
                             <zeroOrMore>
                                 <ref name="nr"/>
                             </zeroOrMore>
@@ -218,7 +226,9 @@
                 <zeroOrMore>
                     <element name="RegestennummerFett">
                         <interleave>
-                            <zeroOrMore><text/></zeroOrMore>
+                            <zeroOrMore>
+                                <text/>
+                            </zeroOrMore>
                             <zeroOrMore>
                                 <ref name="nr"/>
                             </zeroOrMore>
