@@ -3073,7 +3073,7 @@
 															</entry>
 															<entry>
 																<String>value</String>
-																<String>${ask('Bitte Quell-Art auswählen', radio, ('D':'Diplom';'B':'Brief';'H':'historiographisch';'F':'Fälschung';'F?':'teilweise Fälschung';'':'ungesetzt'), '')}</String>
+																<String>${ask('Bitte Quell-Art auswählen', radio, ('D':'Diplom';'B':'Brief';'H':'historiographisch';'F':'Fälschung';'F?':'teilweise Fälschung';'Kurzreg':'Kurzregest';'Dep':'Deperdita';'indirErw':'indirekte Erwähnung';'':'ungesetzt'), '')}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
