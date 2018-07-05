@@ -188,6 +188,7 @@
                 <choice>
                     <value>xref</value>
                     <value>stufe_unclear</value>
+                    <value>rolle</value>
                 </choice>
             </attribute>
         </choice>

@@ -28,3 +28,8 @@
     content: "(↗) ";
     color: gray;
 }
+
+*[typ='rolle'] > Inhalt:before {
+    content: "(R) ";
+    color: gray;
+}
