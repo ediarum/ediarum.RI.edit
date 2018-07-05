@@ -23,3 +23,13 @@
     content: "(S) ";
     color: gray;
 }
+
+*[typ='xref'] > Inhalt:before {
+    content: "(↗) ";
+    color: gray;
+}
+
+*[typ='rolle'] > Inhalt:before {
+    content: "(R) ";
+    color: gray;
+}

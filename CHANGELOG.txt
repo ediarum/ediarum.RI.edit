@@ -14,6 +14,18 @@ Framework (Dokumenttyp Zuordnung) für Oxygen XML
 CHANGELOG
 ------------------------------------------------------------------------------------------------
 
+3.1.0 vom 05.07.2018
+	* FEATURE: Neue Normdatenattribute und unterstützende Funktionen
+	* FEATURE: Neue Werte für Attribut source_type + Funktionen
+	* FEATURE: Neue Eintragstypen Querverweis, Rolle und unklar
+
+------------------------------------------------------------------------------------------------	
+
+3.0.0 vom 25.05.2018
+	* FEATURE: Neues Element <nr> mit Attributen in Schema, CSS und Aktionen
+
+------------------------------------------------------------------------------------------------	
+
 2.0.0 vom 20.02.2018
 	* UPDATE: Umstellung auf Projektdatei (.xpr)
 	* UPDATE: Neue Pfade in CSS und XSLT

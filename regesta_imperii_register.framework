@@ -3073,7 +3073,7 @@
 															</entry>
 															<entry>
 																<String>value</String>
-																<String>${ask('Bitte Quell-Art auswählen', radio, ('D':'Diplom';'B':'Brief';'H':'historiographisch';'F':'Fälschung';'F?':'teilweise Fälschung';'':'ungesetzt'), '')}</String>
+																<String>${ask('Bitte Quell-Art auswählen', radio, ('D':'Diplom';'B':'Brief';'H':'historiographisch';'F':'Fälschung';'F?':'teilweise Fälschung';'Kurzreg':'Kurzregest';'Dep':'Deperdita';'indirErw':'indirekte Erwähnung';'':'ungesetzt'), '')}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -3160,6 +3160,694 @@
 															<entry>
 																<String>value</String>
 																<String></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>@wikidata</String>
+										</field>
+										<field name="name">
+											<String>Wikidata-ID</String>
+										</field>
+										<field name="description">
+											<String>Wikidata-ID hinzufügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[matches(local-name(), "Stufe")][1]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::*[matches(local-name(), "Stufe")][1]</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>wikidata</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte tragen Sie die Wikidata-ID ohne URL ein (z.B. Q111111)', generic)}</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>@klosterdb</String>
+										</field>
+										<field name="name">
+											<String>Klosterdb-ID</String>
+										</field>
+										<field name="description">
+											<String>Klosterdb-ID hinzufügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[matches(local-name(), "Stufe") and @typ='ort'][1]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::*[matches(local-name(), "Stufe") and @typ='ort'][1]</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>klosterdb</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>${ask('Bitte tragen Sie die Klosterdb-ID ohne URL ein', generic)}</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>@typ[xref]</String>
+										</field>
+										<field name="name">
+											<String>Querverweis</String>
+										</field>
+										<field name="description">
+											<String>Kategorie des Registereintrags auf "Querverweis" setzen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe6</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe6</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>xref</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe5</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe5</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>xref</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe4</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe4</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>xref</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe3</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe3</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>xref</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe2</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe2</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>xref</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe1</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe1</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>xref</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe0</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe0</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>xref</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>@typ[rolle]</String>
+										</field>
+										<field name="name">
+											<String>Rolle</String>
+										</field>
+										<field name="description">
+											<String>Kategorie des Registereintrags auf "Rolle" setzen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe6</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe6</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>rolle</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe5</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe5</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>rolle</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe4</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe4</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>rolle</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe3</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe3</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>rolle</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe2</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe2</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>rolle</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe1</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe1</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>rolle</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe0</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe0</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>rolle</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -3358,6 +4046,11 @@
 																<String>@gsn</String>
 															</field>
 														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>@wikidata</String>
+															</field>
+														</toolbarItem>
 														<toolbarSeparator/>
 														<toolbarItem>
 															<field name="actionID">
@@ -3372,6 +4065,11 @@
 														<toolbarItem>
 															<field name="actionID">
 																<String>geocoordinates</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>@klosterdb</String>
 															</field>
 														</toolbarItem>
 													</toolbarEntry-array>
@@ -3405,6 +4103,16 @@
 														<toolbarItem>
 															<field name="actionID">
 																<String>@typ[sache]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>@typ[xref]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>@typ[rolle]</String>
 															</field>
 														</toolbarItem>
 													</toolbarEntry-array>

@@ -86,6 +86,7 @@
                     <value>manz</value>
                     <value>rübsamen</value>
                     <value>würz</value>
+                    <value>weber</value>
                 </choice>
             </attribute>
         </optional>
@@ -124,6 +125,16 @@
                     </attribute>
                 </optional>
                 <optional>
+                    <attribute name="wikidata">
+                        <text/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="klosterdb">
+                        <text/>
+                    </attribute>
+                </optional>
+                <optional>
                     <group>
                         <attribute name="lat">
                             <text/>
@@ -150,6 +161,11 @@
                         <text/>
                     </attribute>
                 </optional>
+                <optional>
+                    <attribute name="wikidata">
+                        <text/>
+                    </attribute>
+                </optional>
             </group>
             <group>
                 <attribute name="typ">
@@ -162,7 +178,19 @@
                         <text/>
                     </attribute>
                 </optional>
+                <optional>
+                    <attribute name="wikidata">
+                        <text/>
+                    </attribute>
+                </optional>
             </group>
+            <attribute name="typ">
+                <choice>
+                    <value>xref</value>
+                    <value>stufe_unclear</value>
+                    <value>rolle</value>
+                </choice>
+            </attribute>
         </choice>
     </define>
 
@@ -187,7 +215,9 @@
                 <zeroOrMore>
                     <element name="Regestennummer">
                         <interleave>
-                            <zeroOrMore><text/></zeroOrMore>
+                            <zeroOrMore>
+                                <text/>
+                            </zeroOrMore>
                             <zeroOrMore>
                                 <ref name="nr"/>
                             </zeroOrMore>
@@ -197,7 +227,9 @@
                 <zeroOrMore>
                     <element name="RegestennummerFett">
                         <interleave>
-                            <zeroOrMore><text/></zeroOrMore>
+                            <zeroOrMore>
+                                <text/>
+                            </zeroOrMore>
                             <zeroOrMore>
                                 <ref name="nr"/>
                             </zeroOrMore>
@@ -277,6 +309,9 @@
                         <value>H</value>
                         <value>F</value>
                         <value>F?</value>
+                        <value>Kurzreg</value>
+                        <value>Dep</value>
+                        <value>indirErw</value>
                     </choice>
                 </attribute>
             </optional>
