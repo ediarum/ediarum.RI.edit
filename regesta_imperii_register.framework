@@ -3861,6 +3861,288 @@
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>@typ[ereignis]</String>
+										</field>
+										<field name="name">
+											<String>Ereignis</String>
+										</field>
+										<field name="description">
+											<String>Kategorie des Registereintrags auf "Ergeignis" setzen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe6</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe6</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>ereignis</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe5</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe5</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>ereignis</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe4</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe4</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>ereignis</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe3</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe3</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>ereignis</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe2</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe2</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>ereignis</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe1</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe1</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>ereignis</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::Stufe0</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>ancestor-or-self::Stufe0</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>typ</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String></String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>true</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>ereignis</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -4113,6 +4395,11 @@
 														<toolbarItem>
 															<field name="actionID">
 																<String>@typ[rolle]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>@typ[ereignis]</String>
 															</field>
 														</toolbarItem>
 													</toolbarEntry-array>
