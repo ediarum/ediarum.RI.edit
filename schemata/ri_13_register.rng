@@ -214,6 +214,11 @@
                     </element>
                 </zeroOrMore>
                 <zeroOrMore>
+                    <element name="sup">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
                     <element name="Regestennummer">
                         <interleave>
                             <zeroOrMore>

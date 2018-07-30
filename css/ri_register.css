@@ -73,6 +73,13 @@ Kursivtext {
 	-oxy-display-tags: none;
 }
 
+sup {
+    position: relative; 
+    top: -0.5em;
+    font-size: 0.7em;
+    -oxy-display-tags: none;
+}
+
 Regestennummer, RegestennummerFett {
 	background-color: #F7F6D7;	
 	-oxy-display-tags: none;
