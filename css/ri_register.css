@@ -96,8 +96,8 @@ nr {
 [typ="ort"] nr:after {
     content: oxy_popup(
     edit, "@type",
-    values, "austOrt,verlOrt,empfaenger,beguenst,nennung",
-    labels, "Ausstellungsort,verliehener Ort,Empfänger,Begünstigter,Nennung",
+    values, "austOrt,verlOrt,datOrt,empfaenger,beguenst,nennung",
+    labels, "Ausstellungsort,verliehener Ort,Datierungsort,Empfänger,Begünstigter,Nennung",
     selectionMode,multiple,
     rendererSeparator, ",",
     visible,true,
@@ -130,7 +130,7 @@ nr[type~=empfaenger] {
     font-style: italic;
 }
 
-nr[type~=austOrt] {
+nr[type~=austOrt], nr[type~=datOrt] {
     font-weight: bold;
 }
 
