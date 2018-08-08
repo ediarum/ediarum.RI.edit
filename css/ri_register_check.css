@@ -33,3 +33,36 @@ Stufe6[checked="no"]:after {
 nr:not([type]):not([source_type]) {
     background-color: FireBrick;
 }
+
+[typ="ort"] nr:after {
+    content: oxy_popup(
+    edit, "@type",
+    values, "austOrt,verlOrt,datOrt,empfaenger,beguenst,nennung",
+    labels, "Ausstellungsort,verliehener Ort,Datierungsort,Empfänger,Begünstigter,Nennung",
+    selectionMode,multiple,
+    rendererSeparator, ",",
+    visible,true,
+    columns,1);
+}
+
+[typ="sache"] nr:after {
+    content: oxy_popup(
+    edit, "@type",
+    values, "beguenst,intervenient,petent,zeuge,nennung",
+    labels, "Begünstigter,Intervenient,Petent,Zeuge,Nennung",
+    selectionMode,multiple,
+    rendererSeparator, ",",
+    visible,true,
+    columns,1);
+}
+
+[typ="person"] nr:after {
+    content: oxy_popup(
+    edit, "@type",
+    values, "empfaenger,beguenst,p_tot,p_komment,intervenient,petent,zeuge,nennung",
+    labels, "Empfänger,Begünstigter,Person ist tot, Person ist im Kommentarteil,Intervenient,Petent,Zeuge,Nennung",
+    selectionMode,multiple,
+    rendererSeparator, ",",
+    visible,true,
+    columns,1);
+}
