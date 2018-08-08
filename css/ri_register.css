@@ -3,7 +3,7 @@
  * Berlin-Brandenburgische Akademie der Wissenschaften
  * TELOTA - The electronic life of the academy
  * @author:     Stefan Dumont, dumont@bbaw.de
- * @changed:    25-08-2014
+ * @changed:    08-08-2018
  */
 
 head {
@@ -127,4 +127,8 @@ ref[ziel*="0"]:after {
 	padding-left: 0.3em;
     content: url('gfx/link.png');
 	link: oxy_concat("https://exist.regesta-imperii.de/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(ziel), 0, 1)), ".xml#") attr(ziel);
+}
+
+idno {
+    display: none;
 }
