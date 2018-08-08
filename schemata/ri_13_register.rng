@@ -37,26 +37,44 @@
             <ref name="content"/>
             <zeroOrMore>
                 <element name="Stufe1">
+                    <attribute name="oberbegriff">
+                        <data type="ID"/>
+                    </attribute>
                     <ref name="stufen_attributes"/>
                     <ref name="content"/>
                     <zeroOrMore>
                         <element name="Stufe2">
+                            <attribute name="oberbegriff">
+                                <data type="ID"/>
+                            </attribute>
                             <ref name="stufen_attributes"/>
                             <ref name="content"/>
                             <zeroOrMore>
                                 <element name="Stufe3">
+                                    <attribute name="oberbegriff">
+                                        <data type="ID"/>
+                                    </attribute>
                                     <ref name="stufen_attributes"/>
                                     <ref name="content"/>
                                     <zeroOrMore>
                                         <element name="Stufe4">
+                                            <attribute name="oberbegriff">
+                                                <data type="ID"/>
+                                            </attribute>
                                             <ref name="stufen_attributes"/>
                                             <ref name="content"/>
                                             <zeroOrMore>
                                                 <element name="Stufe5">
+                                                    <attribute name="oberbegriff">
+                                                        <data type="ID"/>
+                                                    </attribute>
                                                   <ref name="stufen_attributes"/>
                                                   <ref name="content"/>
                                                   <zeroOrMore>
-                                                  <element name="Stufe6">
+                                                      <element name="Stufe6">
+                                                          <attribute name="oberbegriff">
+                                                              <data type="ID"/>
+                                                          </attribute>
                                                   <ref name="stufen_attributes"/>
                                                   <ref name="content"/>
                                                   </element>
