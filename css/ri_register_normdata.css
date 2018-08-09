@@ -6,47 +6,50 @@
  * Berlin-Brandenburgische Akademie der Wissenschaften
  * TELOTA - The electronic life of the academy
  * @author:     Stefan Dumont, dumont@bbaw.de
- * @changed:    18-03-2015
+ * @changed:    08-08-2018
  */
 
-*[gnd] > Inhalt:after {
-    content: " GND: " oxy_xpath("parent::*/@gnd");
-    link: "http://d-nb.info/gnd/" oxy_xpath("parent::*/@gnd");
+idno {
+    display: block;
+}
+
+idno[type=gnd]:before {
+    content: "GND: ";
+    link: "https://d-nb.info/gnd/" oxy_xpath("string(.)");
     color: gray;
 }
 
-*[gsn] > Inhalt:after {
-    content: " GSN: " oxy_xpath("parent::*/@gsn");
-    link: "http://personendatenbank.germania-sacra.de/index/gsn/" oxy_xpath("parent::*/@gsn");
+idno[type=gsn]:before {
+    content: "GSN: ";
+    link: "http://personendatenbank.germania-sacra.de/index/gsn/" oxy_xpath("string(.)");
     color: gray;
 }
 
-*[gnd][gsn] > Inhalt:after {
-    content: " GND: " oxy_xpath("parent::*/@gnd") ", GSN: " oxy_xpath("parent::*/@gsn");
+idno[type=geonames]:before {
+    content: "GeoNames: ";
+    link: "https://www.geonames.org/" oxy_xpath("string(.)");
     color: gray;
 }
 
-*[geonames] > Inhalt:after {
-    content: " Geonames: " oxy_xpath("parent::*/@geonames");
-    link: "http://geonames.org/" oxy_xpath("parent::*/@geonames");
+idno[type=getty]:before {
+    content: "Getty-ID: ";
+    link: "http://www.getty.edu/art/collection/objects/" oxy_xpath("string(.)");
     color: gray;
 }
 
-*[getty] > Inhalt:after {
-    content: " Getty-ID: " oxy_xpath("parent::*/@getty");
+idno[type=klosterdb]:before {
+    content: "Klosterdb-ID: ";
+    link: "https://adw-goe.de/forschung/forschungsprojekte-akademienprogramm/germania-sacra/klosterdatenbank/datenbankabfrage/gsn/" oxy_xpath("string(.)");
     color: gray;
 }
 
-*[getty][geonames] > Inhalt:after {
-    content: " Getty-ID: " oxy_xpath("parent::*/@getty") ", Geonames: " oxy_xpath("parent::*/@geonames");
+idno[type=wikidata]:before {
+    content: "Wikidata: ";
+    link: "https://www.wikidata.org/w/index.php?uselang=de&title=" oxy_xpath("string(.)");
     color: gray;
 }
 
-*[lon] > Inhalt:after {
-    content: " Koordinaten: " oxy_xpath("parent::*/@lat") ", " oxy_xpath("parent::*/@lon");
-}
-
-*[lon][geonames] > Inhalt:after {
-    content: " Koordinaten: " oxy_xpath("parent::*/@lat") ", " oxy_xpath("parent::*/@lon") ", Geonames: " oxy_xpath("parent::*/@geonames");
-    color: gray;
+*[lon] > Inhalt:before {
+    content: "Koordinaten: " oxy_xpath("parent::*/@lat") ", " oxy_xpath("parent::*/@lon");
+    display: block;
 }

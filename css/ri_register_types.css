@@ -33,3 +33,8 @@
     content: "(R) ";
     color: gray;
 }
+
+*[typ='ereignis'] > Inhalt:before {
+    content: "(E) ";
+    color: gray;
+}

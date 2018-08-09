@@ -37,26 +37,44 @@
             <ref name="content"/>
             <zeroOrMore>
                 <element name="Stufe1">
+                    <attribute name="oberbegriff">
+                        <text/>
+                    </attribute>
                     <ref name="stufen_attributes"/>
                     <ref name="content"/>
                     <zeroOrMore>
                         <element name="Stufe2">
+                            <attribute name="oberbegriff">
+                                <text/>
+                            </attribute>
                             <ref name="stufen_attributes"/>
                             <ref name="content"/>
                             <zeroOrMore>
                                 <element name="Stufe3">
+                                    <attribute name="oberbegriff">
+                                        <text/>
+                                    </attribute>
                                     <ref name="stufen_attributes"/>
                                     <ref name="content"/>
                                     <zeroOrMore>
                                         <element name="Stufe4">
+                                            <attribute name="oberbegriff">
+                                                <text/>
+                                            </attribute>
                                             <ref name="stufen_attributes"/>
                                             <ref name="content"/>
                                             <zeroOrMore>
                                                 <element name="Stufe5">
+                                                  <attribute name="oberbegriff">
+                                                  <text/>
+                                                  </attribute>
                                                   <ref name="stufen_attributes"/>
                                                   <ref name="content"/>
                                                   <zeroOrMore>
                                                   <element name="Stufe6">
+                                                  <attribute name="oberbegriff">
+                                                  <text/>
+                                                  </attribute>
                                                   <ref name="stufen_attributes"/>
                                                   <ref name="content"/>
                                                   </element>
@@ -110,31 +128,6 @@
                     <value>ort</value>
                 </attribute>
                 <optional>
-                    <attribute name="geonames">
-                        <text/>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="getty">
-                        <text/>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="gnd">
-                        <text/>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="wikidata">
-                        <text/>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="klosterdb">
-                        <text/>
-                    </attribute>
-                </optional>
-                <optional>
                     <group>
                         <attribute name="lat">
                             <text/>
@@ -144,6 +137,20 @@
                         </attribute>
                     </group>
                 </optional>
+                <zeroOrMore>
+                    <element name="idno">
+                        <attribute name="type">
+                            <choice>
+                                <value>geonames</value>
+                                <value>getty</value>
+                                <value>gnd</value>
+                                <value>wikidata</value>
+                                <value>klosterdb</value>
+                            </choice>
+                        </attribute>
+                        <text/>
+                    </element>
+                </zeroOrMore>
             </group>
             <group>
                 <attribute name="typ">
@@ -151,21 +158,18 @@
                         <value>person</value>
                     </choice>
                 </attribute>
-                <optional>
-                    <attribute name="gnd">
+                <zeroOrMore>
+                    <element name="idno">
+                        <attribute name="type">
+                            <choice>
+                                <value>gnd</value>
+                                <value>wikidata</value>
+                                <value>gsn</value>
+                            </choice>
+                        </attribute>
                         <text/>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="gsn">
-                        <text/>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="wikidata">
-                        <text/>
-                    </attribute>
-                </optional>
+                    </element>
+                </zeroOrMore>
             </group>
             <group>
                 <attribute name="typ">
@@ -173,22 +177,24 @@
                         <value>sache</value>
                     </choice>
                 </attribute>
-                <optional>
-                    <attribute name="gnd">
+                <zeroOrMore>
+                    <element name="idno">
+                        <attribute name="type">
+                            <choice>
+                                <value>gnd</value>
+                                <value>wikidata</value>
+                            </choice>
+                        </attribute>
                         <text/>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="wikidata">
-                        <text/>
-                    </attribute>
-                </optional>
+                    </element>
+                </zeroOrMore>
             </group>
             <attribute name="typ">
                 <choice>
                     <value>xref</value>
                     <value>stufe_unclear</value>
                     <value>rolle</value>
+                    <value>ereignis</value>
                 </choice>
             </attribute>
         </choice>
@@ -210,6 +216,11 @@
                                 <ref name="ref"/>
                             </zeroOrMore>
                         </interleave>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <element name="sup">
+                        <text/>
                     </element>
                 </zeroOrMore>
                 <zeroOrMore>
@@ -273,6 +284,9 @@
                         </optional>
                         <optional>
                             <value>verlOrt</value>
+                        </optional>
+                        <optional>
+                            <value>datOrt</value>
                         </optional>
                         <optional>
                             <value>empfaenger</value>

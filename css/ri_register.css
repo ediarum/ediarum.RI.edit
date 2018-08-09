@@ -3,7 +3,7 @@
  * Berlin-Brandenburgische Akademie der Wissenschaften
  * TELOTA - The electronic life of the academy
  * @author:     Stefan Dumont, dumont@bbaw.de
- * @changed:    25-08-2014
+ * @changed:    08-08-2018
  */
 
 head {
@@ -73,6 +73,13 @@ Kursivtext {
 	-oxy-display-tags: none;
 }
 
+sup {
+    position: relative; 
+    top: -0.5em;
+    font-size: 0.7em;
+    -oxy-display-tags: none;
+}
+
 Regestennummer, RegestennummerFett {
 	background-color: #F7F6D7;	
 	-oxy-display-tags: none;
@@ -85,45 +92,12 @@ RegestennummerFett {
 nr {
 	-oxy-display-tags: none;
 }
-	
-[typ="ort"] nr:after {
-    content: oxy_popup(
-    edit, "@type",
-    values, "austOrt,verlOrt,empfaenger,beguenst,nennung",
-    labels, "Ausstellungsort,verliehener Ort,Empfänger,Begünstigter,Nennung",
-    selectionMode,multiple,
-    rendererSeparator, ",",
-    visible,true,
-    columns,1);
-}
-
-[typ="sache"] nr:after {
-    content: oxy_popup(
-    edit, "@type",
-    values, "beguenst,intervenient,petent,zeuge,nennung",
-    labels, "Begünstigter,Intervenient,Petent,Zeuge,Nennung",
-    selectionMode,multiple,
-    rendererSeparator, ",",
-    visible,true,
-    columns,1);
-}
-
-[typ="person"] nr:after {
-    content: oxy_popup(
-    edit, "@type",
-    values, "empfaenger,beguenst,p_tot,p_komment,intervenient,petent,zeuge,nennung",
-    labels, "Empfänger,Begünstigter,Person ist tot, Person ist im Kommentarteil,Intervenient,Petent,Zeuge,Nennung",
-    selectionMode,multiple,
-    rendererSeparator, ",",
-    visible,true,
-    columns,1);
-}
 
 nr[type~=empfaenger] {
     font-style: italic;
 }
 
-nr[type~=austOrt] {
+nr[type~=austOrt], nr[type~=datOrt] {
     font-weight: bold;
 }
 
@@ -153,4 +127,8 @@ ref[ziel*="0"]:after {
 	padding-left: 0.3em;
     content: url('gfx/link.png');
 	link: oxy_concat("https://exist.regesta-imperii.de/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(ziel), 0, 1)), ".xml#") attr(ziel);
+}
+
+idno {
+    display: none;
 }
