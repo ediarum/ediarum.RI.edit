@@ -11946,17 +11946,6 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                             </userEditorVariable>
                             <userEditorVariable>
                                 <field name="name">
-                                    <String>${RI_USERNAME}</String>
-                                </field>
-                                <field name="value">
-                                    <String>kuczera</String>
-                                </field>
-                                <field name="shortDescription">
-                                    <String>Nachname des Benutzers in Kleinbuchstaben</String>
-                                </field>
-                            </userEditorVariable>
-                            <userEditorVariable>
-                                <field name="name">
                                     <String>${RI_SECTION}</String>
                                 </field>
                                 <field name="value">
