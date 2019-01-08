@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="15.0" xml:space="preserve">
-	<map>
+<serialized version="19.1" xml:space="preserve">
+	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
 				<documentTypeDescriptor>
+					<field name="extensionPatch">
+						<null/>
+					</field>
 					<field name="name">
-						<String>Regesta Imperii - Register - READONLY</String>
+						<String>Regesta Imperii – Register – READONLY</String>
 					</field>
 					<field name="schemaDescriptor">
 						<null/>
 					</field>
 					<field name="classpath">
 						<String-array/>
+					</field>
+					<field name="parentClassLoaderID">
+						<null/>
 					</field>
 					<field name="authorExtensionDescriptor">
 						<authorExtension>
@@ -34,6 +40,9 @@
 							<field name="mergeCSSsFromDocument">
 								<Boolean>true</Boolean>
 							</field>
+							<field name="multipleAlternateSelectionEnabled">
+								<Boolean>false</Boolean>
+							</field>
 							<field name="actionDescriptors">
 								<action-array/>
 							</field>
@@ -51,6 +60,9 @@
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array/>
 									</field>
+									<field name="context">
+										<null/>
+									</field>
 								</menu>
 							</field>
 							<field name="popupMenuDescriptor">
@@ -66,6 +78,9 @@
 									</field>
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array/>
+									</field>
+									<field name="context">
+										<null/>
 									</field>
 								</menu>
 							</field>
@@ -104,16 +119,28 @@
 							<field name="tableSupportClassName">
 								<null/>
 							</field>
+							<field name="tableCellSeparatorSupportClassName">
+								<null/>
+							</field>
 							<field name="tableColWidthSupportClassName">
 								<null/>
 							</field>
 							<field name="customReferencesResolver">
 								<null/>
 							</field>
+							<field name="editPropertiesHandler">
+								<null/>
+							</field>
 							<field name="authorExtensionStateListener">
 								<null/>
 							</field>
 							<field name="attributesRecognizer">
+								<null/>
+							</field>
+							<field name="authorActionEventHandler">
+								<null/>
+							</field>
+							<field name="authorImageDecorator">
 								<null/>
 							</field>
 						</authorExtension>
@@ -152,7 +179,7 @@
 									<String>http://www.telota.de</String>
 								</field>
 								<field name="attributeValue">
-									<String>ri_13_register_readonly</String>
+									<String>ri_register_readonly</String>
 								</field>
 							</documentTypeRule>
 						</documentTypeRule-array>
@@ -270,8 +297,11 @@
 					<field name="customAttributeValueEditor">
 						<null/>
 					</field>
+					<field name="textModeExternalObjectInsertionHandler">
+						<null/>
+					</field>
 				</documentTypeDescriptor>
 			</documentTypeDescriptor-array>
 		</entry>
-	</map>
+	</serializableOrderedMap>
 </serialized>
