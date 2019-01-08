@@ -9,7 +9,7 @@
 						<null/>
 					</field>
 					<field name="name">
-						<String>Regesta Imperii Abt. 13 - Register</String>
+						<String>Regesta Imperii – Register</String>
 					</field>
 					<field name="schemaDescriptor">
 						<null/>
@@ -4501,7 +4501,7 @@
 									<String>http://www.telota.de</String>
 								</field>
 								<field name="attributeValue">
-									<String>ri_13_register</String>
+									<String>ri_register</String>
 								</field>
 							</documentTypeRule>
 						</documentTypeRule-array>
