@@ -4,7 +4,7 @@
     xmlns:saxon="http://saxon.sf.net/" exclude-result-prefixes="saxon"
     version="2.0">
     
-    <xsl:variable name="ri_13_register_responsibles">
+    <xsl:variable name="ri_register_responsibles">
         |dumont|manz|rübsamen|weber|
     </xsl:variable>
     
@@ -22,7 +22,7 @@
                 <xsl:value-of select="$keyvalue" />
             </xsl:attribute>
             <xsl:choose>
-                <xsl:when test="matches(@cruser, $ri_13_register_responsibles)">
+                <xsl:when test="matches(@cruser, $ri_register_responsibles)">
                     <xsl:attribute name="checked">
                         <xsl:text>yes</xsl:text>
                     </xsl:attribute>
