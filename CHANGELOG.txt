@@ -1,6 +1,6 @@
 Berlin-Brandenburgische Akademie der Wissenschaften 
 TELOTA - The electronic Life of the Academy
-http://telotadev.bbaw.de/oxygen/updateSite.xml
+http://telotadev.bbaw.de/oxygen/regesta-imperii/update.xml
 
 ------------------------------------------------------------------------------------------------
 ediarum
