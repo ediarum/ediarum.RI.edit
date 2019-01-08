@@ -14,6 +14,13 @@ Framework (Dokumenttyp Zuordnung) für Oxygen XML
 CHANGELOG
 ------------------------------------------------------------------------------------------------
 
+3.3.0 vom 08.01.2019
+	* FEATURE: Ablösung der Benutzervariable ${RI_USERNAME} durch ${author.name}
+	* UPDATE: Zu restriktive Schemaergänzung (@oberbegriff) rückgängig gemacht
+	* UPDATE: Nutzerkonten ergänzt
+
+------------------------------------------------------------------------------------------------
+
 3.2.0 vom 09.08.2018
 	* FEATURE: Normdaten von Attributen in <idno>-Elemente verschoben
 	* UPDATE: Bearbeitungs-Popup für Verweistypen in Überprüfungsmodus verschoben
