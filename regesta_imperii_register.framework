@@ -686,7 +686,7 @@
   &lt;xsl:variable name="ri_id-api">
     &lt;xsl:text>${RI_ID-API}&lt;/xsl:text>
   &lt;/xsl:variable>
-    &lt;xsl:import href="resources/registerAddID.xsl"/>
+    &lt;xsl:import href="${framework}/resources/registerAddID.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1709,7 +1709,7 @@
     &lt;xsl:variable name="ri_13_register_responsibles">
      &lt;xsl:text>${RI_RESPONSIBLES}&lt;/xsl:text>
    &lt;/xsl:variable>
-    &lt;xsl:import href="resources/ri_register_check.xsl"/>
+    &lt;xsl:import href="${framework}/resources/ri_register_check.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
