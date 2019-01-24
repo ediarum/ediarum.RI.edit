@@ -672,7 +672,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/registerAddID.xsl"/>
+    &lt;xsl:import href="${framework}/resources/registerAddID.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1272,7 +1272,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1300,7 +1300,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1328,7 +1328,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1356,7 +1356,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1384,7 +1384,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1412,7 +1412,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1440,7 +1440,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1498,7 +1498,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1526,7 +1526,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1692,7 +1692,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/ri_register_check.xsl"/>
+    &lt;xsl:import href="${framework}/resources/ri_register_check.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
