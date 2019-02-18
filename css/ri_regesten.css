@@ -95,7 +95,7 @@ persName {
 
 persName[key*="0"]:after {
     content: url('gfx/persName.png');
-    link: oxy_concat("https://exist.regesta-imperii.de/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(key), 0, 1)), ".xml#") attr(key);
+    link: oxy_concat("https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(key), 0, 1)), ".xml#") attr(key);
     padding-left: 0.3em;
 }
 
@@ -111,7 +111,7 @@ placeName {
 
 placeName[key*="0"]:after {
     content: url('gfx/placeName.png');
-    link: oxy_concat("https://exist.regesta-imperii.de/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(key), 0, 1)), ".xml#") attr(key);
+    link: oxy_concat("https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(key), 0, 1)), ".xml#") attr(key);
     padding-left: 0.3em;
 }
 

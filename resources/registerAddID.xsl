@@ -13,7 +13,7 @@
         <xsl:variable name="section"><xsl:value-of select="./substring-after(@section, 'register_')" /></xsl:variable><!-- Abteilungsordner, z.B. "013" -->
         <xsl:variable name="letter"><xsl:value-of select="./@letter" /></xsl:variable><!-- Buchstabe, d.h. Dateiname -->
         <!-- Setzt Attributwerte als Parameter und fragt online nach neuer ID -->
-        <xsl:variable name="path">https://exist.regesta-imperii.de/ediarum/routinen/ri_register_newID.xql?section=<xsl:value-of select="$section" />&amp;letter=<xsl:value-of select="$letter" /></xsl:variable>
+        <xsl:variable name="path">https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/routinen/ri_register_newID.xql?section=<xsl:value-of select="$section" />&amp;letter=<xsl:value-of select="$letter" /></xsl:variable>
 
         <xsl:variable name="keyvalue"><xsl:value-of select="document($path)//newID/text()"/></xsl:variable>
 
