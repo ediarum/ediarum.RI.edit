@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="17.1">
+<project version="20.1">
     <meta>
         <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="17.1" xml:space="preserve">
+            <serialized version="20.1" xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
                         <String>autosave.enable</String>
@@ -10325,6 +10325,9 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                                 <field name="menuEntriesDescriptorList">
                                                     <menuEntry-array/>
                                                 </field>
+                                                <field name="context">
+                                                    <null/>
+                                                </field>
                                             </menu>
                                         </field>
                                         <field name="popupMenuDescriptor">
@@ -10340,6 +10343,9 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                                 </field>
                                                 <field name="menuEntriesDescriptorList">
                                                     <menuEntry-array/>
+                                                </field>
+                                                <field name="context">
+                                                    <null/>
                                                 </field>
                                             </menu>
                                         </field>
@@ -11120,16 +11126,28 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                         <field name="tableSupportClassName">
                                             <null/>
                                         </field>
+                                        <field name="tableCellSeparatorSupportClassName">
+                                            <null/>
+                                        </field>
                                         <field name="tableColWidthSupportClassName">
                                             <null/>
                                         </field>
                                         <field name="customReferencesResolver">
                                             <null/>
                                         </field>
+                                        <field name="editPropertiesHandler">
+                                            <null/>
+                                        </field>
                                         <field name="authorExtensionStateListener">
                                             <null/>
                                         </field>
                                         <field name="attributesRecognizer">
+                                            <null/>
+                                        </field>
+                                        <field name="authorActionEventHandler">
+                                            <null/>
+                                        </field>
+                                        <field name="authorImageDecorator">
                                             <null/>
                                         </field>
                                     </authorExtension>
@@ -11286,6 +11304,9 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                     <null/>
                                 </field>
                                 <field name="customAttributeValueEditor">
+                                    <null/>
+                                </field>
+                                <field name="textModeExternalObjectInsertionHandler">
                                     <null/>
                                 </field>
                             </documentTypeDescriptor>
@@ -11868,6 +11889,8 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                         <String>extensions.update.sites</String>
                         <String-array>
                             <String>http://telotadev.bbaw.de/oxygen/regesta-imperii/update.xml</String>
+                            <String>https://oxygen.adwmainz.net/regesta-imperii-abt13/update.xml</String>
+                            <String>https://oxygen.adwmainz.net/regesta-imperii-abt6/update.xml</String>
                         </String-array>
                     </entry>
                     <entry>
