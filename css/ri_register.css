@@ -126,7 +126,7 @@ ref[ziel*="0"] {
 ref[ziel*="0"]:after {
 	padding-left: 0.3em;
     content: url('gfx/link.png');
-	link: oxy_concat("https://exist.regesta-imperii.de/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(ziel), 0, 1)), ".xml#") attr(ziel);
+	link: oxy_concat("https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(ziel), 0, 1)), ".xml#") attr(ziel);
 }
 
 idno {
