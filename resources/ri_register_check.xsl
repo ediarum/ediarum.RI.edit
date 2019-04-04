@@ -4,10 +4,6 @@
     xmlns:saxon="http://saxon.sf.net/" exclude-result-prefixes="saxon"
     version="2.0">
     
-    <xsl:variable name="ri_13_register_responsibles">
-        |dumont|manz|rübsamen|weber|
-    </xsl:variable>
-    
     <xsl:template match="Stufe0|Stufe1|Stufe2|Stufe3|Stufe4|Stufe5">
         <xsl:choose>
             <xsl:when test="matches(@currentuser, $ri_13_register_responsibles)">

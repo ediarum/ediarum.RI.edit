@@ -11467,7 +11467,7 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                     <String>${RI_RESPONSIBLES}</String>
                                 </field>
                                 <field name="value">
-                                    <String>|dumont|manz|rübsamen|weber|</String>
+                                    <String>dumont|manz|rübsamen|weber</String>
                                 </field>
                                 <field name="shortDescription">
                                     <String></String>
