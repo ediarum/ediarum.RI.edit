@@ -3,17 +3,13 @@
     xmlns:telota="http://www.telota.de"
     xmlns:saxon="http://saxon.sf.net/" exclude-result-prefixes="saxon"
     version="2.0">
-    
-    <xsl:variable name="ri_13_register_responsibles">
-        |dumont|manz|rübsamen|weber|
-    </xsl:variable>
-    
+        
     <xsl:template match="Stufe0|Stufe1|Stufe2|Stufe3|Stufe4|Stufe5">
         <!-- Liest Attribute aus übergebener Stufe aus --> 
         <xsl:variable name="section"><xsl:value-of select="./substring-after(@section, 'register_')" /></xsl:variable><!-- Abteilungsordner, z.B. "013" -->
         <xsl:variable name="letter"><xsl:value-of select="./@letter" /></xsl:variable><!-- Buchstabe, d.h. Dateiname -->
         <!-- Setzt Attributwerte als Parameter und fragt online nach neuer ID -->
-        <xsl:variable name="path">https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/routinen/ri_register_newID.xql?section=<xsl:value-of select="$section" />&amp;letter=<xsl:value-of select="$letter" /></xsl:variable>
+        <xsl:variable name="path"><xsl:value-of select="$ri_id-api"/><xsl:text>?section=</xsl:text><xsl:value-of select="$section" /><xsl:text>&amp;letter=</xsl:text><xsl:value-of select="$letter" /></xsl:variable>
 
         <xsl:variable name="keyvalue"><xsl:value-of select="document($path)//newID/text()"/></xsl:variable>
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="20.1">
+<project version="20.0">
     <meta>
         <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="20.1" xml:space="preserve">
+            <serialized version="20.0" xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
                         <String>autosave.enable</String>
@@ -11317,14 +11317,6 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                         <documentTypeEntry-array>
                             <documentTypeEntry>
                                 <field name="documentTypeID">
-                                    <String>6/ediarum_hirt/hirt_register_artwork.framework/ediarum.HIRT_ARTWORK</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
                                     <String>2/internal/CAGB - Dateiendung</String>
                                 </field>
                                 <field name="enable">
@@ -11333,111 +11325,7 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                             </documentTypeEntry>
                             <documentTypeEntry>
                                 <field name="documentTypeID">
-                                    <String>6/ediarum_avhr/ediarum_avhr.framework/ediarum.AVHR</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_avhr-c/ediarum_avhr-c.framework/ediarum.AVHR-C Chronologie</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
                                     <String>6/ediarum_basis/ediarum_basis_register.framework/ediarum.BASIS.register</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_helmholtz/ediarum_helmholtz.framework/ediarum.HELMHOLTZ</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_hirt/ediarum_hirt.framework/ediarum.HIRT</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_iffland/ediarum_iffland.framework/ediarum.IFFLAND</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_johnson/ediarum_johnson.framework/ediarum.JOHNSON</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_lehndorff/ediarum.lehndorff.framework/ediarum.LEHNDORFF</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_mega/ediarum_mega.framework/ediarum.MEGA</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_windeck/ediarum-windeck.framework/ediarum.WINDECK</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_mop/ediarum_mop.framework/ediarum.mop</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/fo/fo_ext.framework/FO</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/test_multiple_execute/sample.framework/Sample</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/wvh/wvh.framework/WvH</String>
                                 </field>
                                 <field name="enable">
                                     <Boolean>false</Boolean>
@@ -11459,438 +11347,12 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                     <Boolean>false</Boolean>
                                 </field>
                             </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_qpm/ediarum.qpm.framework/ediarum.QPM</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ant/ant.framework/ANT</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/dita/dita.framework/DITA</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/dita/ditamap.framework/DITA Map</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/dita/ditaval.framework/DITAVAL</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/daisy/daisy.framework/Daisy</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/docbook/docbook4.framework/DocBook 4</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/docbook/docbook5.framework/DocBook 5</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/docbook/targetset.framework/Docbook Targetset</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ead/ead.framework/EAD</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/jats/jats.framework/JATS</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/kml/kml.framework/KML</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/mathml/mathml.framework/MathML</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/maven/maven.framework/Maven Project</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/maven/maven.framework/Maven Settings</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ncx/ncx.framework/NCX</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/nvdl/nvdl.framework/NVDL</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xml/xmlcatalog.framework/OASIS XML Catalog</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ocf/ocf.framework/OCF</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/odf/odf.framework/ODF 1.2</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ooxml/ooxml.framework/OOXML</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/opf/opf2.0.framework/OPF 2.0</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/opf/opf3.0.framework/OPF 3.0</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/extensions/extensions.framework/Oxygen Extensions</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/relaxng/relaxng.framework/Relax NG</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/sqf/sqf.framework/SQF</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/svg/svg.framework/SVG</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xslt/saxon.framework/Saxon</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/schematron/schematron.framework/Schematron</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/schematron/schematron15.framework/Schematron 1.5 (deprecated)</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/stratml/stratml1ISO.framework/StratML ISO Part1</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/stratml/stratml1.framework/StratML Part 1 (Strategic Plan)</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/stratml/stratml2.framework/StratML Part 2 (Perfomance Plans and Reports)</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/tei/teip5jtei.framework/TEI JTEI</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/tei/teip5odd.framework/TEI ODD</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/tei/teip4.framework/TEI P4 (deprecated)</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/tei/teip5.framework/TEI P5</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/wsdl/wsdl.framework/WSDL</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/widgets/widgets.framework/Widgets</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xhtml/xhtml.framework/XHTML</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xliff/xliff.framework/XLIFF 1.2</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xliff/xliff_2.0.framework/XLIFF 2.0</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xml_refactoring/xmlRefactoring.framework/XML Refactoring</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xmlschema/xmlschema.framework/XML Schema</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xmlspec/xmlspec.framework/XMLSpec</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xproc/xproc.framework/XProc</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/focheck/AHFormatter.framework/XSL 1.1 with Antenna House extensions</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xslt/xslt.framework/XSLT</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/xspec/xspec.framework/XSpec</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/samples/application_form.framework/Application Form (Sample)</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/samples/form-controls.framework/Form Controls (Sample)</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/samples/personal.framework/Personal (Sample)</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/samples/travel-guide.framework/Travel Guide (Sample)</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
                         </documentTypeEntry-array>
                     </entry>
                     <entry>
                         <String>extensions.update.sites</String>
                         <String-array>
                             <String>http://telotadev.bbaw.de/oxygen/regesta-imperii/update.xml</String>
-                            <String>https://oxygen.adwmainz.net/regesta-imperii-abt13/update.xml</String>
-                            <String>https://oxygen.adwmainz.net/regesta-imperii-abt6/update.xml</String>
                         </String-array>
                     </entry>
                     <entry>
@@ -11917,7 +11379,7 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                     <String>${RI_DATA_VIA_REST}</String>
                                 </field>
                                 <field name="value">
-                                    <String>https://exist.regesta-imperii.de/exist/rest/db/data/</String>
+                                    <String>https://exist.regesta-imperii.de/data/</String>
                                 </field>
                                 <field name="shortDescription">
                                     <String></String>
@@ -11961,10 +11423,21 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                     <String>${RI_DATACOPY_VIA_REST}</String>
                                 </field>
                                 <field name="value">
-                                    <String>https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/data_copy/</String>
+                                    <String>https://exist.regesta-imperii.de/ediarum/data_copy/</String>
                                 </field>
                                 <field name="shortDescription">
                                     <String></String>
+                                </field>
+                            </userEditorVariable>
+                            <userEditorVariable>
+                                <field name="name">
+                                    <String>${RI_USERNAME}</String>
+                                </field>
+                                <field name="value">
+                                    <String>kuczera</String>
+                                </field>
+                                <field name="shortDescription">
+                                    <String>Nachname des Benutzers in Kleinbuchstaben</String>
                                 </field>
                             </userEditorVariable>
                             <userEditorVariable>
@@ -11983,7 +11456,29 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                     <String>${RI_EDIARUM_ROUTINEN}</String>
                                 </field>
                                 <field name="value">
-                                    <String>https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/routinen/</String>
+                                    <String>https://exist.regesta-imperii.de/ediarum/routinen/</String>
+                                </field>
+                                <field name="shortDescription">
+                                    <String></String>
+                                </field>
+                            </userEditorVariable>
+                            <userEditorVariable>
+                                <field name="name">
+                                    <String>${RI_RESPONSIBLES}</String>
+                                </field>
+                                <field name="value">
+                                    <String>|dumont|manz|rübsamen|weber|</String>
+                                </field>
+                                <field name="shortDescription">
+                                    <String></String>
+                                </field>
+                            </userEditorVariable>
+                            <userEditorVariable>
+                                <field name="name">
+                                    <String>${RI_ID-API}</String>
+                                </field>
+                                <field name="value">
+                                    <String>https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/routinen/ri_register_newID.xql</String>
                                 </field>
                                 <field name="shortDescription">
                                     <String></String>
