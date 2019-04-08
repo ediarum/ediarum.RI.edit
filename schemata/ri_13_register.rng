@@ -80,14 +80,7 @@
         </attribute>
         <optional>
             <attribute name="cruser">
-                <choice>
-                    <value>dumont</value>
-                    <value>kuczera</value>
-                    <value>manz</value>
-                    <value>rübsamen</value>
-                    <value>würz</value>
-                    <value>weber</value>
-                </choice>
+                <text/>
             </attribute>
         </optional>
         <optional>
