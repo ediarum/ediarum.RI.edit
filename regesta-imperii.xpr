@@ -11352,7 +11352,8 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                     <entry>
                         <String>extensions.update.sites</String>
                         <String-array>
-                            <String>http://telotadev.bbaw.de/oxygen/regesta-imperii/update.xml</String>
+                            <String>https://oxygen.adwmainz.net/regesta-imperii-abt13/update.xml</String>
+							<String>https://oxygen.adwmainz.net/regesta-imperii-abt6/update.xml</String>
                         </String-array>
                     </entry>
                     <entry>
@@ -11379,7 +11380,7 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                     <String>${RI_DATA_VIA_REST}</String>
                                 </field>
                                 <field name="value">
-                                    <String>https://exist.regesta-imperii.de/data/</String>
+                                    <String>https://exist.regesta-imperii.de/exist/rest/db/data/</String>
                                 </field>
                                 <field name="shortDescription">
                                     <String></String>
@@ -11423,7 +11424,7 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                     <String>${RI_DATACOPY_VIA_REST}</String>
                                 </field>
                                 <field name="value">
-                                    <String>https://exist.regesta-imperii.de/ediarum/data_copy/</String>
+                                    <String>https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/data_copy/</String>
                                 </field>
                                 <field name="shortDescription">
                                     <String></String>
@@ -11456,7 +11457,7 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                     <String>${RI_EDIARUM_ROUTINEN}</String>
                                 </field>
                                 <field name="value">
-                                    <String>https://exist.regesta-imperii.de/ediarum/routinen/</String>
+                                    <String>https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/routinen/</String>
                                 </field>
                                 <field name="shortDescription">
                                     <String></String>
