@@ -3,7 +3,6 @@
     xmlns:telota="http://www.telota.de"
     xmlns:saxon="http://saxon.sf.net/" exclude-result-prefixes="saxon"
     version="2.0">
-
     <xsl:template match="Stufe0|Stufe1|Stufe2|Stufe3|Stufe4|Stufe5">
         <!-- Liest Attribute aus übergebener Stufe aus --> 
         <xsl:variable name="section"><xsl:value-of select="./substring-after(@section, 'register_')" /></xsl:variable><!-- Abteilungsordner, z.B. "013" -->
