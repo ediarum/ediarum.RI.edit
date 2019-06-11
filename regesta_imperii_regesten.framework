@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="15.1" xml:space="preserve">
-	<map>
+<serialized version="19.1" xml:space="preserve">
+	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
 				<documentTypeDescriptor>
+					<field name="extensionPatch">
+						<null/>
+					</field>
 					<field name="name">
-						<String>Regesta Imperii Abt. 13 - Regesten</String>
+						<String>Regesta Imperii – Regesten</String>
 					</field>
 					<field name="schemaDescriptor">
 						<docTypeSchema>
@@ -70,6 +73,9 @@
 							<field name="mergeCSSsFromDocument">
 								<Boolean>true</Boolean>
 							</field>
+							<field name="multipleAlternateSelectionEnabled">
+								<Boolean>false</Boolean>
+							</field>
 							<field name="actionDescriptors">
 								<action-array>
 									<action>
@@ -101,18 +107,21 @@
 														<String>ancestor-or-self::p</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;q xmlns="http://www.tei-c.org/ns/1.0">&lt;/q></String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -144,7 +153,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="literatur"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="literatur">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -157,13 +166,16 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -195,7 +207,7 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>first action</String>
 																<String>regest_1</String>
@@ -204,13 +216,16 @@
 																<String>second action</String>
 																<String>regest_2</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.MultipleActionsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -242,7 +257,7 @@
 														<String>ancestor-or-self::div[@type="regest"]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="ri_prov_${uuid}">
@@ -266,7 +281,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -277,7 +292,7 @@
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="ri_prov_${uuid}">
@@ -301,13 +316,16 @@
 																<String>insertPosition</String>
 																<String>Inside as first child</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -339,7 +357,7 @@
 														<String>ancestor-or-self::div[@type="regest"]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
 																<String>${RI_DATACOPY_VIA_REST}${RI_REGISTERPATH}${ask('Buchstaben des zu verlinkenden Registereintrags auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
@@ -364,13 +382,16 @@
 																<String>xpath to element of the attribute</String>
 																<String>ancestor-or-self::div[@type="regest"]/head/origPlace</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -402,13 +423,13 @@
 														<String>ancestor-or-self::div[parent::div[@type="regest"]]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -419,13 +440,16 @@
 																<String>targetLocation</String>
 																<String>ancestor-or-self::div[parent::div[@type="regest"]]</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -457,7 +481,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="literatur"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="kommentar"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="zeugen">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -470,7 +494,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -481,7 +505,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="kommentar"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="zeugen">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -494,7 +518,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -505,7 +529,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="zeugen">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -518,13 +542,16 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -556,7 +583,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="kanzler"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="literatur"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="kommentar"])  and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="kanzler">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -569,7 +596,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -580,7 +607,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="kanzler"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="kommentar"])  and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="kanzler">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -593,7 +620,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -604,7 +631,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="kanzler"])  and not(ancestor-or-self::div[@type="regest"]/div[@type="zeugen"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="kanzler">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -617,7 +644,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -628,7 +655,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="kanzler"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="kanzler">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -641,13 +668,16 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -679,7 +709,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="externe_verweise">&lt;list>&lt;item>${caret}&lt;/item>&lt;/list>&lt;/div></String>
@@ -692,7 +722,7 @@
 																<String>insertPosition</String>
 																<String>Inside as last child</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -703,7 +733,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"] and ancestor-or-self::item</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0">${caret}&lt;/item></String>
@@ -716,7 +746,7 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -727,7 +757,7 @@
 														<String>ancestor-or-self::div[@type="regest"] and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0">${caret}&lt;/item></String>
@@ -740,13 +770,16 @@
 																<String>insertPosition</String>
 																<String>Inside as last child</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -779,7 +812,7 @@
 and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="unterschriften">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -792,7 +825,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"])</St
 																<String>insertPosition</String>
 																<String>Inside as last child</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -804,7 +837,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"])</St
 and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="unterschriften">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -817,13 +850,16 @@ and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -856,7 +892,7 @@ and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
 and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="incipit">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -869,7 +905,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Inside as last child</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -880,7 +916,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="incipit">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -893,7 +929,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -904,7 +940,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="incipit">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -917,13 +953,16 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -956,7 +995,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="siegel">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -969,7 +1008,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Inside as last child</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -980,7 +1019,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"] and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="siegel">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -993,7 +1032,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1004,7 +1043,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="siegel">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1017,7 +1056,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1028,7 +1067,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="siegel">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1041,13 +1080,16 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1080,7 +1122,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="empfaenger">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1093,7 +1135,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Inside as last child</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1104,7 +1146,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="unterschriften"]) and ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"] and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="empfaenger">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1117,7 +1159,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1128,7 +1170,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="empfaenger">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1141,7 +1183,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1152,7 +1194,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="empfaenger">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1165,7 +1207,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1176,7 +1218,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="empfaenger">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1189,13 +1231,16 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1229,7 +1274,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="externe_verweise"]) and
 and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1242,7 +1287,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 																<String>insertPosition</String>
 																<String>Inside as last child</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1254,7 +1299,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1267,7 +1312,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1278,7 +1323,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="schreiber"]) and  not(ancestor-or-self::div[@type="regest"]/div[@type="incipit"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"])and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1291,7 +1336,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1302,7 +1347,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="schreiber"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="siegel"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1315,7 +1360,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1326,7 +1371,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="schreiber"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1339,7 +1384,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1350,7 +1395,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="schreiber"]) </String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="schreiber">&lt;p>${caret}&lt;/p>&lt;/div></String>
@@ -1363,13 +1408,16 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 																<String>insertPosition</String>
 																<String>Before</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1401,7 +1449,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 														<String>ancestor-or-self::div[@type="regest"]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="${id}">
@@ -1424,13 +1472,16 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1462,7 +1513,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 														<String>ancestor-or-self::q</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0">${caret}&lt;/note></String>
@@ -1475,7 +1526,7 @@ and not(ancestor-or-self::div[@type="regest"]/div[@type="empfaenger"])</String>
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
@@ -1489,18 +1540,21 @@ or ancestor-or-self::origPlace[parent::head]
 or ancestor-or-self::persName[parent::head]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0">${caret}&lt;/note></String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1532,7 +1586,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::p</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
 																<String>${RI_DATACOPY_VIA_REST}${RI_REGISTERPATH}${ask('Buchstaben des zu verlinkenden Registereintrags auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
@@ -1549,13 +1603,16 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>node</String>
 																<String>//li</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1587,12 +1644,12 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::persName</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>unwrapElementLocation</String>
 																<String>ancestor-or-self::persName</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.UnwrapTagsOperation</String>
@@ -1603,12 +1660,12 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::placeName</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>unwrapElementLocation</String>
 																<String>ancestor-or-self::placeName</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.UnwrapTagsOperation</String>
@@ -1619,18 +1676,21 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::q and not(ancestor-or-self::origDate)</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>unwrapElementLocation</String>
 																<String>ancestor-or-self::q</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.UnwrapTagsOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1662,7 +1722,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::p</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
 																<String>${RI_DATACOPY_VIA_REST}${RI_REGISTERPATH}${ask('Buchstaben des zu verlinkenden Registereintrags auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
@@ -1679,13 +1739,16 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>node</String>
 																<String>//li</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1717,18 +1780,21 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::p</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="hochgestellt">&lt;/hi></String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1760,13 +1826,13 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::note</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1777,13 +1843,16 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>targetLocation</String>
 																<String>ancestor-or-self::note</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1815,13 +1884,13 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::div[@type="regest"]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>script</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/delete_anything.xsl"/>
+    &lt;xsl:import href="${framework}/resources/delete_anything.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -1832,13 +1901,16 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>targetLocation</String>
 																<String>ancestor-or-self::div[@type="regest"]</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1870,7 +1942,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type='originaldatierung'])</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;div type="originaldatierung" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/div></String>
@@ -1883,13 +1955,16 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -1921,7 +1996,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::note[not(./@telota:show)]</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>true</String>
@@ -1942,7 +2017,7 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>value</String>
 																<String>true</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -1953,7 +2028,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::note[@telota:show='true']</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>true</String>
@@ -1974,7 +2049,7 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>value</String>
 																<String>false</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
@@ -1985,7 +2060,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::note[@telota:show='false']</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>editAttribute</String>
 																<String>true</String>
@@ -2006,13 +2081,16 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>value</String>
 																<String>true</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2044,18 +2122,21 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::p</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;persName role="litAuthor" xmlns="http://www.tei-c.org/ns/1.0">&lt;/persName></String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2087,7 +2168,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String></String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
 																<String>${RI_DATACOPY_VIA_REST}/indexOfRegests.xml</String>
@@ -2104,13 +2185,16 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>node</String>
 																<String>//li</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 									<action>
@@ -2142,7 +2226,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>ancestor-or-self::p or ancestor-or-self::item</String>
 													</field>
 													<field name="argValues">
-														<map>
+														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
 																<String>http://opac.regesta-imperii.de/xml_kurztitel/${ask('Anfangsbuchstaben des Kurztitels auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
@@ -2159,13 +2243,16 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>node</String>
 																<String>//li</String>
 															</entry>
-														</map>
+														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
 														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
 										</field>
 									</action>
 								</action-array>
@@ -2183,6 +2270,9 @@ or ancestor-or-self::persName[parent::head]</String>
 									</field>
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array/>
+									</field>
+									<field name="context">
+										<null/>
 									</field>
 								</menu>
 							</field>
@@ -2220,6 +2310,9 @@ or ancestor-or-self::persName[parent::head]</String>
 												</field>
 											</menuItem>
 										</menuEntry-array>
+									</field>
+									<field name="context">
+										<null/>
 									</field>
 								</menu>
 							</field>
@@ -2440,16 +2533,28 @@ or ancestor-or-self::persName[parent::head]</String>
 							<field name="tableSupportClassName">
 								<null/>
 							</field>
+							<field name="tableCellSeparatorSupportClassName">
+								<null/>
+							</field>
 							<field name="tableColWidthSupportClassName">
 								<null/>
 							</field>
 							<field name="customReferencesResolver">
 								<null/>
 							</field>
+							<field name="editPropertiesHandler">
+								<null/>
+							</field>
 							<field name="authorExtensionStateListener">
 								<null/>
 							</field>
 							<field name="attributesRecognizer">
+								<null/>
+							</field>
+							<field name="authorActionEventHandler">
+								<null/>
+							</field>
+							<field name="authorImageDecorator">
 								<null/>
 							</field>
 						</authorExtension>
@@ -2490,7 +2595,7 @@ or ancestor-or-self::persName[parent::head]</String>
 									<String>http://www.telota.de</String>
 								</field>
 								<field name="attributeValue">
-									<String>ri_13_regesten</String>
+									<String>ri_regesten</String>
 								</field>
 							</documentTypeRule>
 						</documentTypeRule-array>
@@ -2608,8 +2713,11 @@ or ancestor-or-self::persName[parent::head]</String>
 					<field name="customAttributeValueEditor">
 						<null/>
 					</field>
+					<field name="textModeExternalObjectInsertionHandler">
+						<null/>
+					</field>
 				</documentTypeDescriptor>
 			</documentTypeDescriptor-array>
 		</entry>
-	</map>
+	</serializableOrderedMap>
 </serialized>

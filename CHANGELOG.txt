@@ -1,11 +1,11 @@
 Berlin-Brandenburgische Akademie der Wissenschaften 
 TELOTA - The electronic Life of the Academy
-http://telotadev.bbaw.de/oxygen/updateSite.xml
+http://telotadev.bbaw.de/oxygen/regesta-imperii/update.xml
 
 ------------------------------------------------------------------------------------------------
 ediarum
 Digitale Arbeitsumgebung für das Akademienvorhaben 
-Regesta Imerii - Abt. 13 - Friedrich III.
+Regesta Imerii
 
 Framework (Dokumenttyp Zuordnung) für Oxygen XML 
 

@@ -6,7 +6,7 @@
     
     <xsl:template match="Stufe0|Stufe1|Stufe2|Stufe3|Stufe4|Stufe5">
         <xsl:choose>
-            <xsl:when test="matches(@currentuser, $ri_13_register_responsibles)">
+            <xsl:when test="matches(@currentuser, $ri_register_responsibles)">
                 <xsl:element name="{name()}">
                     <xsl:attribute name="checked">
                         <xsl:text>yes</xsl:text>
