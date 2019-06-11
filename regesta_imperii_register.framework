@@ -329,7 +329,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe6 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe6></String>
+																<String>&lt;Stufe6 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe6></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -353,7 +353,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe5 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe5></String>
+																<String>&lt;Stufe5 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe5></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -377,7 +377,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe4 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe4></String>
+																<String>&lt;Stufe4 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe4></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -401,7 +401,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe3 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe3></String>
+																<String>&lt;Stufe3 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe3></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -425,7 +425,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe2 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe2></String>
+																<String>&lt;Stufe2 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe2></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -449,7 +449,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe1 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe1></String>
+																<String>&lt;Stufe1 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe1></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -473,7 +473,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe0  letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe0></String>
+																<String>&lt;Stufe0  letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe0></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -795,7 +795,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe6 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe6></String>
+																<String>&lt;Stufe6 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe6></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -819,7 +819,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe5 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe5></String>
+																<String>&lt;Stufe5 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe5></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -843,7 +843,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe4 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe4></String>
+																<String>&lt;Stufe4 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe4></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -867,7 +867,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe3 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe3></String>
+																<String>&lt;Stufe3 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe3></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -891,7 +891,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe2 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe2></String>
+																<String>&lt;Stufe2 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe2></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -915,7 +915,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe1  letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe1></String>
+																<String>&lt;Stufe1  letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe1></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1023,7 +1023,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe6 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe6></String>
+																<String>&lt;Stufe6 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe6></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1047,7 +1047,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe5 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe5></String>
+																<String>&lt;Stufe5 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe5></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1071,7 +1071,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe4 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe4></String>
+																<String>&lt;Stufe4 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe4></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1095,7 +1095,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe3 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe3></String>
+																<String>&lt;Stufe3 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe3></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1119,7 +1119,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe2 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe2></String>
+																<String>&lt;Stufe2 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe2></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1143,7 +1143,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe1 letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe1></String>
+																<String>&lt;Stufe1 letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe1></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -1167,7 +1167,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;Stufe0  letter="${cfn}" section="${cfd}" cruser="${author.name}">&lt;/Stufe0></String>
+																<String>&lt;Stufe0  letter="${cfn}" section="${RI_SECTION}" cruser="${author.name}">&lt;/Stufe0></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
