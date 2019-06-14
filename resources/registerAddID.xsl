@@ -5,7 +5,7 @@
     version="2.0">
     <xsl:template match="Stufe0|Stufe1|Stufe2|Stufe3|Stufe4|Stufe5">
         <!-- Liest Attribute aus übergebener Stufe aus --> 
-        <xsl:variable name="section"><xsl:value-of select="./substring-after(@section, 'register_')" /></xsl:variable><!-- Abteilungsordner, z.B. "013" -->
+        <xsl:variable name="section"><xsl:value-of select="./@section" /></xsl:variable><!-- Abteilungsordner, z.B. "013" -->
         <xsl:variable name="letter"><xsl:value-of select="./@letter" /></xsl:variable><!-- Buchstabe, d.h. Dateiname -->
         <!-- Setzt Attributwerte als Parameter und fragt online nach neuer ID -->
         <xsl:variable name="path"><xsl:value-of select="$ri_id-api"/><xsl:text>?section=</xsl:text><xsl:value-of select="$section" /><xsl:text>&amp;letter=</xsl:text><xsl:value-of select="$letter" /></xsl:variable>
