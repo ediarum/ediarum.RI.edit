@@ -2,12 +2,12 @@ message: "If you use this software, please cite it using these metadata."
 authors:
   - family-names: Jarosch
     given-names: Julian
-	orcid: "https://orcid.org/0000-0001-8483-8123"
+    orcid: "https://orcid.org/0000-0001-8483-8123"
   - family-names: Dumont
     given-names: Stefan
     orcid: "https://orcid.org/0000-0002-6923-0950"
 title: ediarum.RI.edit 
-abstract: "ediarum.RI.edit is an user interface for Regesta and Indexes in Oxygen XML Author for the research project 'Regesta Imperii'."
+abstract: "ediarum.RI.edit is a user interface for regesta and their indexes in Oxygen XML Author for the research project “Regesta Imperii” (http://www.regesta-imperii.de/)."
 type: software
 date-released: "2022-06-01"
 version: 4.0.0
