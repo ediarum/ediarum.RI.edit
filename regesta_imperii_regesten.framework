@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="19.1" xml:space="preserve">
+<serialized xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
 				<documentTypeDescriptor>
+					<field name="webResources">
+						<null/>
+					</field>
 					<field name="extensionPatch">
 						<null/>
 					</field>
@@ -17,7 +20,7 @@
 								<Integer>4</Integer>
 							</field>
 							<field name="uri">
-								<String>${framework}/schemata/ri_13_regesten.rng</String>
+								<String>${framework}/schemata/ri_regesten.rng</String>
 							</field>
 						</docTypeSchema>
 					</field>
@@ -368,11 +371,27 @@
 															</entry>
 															<entry>
 																<String>attribute value</String>
-																<String>@id</String>
+																<String>$ITEMS</String>
 															</entry>
 															<entry>
-																<String>expression</String>
-																<String>//span</String>
+																<String>item rendering</String>
+																<String>$XPATH{/span}</String>
+															</entry>
+															<entry>
+																<String>item separator</String>
+																<String> </String>
+															</entry>
+															<entry>
+																<String>item variable</String>
+																<String>$XPATH{@id}</String>
+															</entry>
+															<entry>
+																<String>multiple selection</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>namespaces</String>
+																<String>tei:http://www.tei-c.org/ns/1.0</String>
 															</entry>
 															<entry>
 																<String>node</String>
@@ -385,7 +404,7 @@
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+														<String>org.bbaw.telota.ediarum.RegisterChangeAttributeOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -1593,11 +1612,27 @@ or ancestor-or-self::persName[parent::head]</String>
 															</entry>
 															<entry>
 																<String>element</String>
-																<String>"&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='" + @id + "' />"</String>
+																<String>&lt;persName xmlns='http://www.tei-c.org/ns/1.0' key='$ITEMS' /></String>
 															</entry>
 															<entry>
-																<String>expression</String>
-																<String>//span</String>
+																<String>item rendering</String>
+																<String>$XPATH{/span}</String>
+															</entry>
+															<entry>
+																<String>item separator</String>
+																<String> </String>
+															</entry>
+															<entry>
+																<String>item variable</String>
+																<String>$XPATH{@id}</String>
+															</entry>
+															<entry>
+																<String>multiple selection</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>namespaces</String>
+																<String>tei:http://www.tei-c.org/ns/1.0</String>
 															</entry>
 															<entry>
 																<String>node</String>
@@ -1606,7 +1641,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+														<String>org.bbaw.telota.ediarum.RegisterSurroundWithElementOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -1729,11 +1764,27 @@ or ancestor-or-self::persName[parent::head]</String>
 															</entry>
 															<entry>
 																<String>element</String>
-																<String>"&lt;placeName xmlns='http://www.tei-c.org/ns/1.0' key='" + @id + "' />"</String>
+																<String>&lt;placeName xmlns='http://www.tei-c.org/ns/1.0' key='$ITEMS' /></String>
 															</entry>
 															<entry>
-																<String>expression</String>
-																<String>//span</String>
+																<String>item rendering</String>
+																<String>$XPATH{/span}</String>
+															</entry>
+															<entry>
+																<String>item separator</String>
+																<String> </String>
+															</entry>
+															<entry>
+																<String>item variable</String>
+																<String>$XPATH{@id}</String>
+															</entry>
+															<entry>
+																<String>multiple selection</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>namespaces</String>
+																<String>tei:http://www.tei-c.org/ns/1.0</String>
 															</entry>
 															<entry>
 																<String>node</String>
@@ -1742,7 +1793,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+														<String>org.bbaw.telota.ediarum.RegisterSurroundWithElementOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -2175,11 +2226,27 @@ or ancestor-or-self::persName[parent::head]</String>
 															</entry>
 															<entry>
 																<String>element</String>
-																<String>"&lt;ref xmlns='http://www.tei-c.org/ns/1.0' target='" + @id + "' />"</String>
+																<String>&lt;ref xmlns='http://www.tei-c.org/ns/1.0' target='$ITEMS' /></String>
 															</entry>
 															<entry>
-																<String>expression</String>
-																<String>//span</String>
+																<String>item rendering</String>
+																<String>$XPATH{/span}</String>
+															</entry>
+															<entry>
+																<String>item separator</String>
+																<String> </String>
+															</entry>
+															<entry>
+																<String>item variable</String>
+																<String>$XPATH{@id}</String>
+															</entry>
+															<entry>
+																<String>multiple selection</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>namespaces</String>
+																<String>tei:http://www.tei-c.org/ns/1.0</String>
 															</entry>
 															<entry>
 																<String>node</String>
@@ -2188,7 +2255,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+														<String>org.bbaw.telota.ediarum.RegisterSurroundWithElementOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -2233,11 +2300,27 @@ or ancestor-or-self::persName[parent::head]</String>
 															</entry>
 															<entry>
 																<String>element</String>
-																<String>"&lt;bibl xmlns='http://www.tei-c.org/ns/1.0' type="kurztitel" corresp='" + @id + "'>" + /span + "&lt;/bibl>"</String>
+																<String>&lt;bibl xmlns='http://www.tei-c.org/ns/1.0' type="kurztitel" corresp='$ITEMS'>$XPATH{/span}&lt;/bibl></String>
 															</entry>
 															<entry>
-																<String>expression</String>
-																<String>/span</String>
+																<String>item rendering</String>
+																<String>$XPATH{/span}</String>
+															</entry>
+															<entry>
+																<String>item separator</String>
+																<String> </String>
+															</entry>
+															<entry>
+																<String>item variable</String>
+																<String>$XPATH{@id}</String>
+															</entry>
+															<entry>
+																<String>multiple selection</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>namespaces</String>
+																<String>tei:http://www.tei-c.org/ns/1.0</String>
 															</entry>
 															<entry>
 																<String>node</String>
@@ -2246,7 +2329,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+														<String>org.bbaw.telota.ediarum.RegisterSurroundWithElementOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -2289,6 +2372,11 @@ or ancestor-or-self::persName[parent::head]</String>
 									</field>
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array>
+											<menuItem>
+												<field name="actionID">
+													<String>regest_2</String>
+												</field>
+											</menuItem>
 											<menuItem>
 												<field name="actionID">
 													<String>loschen_persName</String>
@@ -2651,6 +2739,9 @@ or ancestor-or-self::persName[parent::head]</String>
 													</field>
 												</validationUnitSchema>
 											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
+											</field>
 										</validationUnit>
 									</list>
 								</field>
@@ -2664,9 +2755,7 @@ or ancestor-or-self::persName[parent::head]</String>
 						</validationScenario-array>
 					</field>
 					<field name="defaultValidationScenarios">
-						<list>
-							<String>Regesta Imperii Abt. 13 - Regesten</String>
-						</list>
+						<null/>
 					</field>
 					<field name="defaultTransformationScenarios">
 						<null/>
