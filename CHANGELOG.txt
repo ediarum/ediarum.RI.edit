@@ -14,6 +14,12 @@ Framework (Dokumenttyp Zuordnung) für Oxygen XML
 CHANGELOG
 ------------------------------------------------------------------------------------------------
 
+4.0.1 vom 27.02.2024
+	* UPDATE: Attribut doctype im Schema geändert von ri_13_regesten zu ri_regesten
+	* UPDATE: Template an das Schema angenähert, msDesc ergänzt
+
+------------------------------------------------------------------------------------------------
+
 4.0.0 vom 14.06.2019
 	* Reorganisation zu einem Basis-Framework zur abteilungsspezifischen Erweiterung
 
