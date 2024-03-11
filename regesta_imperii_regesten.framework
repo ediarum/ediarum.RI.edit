@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="19.1" xml:space="preserve">
+<serialized xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
 				<documentTypeDescriptor>
+					<field name="webResources">
+						<null/>
+					</field>
 					<field name="extensionPatch">
 						<null/>
 					</field>
@@ -26,6 +29,7 @@
 							<String>${framework}/tei.jar</String>
 							<String>${framework}/ediarum.jar</String>
 							<String>${framework}/resources/</String>
+							<String>file:/C:/Users/jfboe/OneDrive/Desktop/framework/askmore-1.4.2.jar</String>
 						</String-array>
 					</field>
 					<field name="parentClassLoaderID">
@@ -263,8 +267,8 @@
 																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="ri_prov_${uuid}">
   &lt;head>
     &lt;persName role="issuer">${RI_NAME}&lt;/persName>
-    &lt;origDate from="${ask('Ausstellungsdatum in Normschreibweise (Beginn)', generic)}" to="${ask('Ausstellungsdatum in Normschreibweise (Ende)', generic)}">${ask('Ausstellungsdatum', generic)}&lt;/origDate>
-    &lt;origPlace>${ask('Ausstellungsort', generic)}&lt;/origPlace>
+    &lt;origDate from="$$"Ausstellungsdatum in Normschreibweise (Beginn)":()$$" to="$$"Ausstellungsdatum in Normschreibweise (Ende)":()$$">$$"Ausstellungsdatum in Normschreibweise":()$$&lt;/origDate>
+    &lt;origPlace>$$"Ausstellungsort ":()$$&lt;/origPlace>
   &lt;/head>
   &lt;div type="regestentext">&lt;p>${caret}&lt;/p>&lt;/div>
   &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
@@ -275,7 +279,8 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::div[@type="regest"]</String>
+																<String>ancestor-or-self::div[@type="regest"]
+</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -284,7 +289,7 @@
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+														<String>org.adwmainz.da.extensions.askmore.operations.InsertOrReplaceAnnotatedFragmentOperation</String>
 													</field>
 												</actionMode>
 												<actionMode>
@@ -2289,6 +2294,11 @@ or ancestor-or-self::persName[parent::head]</String>
 									</field>
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array>
+											<menuItem>
+												<field name="actionID">
+													<String>regest_1</String>
+												</field>
+											</menuItem>
 											<menuItem>
 												<field name="actionID">
 													<String>loschen_persName</String>
