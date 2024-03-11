@@ -29,7 +29,7 @@
 							<String>${framework}/tei.jar</String>
 							<String>${framework}/ediarum.jar</String>
 							<String>${framework}/resources/</String>
-							<String>file:/C:/Users/jfboe/OneDrive/Desktop/framework/askmore-1.4.2.jar</String>
+							<String>${framework}/askmore-1.4.2.jar</String>
 						</String-array>
 					</field>
 					<field name="parentClassLoaderID">
@@ -2294,11 +2294,6 @@ or ancestor-or-self::persName[parent::head]</String>
 									</field>
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array>
-											<menuItem>
-												<field name="actionID">
-													<String>regest_1</String>
-												</field>
-											</menuItem>
 											<menuItem>
 												<field name="actionID">
 													<String>loschen_persName</String>
