@@ -15,8 +15,9 @@ CHANGELOG
 ------------------------------------------------------------------------------------------------
 
 4.0.1 vom 27.02.2024
-	* UPDATE: Attribut doctype im Schema ge‰ndert von ri_13_regesten zu ri_regesten
-	* UPDATE: Template an das Schema angen‰hert, msDesc erg‰nzt
+	* UPDATE: Attribut doctype im Schema ge√§ndert von ri_13_regesten zu ri_regesten
+	* UPDATE: Template an das Schema angen√§hert, msDesc erg√§nzt
+	* UPDATE: Datumseingabe mit mehreren Feldern mit AskMore-Erweiterung umgesetzt
 
 ------------------------------------------------------------------------------------------------
 
