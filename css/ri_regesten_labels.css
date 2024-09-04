@@ -15,14 +15,49 @@ div[type="originaldatierung"]:before {
     content: "Originaldatierung";
 }
 
+div[type="originalort"]:before {
+    content: "Originalort";
+}
+
 div[type="kanzleivermerk"]:before {
     content: "Kanzleivermerk";
+}
+
+div[type="verso"]:before {
+    content: "verso";
+}
+div[type="recto"]:before {
+    content: "recto";
 }
 
 div[type="ueberlieferung"]:before {
     content: "Überlieferung";
 }
 
+div[type="original"]:before {
+    content: "Original";
+}
+
+div[type="faksimile"]:before {
+    content: "Faksimile";
+}
+
+div[type="drucke"]:before {
+    content: "Drucke";
+}
+
+div[type="regesten"]:before {
+    content: "Regesten";
+}
+
+div[type="rekognition"]:before {
+    content: "Rekognition";
+}
+
+div[type="kopie"]:before {
+    content: "Kopie";
+}
+  
 div[type="kommentar"]:before {
     content: "Kommentar";
 }
