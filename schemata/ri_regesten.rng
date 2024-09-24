@@ -161,6 +161,11 @@
                         <ref name="note" />
                     </zeroOrMore>
                 </element>
+                <optional>
+                <element name="regKategorie">
+                    <text />
+                </element>
+                </optional>
             </element>
             <oneOrMore>
                 <ref name="common_div" />
@@ -176,8 +181,15 @@
                         <choice>
                             <value>regestentext</value>
                             <value>originaldatierung</value>
+                            <value>originalort</value>
                             <value>kanzleivermerk</value>
                             <value>ueberlieferung</value>
+                            <value>original</value>
+                            <value>faksimile</value>
+                            <value>drucke</value>
+                            <value>regesten</value>
+                            <value>rekognition</value>
+                            <value>kopie</value>
                             <value>kommentar</value>
                             <value>literatur</value>
                             <value>zeugen</value>
@@ -191,6 +203,9 @@
                     </attribute>
                     <oneOrMore>    
                         <element name="p">
+                            <zeroOrMore>
+                                <attribute name="rend"><text/></attribute>
+                            </zeroOrMore>
                             <ref name="content" />
                         </element>
                     </oneOrMore>
@@ -239,6 +254,9 @@
             </zeroOrMore>
             <zeroOrMore>
                 <ref name="bibl" />
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="xref" />
             </zeroOrMore>
         </interleave>
     </define>
@@ -290,6 +308,15 @@
                     <text />
                 </zeroOrMore>
             </interleave>
+        </element>
+    </define>
+    
+    <define name="xref">
+        <element name="xref">
+            <attribute name="type">
+                <value>source</value>
+            </attribute>
+            <text />
         </element>
     </define>
     

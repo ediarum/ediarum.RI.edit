@@ -48,15 +48,21 @@ div head origDate {
     -oxy-display-tags: none;
     -oxy-placeholder-content: "[Austellungsdatum eingeben]";
 }
-div head persName:after,
-div head origDate:after {
-    content: ", ";
-}
-
 div head origPlace {
     -oxy-editable: true;
     -oxy-display-tags: none;
     -oxy-placeholder-content: "[Ausstellungsort eingeben]";
+}
+div head persName:after,
+div head origDate:after,
+div head origPlace:after {
+    content: ", ";
+}
+
+div head regKategorie {
+    -oxy-editable: true;
+    -oxy-display-tags: none;
+    -oxy-placeholder-content: "[Regestkategorie eingeben]";
 }
 
 div p,
@@ -113,6 +119,13 @@ placeName[key*="0"]:after {
     content: url('gfx/placeName.png');
     link: oxy_concat("https://exist.regesta-imperii.de/exist/rest/db/apps/ediarum/data_copy/register_for_css/013/", oxy_lowercase(oxy_substring(attr(key), 0, 1)), ".xml#") attr(key);
     padding-left: 0.3em;
+}
+
+xref[type="source"] {
+    background: rgba(126, 165, 216, 0.425)
+    content: url('gfx/auszeichnungQuellenRI.png');
+    -oxy-display-tags: none;
+    
 }
 
 bibl {
@@ -176,6 +189,11 @@ hi[rend="hochgestellt"] {
     vertical-align: top;
     -oxy-display-tags: none;
 }
+
+p[rend="spaced"]{
+    margin-left: 2em;
+    -oxy-display-tags: none;
+  }
 
 div:before {
     /* border-bottom: 1px solid silver; */
