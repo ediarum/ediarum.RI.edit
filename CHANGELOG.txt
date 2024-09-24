@@ -4,14 +4,27 @@ http://telotadev.bbaw.de/oxygen/regesta-imperii/update.xml
 
 ------------------------------------------------------------------------------------------------
 ediarum
-Digitale Arbeitsumgebung f�r das Akademienvorhaben 
+Digitale Arbeitsumgebung für das Akademienvorhaben 
 Regesta Imerii
 
-Framework (Dokumenttyp Zuordnung) f�r Oxygen XML 
+Framework (Dokumenttyp Zuordnung) für Oxygen XML 
 
 
 ------------------------------------------------------------------------------------------------
 CHANGELOG
+------------------------------------------------------------------------------------------------
+
+4.0.2 vom 25.09.2024
+	* UPDATE: Die Regestenstruktur mit unterteilter Überlieferung wird in der Spalte „Regest einfügen“ gefunden. Neue Felder: Original, Kopie, Drucke, Regesten.
+	* UPDATE: Die Felder Faksimile und Rekognition (bei den Karolingern) befinden sich in der Spalte „Regestenstruktur“.
+	* UPDATE: Buttons für: Auszeichnung von Quellen und Externe Verweise befinden sich rechts neben der Spalte „Löschen“.
+	* UPDATE: Shortcuts: Literatur: Strg+L, Quellen: Strg+Q, Externe Verweise: Strg+A
+	* UPDATE: Die Kategorien der Regesten befinden sich in der Spalte „Regest einfügen“.
+	* UPDATE: Neue Felder für Originalort (Karolinger und IV: Päpste; Platz: nach Originaldatierung) sowie Rekognition (Karolinger, Platz: nach Originalort) befinden sich in der Spalte „Regestenstruktur“.
+	* UPDATE: Die Aktion für Einrückungen bei Unterschriften (IV: Päpste) ist im Kontextmenü zu finden (Rechtsklick, Name „Einrückung“). Außerdem wird in der Spalte „Löschen“ die Aktion „Einrückung löschen“ angeboten, um unerwünschte Einrückungen zu entfernen.
+	* UPDATE: Die Funktion »Kurztitel einfügen« (mit Verknüpfung zum RI-Opac) ist vereinfacht zu einer Markierung des Kurztitels; die Zuordnung zum Opac erfolgt später im Publikationsprozess.
+
+
 ------------------------------------------------------------------------------------------------
 
 4.0.1 vom 27.02.2024
@@ -34,22 +47,22 @@ CHANGELOG
 ------------------------------------------------------------------------------------------------
 
 3.3.0 vom 08.01.2019
-	* FEATURE: Abl�sung der Benutzervariable ${RI_USERNAME} durch ${author.name}
-	* UPDATE: Zu restriktive Schemaerg�nzung (@oberbegriff) r�ckg�ngig gemacht
-	* UPDATE: Nutzerkonten erg�nzt
+	* FEATURE: Ablösung der Benutzervariable ${RI_USERNAME} durch ${author.name}
+	* UPDATE: Zu restriktive Schemaergänzung (@oberbegriff) rückgängig gemacht
+	* UPDATE: Nutzerkonten ergänzt
 
 ------------------------------------------------------------------------------------------------
 
 3.2.0 vom 09.08.2018
 	* FEATURE: Normdaten von Attributen in <idno>-Elemente verschoben
-	* UPDATE: Bearbeitungs-Popup f�r Verweistypen in �berpr�fungsmodus verschoben
-	* UPDATE: diverse kleinere Erg�nzungen in Schema und CSS
+	* UPDATE: Bearbeitungs-Popup für Verweistypen in Überprüfungsmodus verschoben
+	* UPDATE: diverse kleinere Ergänzungen in Schema und CSS
 
 ------------------------------------------------------------------------------------------------
 
 3.1.0 vom 05.07.2018
-	* FEATURE: Neue Normdatenattribute und unterst�tzende Funktionen
-	* FEATURE: Neue Werte f�r Attribut source_type + Funktionen
+	* FEATURE: Neue Normdatenattribute und unterstützende Funktionen
+	* FEATURE: Neue Werte für Attribut source_type + Funktionen
 	* FEATURE: Neue Eintragstypen Querverweis, Rolle und unklar
 
 ------------------------------------------------------------------------------------------------	
@@ -72,22 +85,22 @@ CHANGELOG
 
 1.7 vom 18.03.2015
 	* UPDATE: Schema aktualisiert
-	* FEATURE #3273: Shortcuts f�r Kategorie- und Normdatenfunktionen
-	* FEATURE #4172: Register: Hinzuf�gen einer Germania-Sacra-ID
+	* FEATURE #3273: Shortcuts für Kategorie- und Normdatenfunktionen
+	* FEATURE #4172: Register: Hinzufügen einer Germania-Sacra-ID
 
 ------------------------------------------------------------------------------------------------	
 	
 1.6 vom 27.08.2014
 	* BUGFIX #3271: Linkpfeil hinter den Text anzeigen
-	* FEATURE #3269: Normdatenfunktionen mit Shortcut & Kontextmen�
+	* FEATURE #3269: Normdatenfunktionen mit Shortcut & Kontextmenü
 
 ------------------------------------------------------------------------------------------------
 
 1.5 vom 25.08.2014
 	* BUGFIX #3065: Stufen 3 und 4 fehlen in Auswahlliste
 	* BUGFIX #3246: Regressionbug wg. #2361
-	* FEATURE #2551: Tastaturk�rzel
-	* FEATURE #3204: Neue Attribute f�r Registereintr�ge
+	* FEATURE #2551: Tastaturkürzel
+	* FEATURE #3204: Neue Attribute für Registereinträge
 
 ------------------------------------------------------------------------------------------------
 
@@ -97,21 +110,21 @@ CHANGELOG
 ------------------------------------------------------------------------------------------------
 
 1.3 vom 29.11.2013
-	* FEATURE: <note> in Regestenheader erm�glichen (#2320)
+	* FEATURE: <note> in Regestenheader ermöglichen (#2320)
 	* BUGFIX: Text in <hi> erlaubt (#2341)
 
 ------------------------------------------------------------------------------------------------
 
 1.2 vom 07.11.2013
 	* FEATURE: Originaldatierung nun als eigener Abschnitt angelegt
-	* FEATURE: Kurztitel aus RI-OPAC einf�gen
+	* FEATURE: Kurztitel aus RI-OPAC einfügen
 	* BUGFIX: Icons nun hinter placeName, persName und bibl
 
 ------------------------------------------------------------------------------------------------
 
 1.1 vom 19.08.2013
-	* FEATURE: Templatevorlage f�r Band eingerichtet
-	* BUGFIX: Einf�gen eines Regests nun auch am Anfang bzw. in leerer Vorlage m�glich
+	* FEATURE: Templatevorlage für Band eingerichtet
+	* BUGFIX: Einfügen eines Regests nun auch am Anfang bzw. in leerer Vorlage möglich
 
 ------------------------------------------------------------------------------------------------
 
