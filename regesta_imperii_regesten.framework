@@ -2265,7 +2265,7 @@ or ancestor-or-self::persName[parent::head]</String>
 											<String>auszeichnungQuellen</String>
 										</field>
 										<field name="name">
-											<String>auszeichnungQuellen</String>
+											<String>Auszeichnung Quellen</String>
 										</field>
 										<field name="description">
 											<String>Auszeichnung Quellen</String>
@@ -2381,10 +2381,10 @@ or ancestor-or-self::persName[parent::head]</String>
 											<String>regestStrukturUU</String>
 										</field>
 										<field name="name">
-											<String>regestStrukturUU</String>
+											<String>Regeststruktur unterteilte Überlieferung</String>
 										</field>
 										<field name="description">
-											<String>Regeststruktur mit unterteilte Überlieferung einfügen</String>
+											<String>Regeststruktur mit unterteilter Überlieferung einfügen</String>
 										</field>
 										<field name="largeIconPath">
 											<String></String>
@@ -2636,7 +2636,7 @@ or ancestor-or-self::persName[parent::head]</String>
 											<String>Einrückung</String>
 										</field>
 										<field name="description">
-											<String>Einrückungen bei Unterschiften ermöglichen</String>
+											<String>Einrückungen bei Unterschiften einfügen</String>
 										</field>
 										<field name="largeIconPath">
 											<String></String>
@@ -2687,10 +2687,10 @@ or ancestor-or-self::persName[parent::head]</String>
 											<String>einruekungLoeschen</String>
 										</field>
 										<field name="name">
-											<String>einrükungLöschen</String>
+											<String>Einrückung löschen</String>
 										</field>
 										<field name="description">
-											<String>Löscht unerwünschte Einrükung</String>
+											<String>Löscht unerwünschte Einrückung</String>
 										</field>
 										<field name="largeIconPath">
 											<String></String>
@@ -3201,6 +3201,9 @@ or ancestor-or-self::persName[parent::head]</String>
 														<String>${framework}/schemata/ri_13_regesten.rng</String>
 													</field>
 												</validationUnitSchema>
+											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
 											</field>
 										</validationUnit>
 									</list>
