@@ -696,7 +696,7 @@
 											<String></String>
 										</field>
 										<field name="largeIconPath">
-											<String>file:/C:/Users/jfboe/Downloads/auszeichnungRefRIAB(1).png</String>
+											<String>${framework}/icons/auszeichnungRefRIAB(1).png</String>
 										</field>
 										<field name="smallIconPath">
 											<String></String>
@@ -2271,10 +2271,10 @@ or ancestor-or-self::persName[parent::head]</String>
 											<String>Auszeichnung Quellen</String>
 										</field>
 										<field name="largeIconPath">
-											<String>file:/C:/Users/jfboe/Downloads/auszeichnungQuellenRI(2).png</String>
+											<String>${framework}/icons/auszeichnungQuellenRI(2).png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>file:/C:/Users/jfboe/Downloads/auszeichnungQuellenRI(4).png</String>
+											<String>${framework}/icons/auszeichnungQuellenRI(4).png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
