@@ -2207,10 +2207,10 @@ or ancestor-or-self::persName[parent::head]</String>
 											<String>bibl[kurztitel]</String>
 										</field>
 										<field name="name">
-											<String>Kurztitel einfügen</String>
+											<String>Kurztitel markieren</String>
 										</field>
 										<field name="description">
-											<String>Fügt einen Kurztitel aus dem OPAC mit Link ein</String>
+											<String>Markiert eine Textstelle als Kurztitel, der später dem OPAC zugeordnet wird</String>
 										</field>
 										<field name="largeIconPath">
 											<String>${framework}/icons/name_bibl_RI.png</String>
@@ -2233,25 +2233,17 @@ or ancestor-or-self::persName[parent::head]</String>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
-																<String>URL</String>
-																<String>http://opac.regesta-imperii.de/xml_kurztitel/${ask('Anfangsbuchstaben des Kurztitels auswählen', combobox, ('a':'A';'b':'B';'c':'C';'d':'D';'e':'E';'f':'F';'g':'G';'h':'H';'i':'I';'j':'J';'k':'K';'l':'L';'m':'M';'n':'N';'o':'O';'p':'P';'q':'Q';'r':'R';'s':'S';'t':'T';'u':'U';'v':'V';'w':'W';'x':'X';'y':'Y';'z':'Z';))}.xml</String>
+																<String>fragment</String>
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="kurztitel" corresp="">&lt;/bibl></String>
 															</entry>
 															<entry>
-																<String>element</String>
-																<String>"&lt;bibl xmlns='http://www.tei-c.org/ns/1.0' type="kurztitel" corresp='" + @id + "'>" + /span + "&lt;/bibl>"</String>
-															</entry>
-															<entry>
-																<String>expression</String>
-																<String>/span</String>
-															</entry>
-															<entry>
-																<String>node</String>
-																<String>//li</String>
+																<String>schemaAware</String>
+																<String>false</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.InsertRegisterOperation</String>
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -2988,6 +2980,11 @@ or ancestor-or-self::persName[parent::head]</String>
 												</field>
 											</toolbarItem>
 											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>bibl[kurztitel]</String>
+												</field>
+											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
 													<String>author</String>
