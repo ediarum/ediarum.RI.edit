@@ -23,13 +23,6 @@ div[type="kanzleivermerk"]:before {
     content: "Kanzleivermerk";
 }
 
-div[type="verso"]:before {
-    content: "verso";
-}
-div[type="recto"]:before {
-    content: "recto";
-}
-
 div[type="ueberlieferung"]:before {
     content: "Überlieferung";
 }
@@ -96,4 +89,12 @@ div[type="unterschriften"]:before {
 
 div[type="externe_verweise"]:before {
     content: "Externe Verweise";
+}
+
+pb[type='recto']{
+    content:"recto";
+}
+
+pb[type='verso']{
+    content:"verso";
 }

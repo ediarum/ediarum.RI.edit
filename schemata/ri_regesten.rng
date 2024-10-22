@@ -209,6 +209,21 @@
                             <ref name="content" />
                         </element>
                     </oneOrMore>
+                    <zeroOrMore>    
+                        <element name="pb">
+                            <attribute name="type">
+                                <choice>
+                                    <value>recto</value>
+                                    <value>verso</value>
+                                </choice>
+                            </attribute>
+                            <zeroOrMore>    
+                                <element name="p">
+                                    <text/>
+                                </element>
+                            </zeroOrMore>
+                        </element>
+                    </zeroOrMore>
                 </group>
                 <group>
                     <attribute name="type">

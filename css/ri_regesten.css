@@ -122,7 +122,7 @@ placeName[key*="0"]:after {
 }
 
 xref[type="source"] {
-    background: rgba(126, 165, 216, 0.425)
+    background: rgba(126, 165, 216, 0.425);
     content: url('gfx/auszeichnungQuellenRI.png');
     -oxy-display-tags: none;
     
