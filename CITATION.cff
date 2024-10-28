@@ -3,14 +3,19 @@ authors:
   - family-names: Jarosch
     given-names: Julian
     orcid: "https://orcid.org/0000-0001-8483-8123"
+    affiliation: Akademie der Wissenschaften und der Literatur | Mainz
   - family-names: Dumont
     given-names: Stefan
     orcid: "https://orcid.org/0000-0002-6923-0950"
+    affiliation: Berlin-Brandenburgische Akademie der Wissenschaften
+  - given-names: Anna
+    family-names: Prusova
+    affiliation: Regesta Imperii
 title: ediarum.RI.edit 
 abstract: "ediarum.RI.edit is a user interface for regesta and their indexes in Oxygen XML Author for the research project “Regesta Imperii” (http://www.regesta-imperii.de/)."
 type: software
-date-released: "2022-06-01"
-version: 4.0.0
+date-released: "2024-09-25"
+version: 4.0.2
 repository-code: "https://github.com/ediarum/ediarum.RI.edit"
 url: "http://www.regesta-imperii.de"
 cff-version: 1.2.0
