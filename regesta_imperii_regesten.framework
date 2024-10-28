@@ -2876,8 +2876,8 @@ or ancestor-or-self::persName[parent::head]</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;pb xmlns="http://www.tei-c.org/ns/1.0" type="recto">&lt;p>&lt;/p>&lt;/pb>
-&lt;pb xmlns="http://www.tei-c.org/ns/1.0" type="verso">&lt;p>&lt;/p>&lt;/pb></String>
+																<String>&lt;pb xmlns="http://www.tei-c.org/ns/1.0" type="recto"/>&lt;p xmlns="http://www.tei-c.org/ns/1.0">&lt;/p>
+&lt;pb xmlns="http://www.tei-c.org/ns/1.0" type="verso"/>&lt;p xmlns="http://www.tei-c.org/ns/1.0">&lt;/p></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
