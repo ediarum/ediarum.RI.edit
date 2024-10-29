@@ -696,7 +696,7 @@
 											<String>Abschnitt »externe Verweise« anlegen</String>
 										</field>
 										<field name="largeIconPath">
-                    <String>${framework}/icons/auszeichnungRefRIAB(1).png</String>
+											<String>${framework}/icons/auszeichnungRefRIAB(1).png</String>
 										</field>
 										<field name="smallIconPath">
 											<String></String>
@@ -2676,7 +2676,7 @@ or ancestor-or-self::persName[parent::head]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>einruekungLoeschen</String>
+											<String>einrueckungLoeschen</String>
 										</field>
 										<field name="name">
 											<String>Einrückung löschen</String>
@@ -3094,7 +3094,7 @@ or ancestor-or-self::persName[parent::head]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>einruekung</String>
+											<String>einrueckung</String>
 										</field>
 										<field name="name">
 											<String>Einrückung</String>
@@ -3148,57 +3148,7 @@ or ancestor-or-self::persName[parent::head]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>einruekungLoeschen</String>
-										</field>
-										<field name="name">
-											<String>einrükungLöschen</String>
-										</field>
-										<field name="description">
-											<String>Löscht unerwünschte Einrükung</String>
-										</field>
-										<field name="largeIconPath">
-											<String></String>
-										</field>
-										<field name="smallIconPath">
-											<String></String>
-										</field>
-										<field name="accessKey">
-											<String></String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor-or-self::div[@type="unterschriften"]//p[@rend="spaced"]</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>elementLocation</String>
-																<String>ancestor-or-self::div[@type="unterschriften"]//p[@rend="spaced"]</String>
-															</entry>
-															<entry>
-																<String>name</String>
-																<String>rend</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-										<field name="enabledInReadOnlyContext">
-											<Boolean>false</Boolean>
-										</field>
-									</action>
-									<action>
-										<field name="id">
-											<String>neueUebelieferung</String>
+											<String>neueUeberlieferung</String>
 										</field>
 										<field name="name">
 											<String>Unterteilung Überlieferung</String>
@@ -3285,7 +3235,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;regKategorie xmlns="http://www.tei-c.org/ns/1.0">$$"Wahlen Sie Kategorie der Regest ein":("Urkundenregest", "Historiographisches Regest", "Deperditum")$$&lt;/regKategorie>
+																<String>&lt;regKategorie xmlns="http://www.tei-c.org/ns/1.0">$$"Wahlen Sie Kategorie des Regests aus":("Urkundenregest", "Historiographisches Regest", "Deperditum")$$&lt;/regKategorie>
 </String>
 															</entry>
 															<entry>
@@ -3316,7 +3266,7 @@ or ancestor-or-self::persName[parent::head]</String>
 											<String>recto_verso</String>
 										</field>
 										<field name="description">
-											<String>Trennung des Feldes Kanzleivermer in recto und verso.</String>
+											<String>Trennung des Feldes Kanzleivermerk in recto und verso.</String>
 										</field>
 										<field name="largeIconPath">
 											<String></String>
@@ -3406,12 +3356,12 @@ or ancestor-or-self::persName[parent::head]</String>
 											</menuItem>
 											<menuItem>
 												<field name="actionID">
-													<String>einruekungLoeschen</String>
+													<String>einrueckung</String>
 												</field>
 											</menuItem>
 											<menuItem>
 												<field name="actionID">
-													<String>einruekung</String>
+													<String>einrueckungLoeschen</String>
 												</field>
 											</menuItem>
 											<menuItem>
@@ -3512,13 +3462,11 @@ or ancestor-or-self::persName[parent::head]</String>
 													<toolbarEntry-array>
 														<toolbarItem>
 															<field name="actionID">
-
 																<String>recto_verso</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-
 																<String>rekognition[div]</String>
 															</field>
 														</toolbarItem>
@@ -3529,7 +3477,7 @@ or ancestor-or-self::persName[parent::head]</String>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>neueUebelieferung</String>
+																<String>neueUeberlieferung</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
@@ -3634,13 +3582,11 @@ or ancestor-or-self::persName[parent::head]</String>
 											<toolbarSeparator/>
 											<toolbarItem>
 												<field name="actionID">
-
 													<String>bibl[kurztitel]</String>
 												</field>
 											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
-
 													<String>author</String>
 												</field>
 											</toolbarItem>
@@ -3694,24 +3640,17 @@ or ancestor-or-self::persName[parent::head]</String>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
+																<String>einrueckungLoeschen</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
 																<String>loeschen_note</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
 																<String>loschen_div</String>
-
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>einruekungLoeschen</String>
-
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>einruekungLoeschen</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
