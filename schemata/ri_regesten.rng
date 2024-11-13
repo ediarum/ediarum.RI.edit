@@ -8,7 +8,7 @@
             
         <element name="TEI">
             <attribute name="doctype" ns="http://www.telota.de">
-                <value>ri_13_regesten</value>
+                <value>ri_regesten</value>
             </attribute>
             <element name="teiHeader">
                 <element name="fileDesc">
