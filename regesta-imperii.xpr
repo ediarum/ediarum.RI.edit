@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="20.0">
+<project>
     <meta>
         <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="20.0" xml:space="preserve">
+            <serialized xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
                         <String>autosave.enable</String>
@@ -17,6 +17,9 @@
                         <String>document.types</String>
                         <documentTypeDescriptor-array>
                             <documentTypeDescriptor>
+                                <field name="webResources">
+                                    <null/>
+                                </field>
                                 <field name="extensionPatch">
                                     <documentTypeDescriptorPatch>
                                         <field name="patchList">
@@ -11317,6 +11320,14 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                         <documentTypeEntry-array>
                             <documentTypeEntry>
                                 <field name="documentTypeID">
+                                    <String>3/ediarum_hkw/ediarum.hkw.edit.framework/ediarum.hkw.edit</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
                                     <String>2/internal/CAGB - Dateiendung</String>
                                 </field>
                                 <field name="enable">
@@ -11325,7 +11336,7 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                             </documentTypeEntry>
                             <documentTypeEntry>
                                 <field name="documentTypeID">
-                                    <String>6/ediarum_basis/ediarum_basis_register.framework/ediarum.BASIS.register</String>
+                                    <String>3/framework/regesta-imperii-abt6-regesten.framework/Regesta Imperii Abt. 6 – Regesten</String>
                                 </field>
                                 <field name="enable">
                                     <Boolean>false</Boolean>
@@ -11333,15 +11344,7 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                             </documentTypeEntry>
                             <documentTypeEntry>
                                 <field name="documentTypeID">
-                                    <String>6/ediarum_basis/ediarum_basis.framework/ediarum.BASIS</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>6/ediarum_basis/ediarum_basis_readonly.framework/ediarum.BASIS.readonly</String>
+                                    <String>3/framework/regesta-imperii-abt6-register.framework/Regesta Imperii Abt. 6 – Register</String>
                                 </field>
                                 <field name="enable">
                                     <Boolean>false</Boolean>
@@ -11353,7 +11356,7 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                         <String>extensions.update.sites</String>
                         <String-array>
                             <String>https://oxygen.adwmainz.net/regesta-imperii-abt13/update.xml</String>
-							<String>https://oxygen.adwmainz.net/regesta-imperii-abt6/update.xml</String>
+                            <String>https://oxygen.adwmainz.net/regesta-imperii-abt6/update.xml</String>
                         </String-array>
                     </entry>
                     <entry>
@@ -11366,6 +11369,10 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                     </entry>
                     <entry>
                         <String>key.editor.open.save.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>key.editor.save.option.pane</String>
                         <Boolean>true</Boolean>
                     </entry>
                     <entry>

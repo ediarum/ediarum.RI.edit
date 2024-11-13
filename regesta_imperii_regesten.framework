@@ -2378,76 +2378,6 @@ or ancestor-or-self::persName[parent::head]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>regestStrukturUU</String>
-										</field>
-										<field name="name">
-											<String>regestStrukturUU</String>
-										</field>
-										<field name="description">
-											<String>Regeststruktur mit unterteilte Überlieferung einfügen</String>
-										</field>
-										<field name="largeIconPath">
-											<String></String>
-										</field>
-										<field name="smallIconPath">
-											<String></String>
-										</field>
-										<field name="accessKey">
-											<String></String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor-or-self::div[@type="regest"]</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="ri_prov_${uuid}">
-  &lt;head>
-    &lt;persName role="issuer">${RI_NAME}&lt;/persName>
-    &lt;origDate from="$$"Ausstellungsdatum in Normschreibweise (Beginn)":()$$" to="$$"Ausstellungsdatum in Normschreibweise (Ende)":()$$">$$"Ausstellungsdatum in Normschreibweise":()$$&lt;/origDate>
-    &lt;origPlace>$$"Ausstellungsort ":()$$&lt;/origPlace>
-  &lt;/head>
-  &lt;div type="regestentext">&lt;p>${caret}&lt;/p>&lt;/div>
-  &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
-  &lt;div type="kanzleivermerk">&lt;p>&lt;/p>&lt;/div>
-  &lt;div type="ueberlieferung">&lt;p>&lt;/p>&lt;/div>
-  &lt;div type="original">&lt;p>&lt;/p>&lt;/div>
-  &lt;div type="kopie">&lt;p>&lt;/p>&lt;/div>
-  &lt;div type="drucke">&lt;p>&lt;/p>&lt;/div>
-  &lt;div type="regesten">&lt;p>&lt;/p>&lt;/div>
-  &lt;div type="kommentar">&lt;p>&lt;/p>&lt;/div>
-&lt;/div></String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>ancestor-or-self::div[@type="regest"]
-</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>After</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>org.adwmainz.da.extensions.askmore.operations.InsertOrReplaceAnnotatedFragmentOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-										<field name="enabledInReadOnlyContext">
-											<Boolean>false</Boolean>
-										</field>
-									</action>
-									<action>
-										<field name="id">
 											<String>originalort[div]</String>
 										</field>
 										<field name="name">
@@ -2472,7 +2402,7 @@ or ancestor-or-self::persName[parent::head]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="originalort"])</String>
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="originalort"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="rekognition"])</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -2526,7 +2456,7 @@ or ancestor-or-self::persName[parent::head]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="faksimile"])</String>
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="faksimile"])  and (ancestor-or-self::div[@type="regest"]/div[@type="regesten"])</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -2536,7 +2466,32 @@ or ancestor-or-self::persName[parent::head]</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::div[@type="regest"]/div[@type="regesten"]</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="regesten"]
+</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="faksimile"]) </String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div xmlns="http://www.tei-c.org/ns/1.0" type="faksimile">&lt;p>${caret}&lt;/p>&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="ueberlieferung"]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -2580,27 +2535,7 @@ or ancestor-or-self::persName[parent::head]</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="originalort"])</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>dialogTitle</String>
-																<String>Operation ist unmöglich</String>
-															</entry>
-															<entry>
-																<String>message</String>
-																<String>Fügen Sie zuerst Originalort ein!</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>org.adwmainz.da.extensions.askmore.operations.DisplayMessageOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="rekognition"])</String>
+														<String>ancestor-or-self::div[@type="regest"] and not(ancestor-or-self::div[@type="regest"]/div[@type="originalort"]) and not(ancestor-or-self::div[@type="regest"]/div[@type="rekognition"])</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -2610,7 +2545,7 @@ or ancestor-or-self::persName[parent::head]</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::div[@type="regest"]/div[@type="originalort"]</String>
+																<String>ancestor-or-self::div[@type="regest"]/div[@type="originaldatierung"]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -2895,6 +2830,98 @@ or ancestor-or-self::persName[parent::head]</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>ref_druckregest</String>
+										</field>
+										<field name="name">
+											<String>ref_druckregest</String>
+										</field>
+										<field name="description">
+											<String>Fügt &lt;ref type="druckregest"> hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/druckregesten.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<String>M1 D</String>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::p or ancestor-or-self::item</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;ref xmlns="http://www.tei-c.org/ns/1.0" type="druckregest" target="">&lt;/ref></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>ref_external</String>
+										</field>
+										<field name="name">
+											<String>ref_external</String>
+										</field>
+										<field name="description">
+											<String>Fügt &lt;ref type="external"> hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::p or ancestor-or-self::item</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;ref xmlns="http://www.tei-c.org/ns/1.0" type="external" target="">&lt;/ref></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -2935,6 +2962,16 @@ or ancestor-or-self::persName[parent::head]</String>
 									</field>
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array>
+											<menuItem>
+												<field name="actionID">
+													<String>ref_external</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
+													<String>ref_druckregest</String>
+												</field>
+											</menuItem>
 											<menuItem>
 												<field name="actionID">
 													<String>regestKategorie</String>
@@ -3016,16 +3053,6 @@ or ancestor-or-self::persName[parent::head]</String>
 														<toolbarItem>
 															<field name="actionID">
 																<String>regest</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>regestStrukturUU</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>regKategorie[div]</String>
 															</field>
 														</toolbarItem>
 													</toolbarEntry-array>
@@ -3171,6 +3198,13 @@ or ancestor-or-self::persName[parent::head]</String>
 													<String>author</String>
 												</field>
 											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>auszeichnungQuellen</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
 											<toolbarItem>
 												<field name="actionID">
 													<String>hi[rend=hoch]</String>
@@ -3190,13 +3224,13 @@ or ancestor-or-self::persName[parent::head]</String>
 											<toolbarSeparator/>
 											<toolbarItem>
 												<field name="actionID">
-													<String>auszeichnungQuellen</String>
+													<String>div[externe_verweise]</String>
 												</field>
 											</toolbarItem>
 											<toolbarSeparator/>
 											<toolbarItem>
 												<field name="actionID">
-													<String>div[externe_verweise]</String>
+													<String>ref_druckregest</String>
 												</field>
 											</toolbarItem>
 											<toolbar>
