@@ -320,12 +320,16 @@
             </attribute>
             <interleave>
                 <zeroOrMore>
+                    <ref name="hi" />
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="persName" />
                 </zeroOrMore>
                 <zeroOrMore>
                     <text />
                 </zeroOrMore>
             </interleave>
+            
         </element>
     </define>
     
@@ -340,24 +344,31 @@
     
     <define name="persName">
         <element name="persName">
-            <choice>
-                <group>
+            <interleave>
+                <optional>
                     <attribute name="key"><text /></attribute>
-                    <text />
-                </group>
-                <group>
+                </optional>
+                <optional>
                     <attribute name="role">
                         <value>litAuthor</value>
                     </attribute>
-                    <text />
-                </group>
-            </choice>
+                </optional>
+                <optional>
+                    <attribute name="uuid"><text /></attribute>
+                </optional>
+            </interleave>
+            <text />
         </element>
     </define>
     
     <define name="placeName">
         <element name="placeName">
-            <attribute name="key"><text /></attribute>
+            <interleave>
+                <zeroOrMore>
+                    <attribute name="uuid"><text /></attribute> 
+                </zeroOrMore>
+                <attribute name="key"><text /></attribute>
+            </interleave>
             <text />
         </element>
     </define>

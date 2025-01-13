@@ -2811,8 +2811,8 @@ or ancestor-or-self::persName[parent::head]</String>
   &lt;head>
     &lt;persName role="issuer">${RI_NAME}&lt;/persName>
     &lt;origDate from="$$"Ausstellungsdatum in Normschreibweise(Beginn)":()$$"  to="$$"Ausstellungsdatum in Normschreibweise(Ende)":()$$"> $$"Ausstellungsdatum":()$$&lt;/origDate>
-    &lt;origPlace>$$"Ausstellungsort":()$$&lt;/origPlace>
-&lt;regKategorie>$$"Wahlen Sie Kategorie der Regest ein":("Urkundenregest", "Historiographisches Regest", "Deperditum")$$&lt;/regKategorie>
+    &lt;origPlace key="noPlace">ohne Ort&lt;/origPlace>
+&lt;regKategorie>$$"Wahlen Sie Kategorie der Regest ein":("Urkundenregest", "Historiographisches Regest", "Deperditum", "Falschung","ohne Kategorie"|"Keine Auswählen")$$&lt;/regKategorie>
   &lt;/head>
   &lt;div type="regestentext">&lt;p>${caret}&lt;/p>&lt;/div>
   &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
@@ -3340,16 +3340,16 @@ or ancestor-or-self::persName[parent::head]</String>
 									</action>
 									<action>
 										<field name="id">
-											<String>add_uuid</String>
+											<String>add_uuid_person</String>
 										</field>
 										<field name="name">
-											<String>uuid</String>
+											<String>uuid_person</String>
 										</field>
 										<field name="description">
-											<String>Fügt uuid ninzu</String>
+											<String>Fügt uuid für Person ninzu</String>
 										</field>
 										<field name="largeIconPath">
-											<String></String>
+											<String>${framework}/icons/uuid.png</String>
 										</field>
 										<field name="smallIconPath">
 											<String></String>
@@ -3358,7 +3358,7 @@ or ancestor-or-self::persName[parent::head]</String>
 											<String></String>
 										</field>
 										<field name="accelerator">
-											<null/>
+											<String>M1 U</String>
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
@@ -3370,12 +3370,13 @@ or ancestor-or-self::persName[parent::head]</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;uuid xmlns="http://www.tei-c.org/ns/1.0">$$"Fügen Sie uuid hinzu:":()$$&lt;/uuid></String>
+																<String>&lt;persName uuid="$$"Fügen Sie uuid hinzu:":()$$"  xmlns="http://www.tei-c.org/ns/1.0" />
+</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.adwmainz.da.extensions.askmore.operations.InsertOrReplaceAnnotatedFragmentOperation</String>
+														<String>org.adwmainz.da.extensions.askmore.operations.SurroundWithAnnotatedFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -3431,6 +3432,122 @@ or ancestor-or-self::persName[parent::head]</String>
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>uuid_persName_test</String>
+										</field>
+										<field name="name">
+											<String>uuid_persName</String>
+										</field>
+										<field name="description">
+											<String>fügt uuid zum bereits vorhandenen &lt;persName> hinzu</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>//persName</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>editAttribute</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>elementLocation</String>
+																<String>//persName</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>uuid</String>
+															</entry>
+															<entry>
+																<String>namespace</String>
+																<String>xmlns="http://www.tei-c.org/ns/1.0"</String>
+															</entry>
+															<entry>
+																<String>removeIfEmpty</String>
+																<String>false</String>
+															</entry>
+															<entry>
+																<String>value</String>
+																<String>132333</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ChangeAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_uuid_place</String>
+										</field>
+										<field name="name">
+											<String>uuid_place</String>
+										</field>
+										<field name="description">
+											<String>Fügt uuid für Place hinzu</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::placeName</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;placeName uuid="$$"Fügen Sie uuid hinzu:":()$$"  xmlns="http://www.tei-c.org/ns/1.0" /></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>org.adwmainz.da.extensions.askmore.operations.SurroundWithAnnotatedFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -3497,6 +3614,21 @@ or ancestor-or-self::persName[parent::head]</String>
 											<menuItem>
 												<field name="actionID">
 													<String>ref_external</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
+													<String>add_uuid_place</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
+													<String>add_uuid_person</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
+													<String>uuid_persName_test</String>
 												</field>
 											</menuItem>
 											<menuItem>
