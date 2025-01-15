@@ -128,6 +128,11 @@ xref[type="source"] {
     
 }
 
+ref[type="druckregest"] {
+    content: url('gfx/druckregesten.png');
+    -oxy-display-tags: none;
+}
+
 bibl {
     background-color: #C9E3E8;
     -oxy-display-tags: none;
