@@ -14,8 +14,8 @@ authors:
 title: ediarum.RI.edit 
 abstract: "ediarum.RI.edit is a user interface for regesta and their indexes in Oxygen XML Author for the research project “Regesta Imperii” (http://www.regesta-imperii.de/)."
 type: software
-date-released: "2024-09-25"
-version: 4.0.2
+date-released: "2025-01-15"
+version: 4.0.3
 repository-code: "https://github.com/ediarum/ediarum.RI.edit"
 url: "http://www.regesta-imperii.de"
 cff-version: 1.2.0
