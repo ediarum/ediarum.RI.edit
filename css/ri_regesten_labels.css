@@ -46,6 +46,10 @@ div[type="drucke"]:before {
     content: "Drucke";
 }
 
+div[type="erwaehrung"]:before {
+    content: "Erwährung";
+}
+
 div[type="regesten"]:before {
     content: "Regesten";
 }
@@ -104,4 +108,15 @@ pb[type='recto']{
 
 pb[type='verso']{
     content:"verso";
+}
+pb[type='regest']{
+    content:"Reg:";
+}
+
+pb[type='drucke']{
+    content:"Drucke:";
+}
+
+pb[type='literatur']{
+    content:"Literatur:";
 }

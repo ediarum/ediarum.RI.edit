@@ -11342,14 +11342,6 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                                     <Boolean>false</Boolean>
                                 </field>
                             </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>3/framework/regesta-imperii-abt6-register.framework/Regesta Imperii Abt. 6 – Register</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
                         </documentTypeEntry-array>
                     </entry>
                     <entry>
