@@ -30,8 +30,24 @@ div[type="recto"]:before {
     content: "recto";
 }
 
+div[type="adressierung"]:before {
+    content: "Adressierung";
+}
+
+div[type="unterzeichnung"]:before {
+    content: "Unterzeichnung";
+}
+
 div[type="ueberlieferung"]:before {
     content: "Überlieferung";
+}
+
+/* Displays the value of the 'type' attribute followed by a colon */
+div[type="ueberlieferung"] ul li:before {
+    content: attr(type) ": ";
+    font-weight: bold;
+    color: #444;
+    text-transform: capitalize;
 }
 
 div[type="original"]:before {
