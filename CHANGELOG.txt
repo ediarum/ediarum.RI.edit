@@ -13,6 +13,13 @@ Framework (Dokumenttyp Zuordnung) für Oxygen XML
 ------------------------------------------------------------------------------------------------
 CHANGELOG
 
+4.1.0 vom 03.03.2026
+	* UPDATE: im CSS: neue Felder für Adressierung und Unterzeichnung — neue Typen für Überlieferung — neues li-element für Überlieferung
+	* UPDATE: Validierung: Pfad zur Schema-Datei generischer benannt — Label der Validierung generischer
+
+
+------------------------------------------------------------------------------------------------
+
 4.0.3 vom 15.01.2025
 	* UPDATE: Veränderungen ins Menü (neue Knöpfe für Druckregest; AuszeichungQuellen steht jetzt neben Literatur)
 	* UPDATE: neue Aktionen: ref_druckregest und ref_external (für ref_druckregest wurde Shortcut (Strg + D) und Knöpfe gemacht; ref_external befindet sich im Kontextmenü)
