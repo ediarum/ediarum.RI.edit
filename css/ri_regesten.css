@@ -94,6 +94,17 @@ div[type="regestentext"] origDate {
     -oxy-display-tags: none;
 }
 
+ueberlieferungsTyp::before {
+    content: ": ";
+    color: gray;
+}
+
+ueberlieferungsTyp {
+    color: gray;
+    -oxy-display-tags: none;
+    -oxy-placeholder-content: "[Hier Überlieferungstyp eingeben]";
+}
+
 persName {
     background-color: #eeebf3; 
     -oxy-display-tags: none;

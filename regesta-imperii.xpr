@@ -11336,7 +11336,23 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                             </documentTypeEntry>
                             <documentTypeEntry>
                                 <field name="documentTypeID">
-                                    <String>3/framework/regesta-imperii-abt6-regesten.framework/Regesta Imperii Abt. 6 – Regesten</String>
+                                    <String>3/framework/regesta-imperii-abt1-register.framework/Regesta Imperii Abt. 1 – Register</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>3/framework/regesta-imperii-abt13-register.framework/Regesta Imperii Abt. 13 – Register</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>3/framework/regesta-imperii-abt4-register.framework/Regesta Imperii Abt. 4 – Register</String>
                                 </field>
                                 <field name="enable">
                                     <Boolean>false</Boolean>
@@ -11357,6 +11373,7 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                         <String-array>
                             <String>https://oxygen.adwmainz.net/regesta-imperii-abt13/update.xml</String>
                             <String>https://oxygen.adwmainz.net/regesta-imperii-abt6/update.xml</String>
+                            <String>https://oxygen.adwmainz.net/regesta-imperii-abt20/update.xml</String>
                         </String-array>
                     </entry>
                     <entry>

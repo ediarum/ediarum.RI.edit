@@ -20,7 +20,7 @@
 								<Integer>4</Integer>
 							</field>
 							<field name="uri">
-								<String>${framework}/schemata/ri_13_regesten.rng</String>
+								<String>${framework}/schemata/ri_regesten.rng</String>
 							</field>
 						</docTypeSchema>
 					</field>
@@ -4059,6 +4059,9 @@ or ancestor-or-self::persName[parent::head]</String>
 													</field>
 												</validationUnitSchema>
 											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
+											</field>
 										</validationUnit>
 									</list>
 								</field>
@@ -4069,11 +4072,57 @@ or ancestor-or-self::persName[parent::head]</String>
 									<String>Regesta Imperii Abt. 13 - Regesten</String>
 								</field>
 							</validationScenario>
+							<validationScenario>
+								<field name="pairs">
+									<list>
+										<validationUnit>
+											<field name="validationType">
+												<validationUnitType>
+													<field name="validationInputType">
+														<String>text/any</String>
+													</field>
+												</validationUnitType>
+											</field>
+											<field name="url">
+												<String>${currentFileURL}</String>
+											</field>
+											<field name="validationEngine">
+												<validationEngine>
+													<field name="engineType">
+														<String>&lt;Default engine></String>
+													</field>
+													<field name="allowsAutomaticValidation">
+														<Boolean>true</Boolean>
+													</field>
+												</validationEngine>
+											</field>
+											<field name="allowAutomaticValidation">
+												<Boolean>true</Boolean>
+											</field>
+											<field name="extensions">
+												<null/>
+											</field>
+											<field name="validationSchema">
+												<null/>
+											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
+											</field>
+										</validationUnit>
+									</list>
+								</field>
+								<field name="type">
+									<String>Validation_scenario</String>
+								</field>
+								<field name="name">
+									<String>Regesta Imperii – Regesten</String>
+								</field>
+							</validationScenario>
 						</validationScenario-array>
 					</field>
 					<field name="defaultValidationScenarios">
 						<list>
-							<String>Regesta Imperii Abt. 13 - Regesten</String>
+							<String>Regesta Imperii – Regesten</String>
 						</list>
 					</field>
 					<field name="defaultTransformationScenarios">

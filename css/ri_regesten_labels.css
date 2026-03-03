@@ -30,8 +30,24 @@ div[type="recto"]:before {
     content: "recto";
 }
 
+div[type="adressierung"]:before {
+    content: "Adressierung";
+}
+
+div[type="unterzeichnung"]:before {
+    content: "Unterzeichnung";
+}
+
 div[type="ueberlieferung"]:before {
     content: "Überlieferung";
+}
+
+/* Displays the value of the 'type' attribute followed by a colon */
+div[type="ueberlieferung"] ul li:before {
+    content: attr(type) ": ";
+    font-weight: bold;
+    color: #444;
+    text-transform: capitalize;
 }
 
 div[type="original"]:before {
@@ -44,6 +60,10 @@ div[type="faksimile"]:before {
 
 div[type="drucke"]:before {
     content: "Drucke";
+}
+
+div[type="erwaehrung"]:before {
+    content: "Erwährung";
 }
 
 div[type="regesten"]:before {
@@ -104,4 +124,15 @@ pb[type='recto']{
 
 pb[type='verso']{
     content:"verso";
+}
+pb[type='regest']{
+    content:"Reg:";
+}
+
+pb[type='drucke']{
+    content:"Drucke:";
+}
+
+pb[type='literatur']{
+    content:"Literatur:";
 }

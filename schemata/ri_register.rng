@@ -287,6 +287,24 @@
                         <optional>
                             <value>nennung</value>
                         </optional>
+                        <optional>
+                            <value>notar</value>
+                        </optional>
+                        <optional>
+                            <value>adressat</value>
+                        </optional>
+                        <optional>
+                            <value>ab</value>
+                        </optional>
+                        <optional>
+                            <value>aussteller</value>
+                        </optional>
+                        <optional>
+                            <value>notIns</value>
+                        </optional>
+                        <optional>
+                            <value>rekogneszent</value>
+                        </optional>
                     </list>
                 </attribute>
             </optional>
@@ -298,9 +316,11 @@
                         <value>H</value>
                         <value>F</value>
                         <value>F?</value>
+                        <value>U</value>
                         <value>Kurzreg</value>
                         <value>Dep</value>
                         <value>indirErw</value>
+                        <value>notIns</value>
                     </choice>
                 </attribute>
             </optional>
