@@ -5,13 +5,26 @@ http://telotadev.bbaw.de/oxygen/regesta-imperii/update.xml
 ------------------------------------------------------------------------------------------------
 ediarum
 Digitale Arbeitsumgebung für das Akademienvorhaben 
-Regesta Imerii
+Regesta Imperii
 
 Framework (Dokumenttyp Zuordnung) für Oxygen XML 
 
 
 ------------------------------------------------------------------------------------------------
+
+4.1.1 vom 31.03.2026
+	* UPDATE: im CSS: neues Feld für Aussteller
+
+
+------------------------------------------------------------------------------------------------
 CHANGELOG
+
+4.1.0 vom 03.03.2026
+	* UPDATE: im CSS: neue Felder für Adressierung und Unterzeichnung — neue Typen für Überlieferung — neues li-element für Überlieferung
+	* UPDATE: Validierung: Pfad zur Schema-Datei generischer benannt — Label der Validierung generischer
+
+
+------------------------------------------------------------------------------------------------
 
 4.0.3 vom 15.01.2025
 	* UPDATE: Veränderungen ins Menü (neue Knöpfe für Druckregest; AuszeichungQuellen steht jetzt neben Literatur)
