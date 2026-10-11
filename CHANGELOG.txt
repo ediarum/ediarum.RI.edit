@@ -12,6 +12,13 @@ Framework (Dokumenttyp Zuordnung) für Oxygen XML
 
 ------------------------------------------------------------------------------------------------
 
+4.2.2 vom 8.10.2026
+	* UPDATE: Urkundenformulare
+	* UPDATE: Menü-Optimierungen
+	* diverse kleinere Korrekturen und Anpassungen
+
+------------------------------------------------------------------------------------------------
+
 4.2.1 vom 1.07.2026
 	* UPDATE: Regesten-Nummerierung
 	* UPDATE: Header-Layout

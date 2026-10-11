@@ -2814,12 +2814,22 @@ or ancestor-or-self::persName[parent::head]</String>
     &lt;origPlace key="noPlace">ohne Ort&lt;/origPlace>
 &lt;regKategorie>$$"Wahlen Sie Kategorie der Regest ein":("Urkundenregest", "Historiographisches Regest", "Deperditum", "Falschung","ohne Kategorie"|"Keine Auswählen")$$&lt;/regKategorie>
   &lt;/head>
-  &lt;div type="regestentext">&lt;p>${caret}&lt;/p>&lt;/div>
-  &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
-   &lt;div type="kanzleivermerk">&lt;p>&lt;/p>&lt;pb xmlns="http://www.tei-c.org/ns/1.0" type="recto"/>&lt;p xmlns="http://www.tei-c.org/ns/1.0">&lt;/p>
-&lt;pb xmlns="http://www.tei-c.org/ns/1.0" type="verso"/>&lt;p xmlns="http://www.tei-c.org/ns/1.0">&lt;/p>&lt;/div>
-  &lt;div type="ueberlieferung">&lt;p>&lt;/p>&lt;/div>
-  &lt;div type="kommentar">&lt;p>&lt;/p>&lt;/div>
+   &lt;div type="aussteller">&lt;p>${caret}&lt;/p>&lt;/div> 
+  &lt;div type="regestentext">&lt;p>&lt;/p>&lt;/div>
+   &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
+   &lt;div type="siegel">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="adressierung">&lt;p>&lt;/p>&lt;/div> 
+  &lt;div type="unterzeichnung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="kanzleivermerk">&lt;p>&lt;/p>&lt;/div> 
+  &lt;div type="ueberlieferung">&lt;ul type="reihefolge" xmlns="http://www.tei-c.org/ns/1.0">
+        &lt;li type="Original" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li> 
+      &lt;li type="beschreibstoff" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li> 
+      &lt;li type="archivsignatur" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li> 
+  &lt;/ul>&lt;/div>
+  &lt;div type="drucke">&lt;p>&lt;/p>&lt;/div>   
+  &lt;div type="regesten">&lt;p>&lt;/p>&lt;/div>   
+  &lt;div type="kommentar">&lt;p>&lt;/p>&lt;/div>   
+  &lt;div type="notizfeld">&lt;p>&lt;/p>&lt;/div>
 &lt;/div></String>
 															</entry>
 															<entry>
@@ -4088,11 +4098,6 @@ or ancestor-or-self::persName[parent::head]</String>
 														<toolbarItem>
 															<field name="actionID">
 																<String>regest_s</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>regest</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
