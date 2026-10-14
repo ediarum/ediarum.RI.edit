@@ -1,6 +1,6 @@
 # ediarum.RI.edit
 
-Version 4.2.1
+Version 4.2.2
 
 ediarum.RI.edit ist eine ediarum-Bearbeitungsoberfläche (für Regesten und Register) im Oxygen XML Author für das Akademienprojekt Regesta Imperii (http://www.regesta-imperii.de).
 

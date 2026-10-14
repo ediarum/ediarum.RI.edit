@@ -11388,6 +11388,10 @@ and ancestor-or-self::ref[@subtype='nurErwaehnt']</String>
                         </documentTypeEntry-array>
                     </entry>
                     <entry>
+                        <String>enable.project.master.files.support</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
                         <String>extensions.update.sites</String>
                         <String-array>
                             <String>https://oxygen.adwmainz.net/regesta-imperii-abt13/update.xml</String>

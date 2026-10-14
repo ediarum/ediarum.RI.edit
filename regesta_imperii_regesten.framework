@@ -2814,12 +2814,22 @@ or ancestor-or-self::persName[parent::head]</String>
     &lt;origPlace key="noPlace">ohne Ort&lt;/origPlace>
 &lt;regKategorie>$$"Wahlen Sie Kategorie der Regest ein":("Urkundenregest", "Historiographisches Regest", "Deperditum", "Falschung","ohne Kategorie"|"Keine Auswählen")$$&lt;/regKategorie>
   &lt;/head>
-  &lt;div type="regestentext">&lt;p>${caret}&lt;/p>&lt;/div>
-  &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
-   &lt;div type="kanzleivermerk">&lt;p>&lt;/p>&lt;pb xmlns="http://www.tei-c.org/ns/1.0" type="recto"/>&lt;p xmlns="http://www.tei-c.org/ns/1.0">&lt;/p>
-&lt;pb xmlns="http://www.tei-c.org/ns/1.0" type="verso"/>&lt;p xmlns="http://www.tei-c.org/ns/1.0">&lt;/p>&lt;/div>
-  &lt;div type="ueberlieferung">&lt;p>&lt;/p>&lt;/div>
-  &lt;div type="kommentar">&lt;p>&lt;/p>&lt;/div>
+   &lt;div type="aussteller">&lt;p>${caret}&lt;/p>&lt;/div> 
+  &lt;div type="regestentext">&lt;p>&lt;/p>&lt;/div>
+   &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
+   &lt;div type="siegel">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="adressierung">&lt;p>&lt;/p>&lt;/div> 
+  &lt;div type="unterzeichnung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="kanzleivermerk">&lt;p>&lt;/p>&lt;/div> 
+  &lt;div type="ueberlieferung">&lt;ul type="reihefolge" xmlns="http://www.tei-c.org/ns/1.0">
+        &lt;li type="Original" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li> 
+      &lt;li type="beschreibstoff" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li> 
+      &lt;li type="archivsignatur" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li> 
+  &lt;/ul>&lt;/div>
+  &lt;div type="drucke">&lt;p>&lt;/p>&lt;/div>   
+  &lt;div type="regesten">&lt;p>&lt;/p>&lt;/div>   
+  &lt;div type="kommentar">&lt;p>&lt;/p>&lt;/div>   
+  &lt;div type="notizfeld">&lt;p>&lt;/p>&lt;/div>
 &lt;/div></String>
 															</entry>
 															<entry>
@@ -3665,6 +3675,273 @@ or ancestor-or-self::persName[parent::head]</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>regest_k</String>
+										</field>
+										<field name="name">
+											<String>Königsurkunde</String>
+										</field>
+										<field name="description">
+											<String>Formular für Königsurkunden einfügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="ri_prov_${uuid}">
+  &lt;head>
+    &lt;persName role="issuer">${RI_NAME}&lt;/persName>
+    &lt;num>&lt;/num>
+    &lt;origDate from="$$"Ausstellungsdatum in Normschreibweise (Beginn)":()$$" to="$$"Ausstellungsdatum in Normschreibweise (Ende)":()$$">$$"Ausstellungsdatum":()$$&lt;/origDate>
+    &lt;origPlace key="noPlace">$$"Ausstellungsort ":()$$&lt;/origPlace>
+  &lt;/head>
+  &lt;div type="aussteller">&lt;p>${caret}&lt;/p>&lt;/div>
+  &lt;div type="regestentext">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="siegel">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="kanzleivermerk">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="ueberlieferung">&lt;ul type="reihefolge" xmlns="http://www.tei-c.org/ns/1.0">
+  &lt;li type="Original" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li>
+  &lt;li type="beschreibstoff" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li>
+  &lt;li type="archivsignatur" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li>
+&lt;/ul>&lt;/div>
+  &lt;div type="drucke">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="regesten">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="kommentar">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="notizfeld">&lt;p>&lt;/p>&lt;/div>
+&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>org.adwmainz.da.extensions.askmore.operations.InsertOrReplaceAnnotatedFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>regest_s</String>
+										</field>
+										<field name="name">
+											<String>Städtische Urkunde</String>
+										</field>
+										<field name="description">
+											<String>Formular für städtische Urkunden einfügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::div[@type="regest"]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="ri_prov_${uuid}">
+  &lt;head>
+    &lt;persName role="issuer">${RI_NAME}&lt;/persName>
+    &lt;num>&lt;/num>
+    &lt;origDate from="$$"Ausstellungsdatum in Normschreibweise (Beginn)":()$$" to="$$"Ausstellungsdatum in Normschreibweise (Ende)":()$$">$$"Ausstellungsdatum":()$$&lt;/origDate>
+    &lt;origPlace key="noPlace">$$"Ausstellungsort ":()$$&lt;/origPlace>
+  &lt;/head>
+  &lt;div type="aussteller">&lt;p>${caret}&lt;/p>&lt;/div>
+  &lt;div type="regestentext">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="originaldatierung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="siegel">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="adressierung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="unterzeichnung">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="ueberlieferung">&lt;ul type="reihefolge" xmlns="http://www.tei-c.org/ns/1.0">
+  &lt;li type="Original" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li>
+  &lt;li type="beschreibstoff" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li>
+  &lt;li type="archivsignatur" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li>
+&lt;/ul>&lt;/div>
+  &lt;div type="kommentar">&lt;p>&lt;/p>&lt;/div>
+  &lt;div type="notizfeld">&lt;p>&lt;/p>&lt;/div>
+&lt;/div></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::div[@type="regest"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>org.adwmainz.da.extensions.askmore.operations.InsertOrReplaceAnnotatedFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>ueberlifOrig</String>
+										</field>
+										<field name="name">
+											<String>Original hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt ein Feld für ein weiteres Original in die Überlieferung ein</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ul[@type='reihefolge']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;li type="Original" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>${caret}&lt;/p>&lt;/li>
+&lt;li type="beschreibstoff" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li>
+&lt;li type="archivsignatur" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>&lt;/p>&lt;/li></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>(ancestor-or-self::ul[@type='reihefolge'] | ancestor-or-self::div[@type='ueberlieferung'])[last()]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>ueberlifKopie</String>
+										</field>
+										<field name="name">
+											<String>Kopie hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt ein Feld für eine weitere Kopie in die Überlieferung ein</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::ul[@type='reihefolge']</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;li type="Kopie" xmlns="http://www.tei-c.org/ns/1.0">&lt;p>${caret}&lt;/p>&lt;/li></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>(ancestor-or-self::ul[@type='reihefolge'] | ancestor-or-self::div[@type='ueberlieferung'])[last()]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -3712,6 +3989,16 @@ or ancestor-or-self::persName[parent::head]</String>
 											</menuItem>
 											<menuItem>
 												<field name="actionID">
+													<String>ueberlifOrig</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
+													<String>ueberlifKopie</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
 													<String>ref_druckregest</String>
 												</field>
 											</menuItem>
@@ -3753,11 +4040,6 @@ or ancestor-or-self::persName[parent::head]</String>
 											<menuItem>
 												<field name="actionID">
 													<String>loschen_persName</String>
-												</field>
-											</menuItem>
-											<menuItem>
-												<field name="actionID">
-													<String>div[unterschriften]</String>
 												</field>
 											</menuItem>
 											<menuItem>
@@ -3810,17 +4092,17 @@ or ancestor-or-self::persName[parent::head]</String>
 													<toolbarEntry-array>
 														<toolbarItem>
 															<field name="actionID">
-																<String>regest</String>
+																<String>regest_k</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>regest_s</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
 																<String>regKategorie_regestStruktur</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>regest_ohne_ort</String>
 															</field>
 														</toolbarItem>
 													</toolbarEntry-array>
@@ -3893,11 +4175,6 @@ or ancestor-or-self::persName[parent::head]</String>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>div[siegel]</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
 																<String>div[incipit]</String>
 															</field>
 														</toolbarItem>
@@ -3919,6 +4196,11 @@ or ancestor-or-self::persName[parent::head]</String>
 														<toolbarItem>
 															<field name="actionID">
 																<String>[div]notizfeld</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>div[siegel]</String>
 															</field>
 														</toolbarItem>
 														<toolbarSeparator/>
