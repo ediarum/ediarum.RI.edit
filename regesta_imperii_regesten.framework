@@ -2308,7 +2308,7 @@ or ancestor-or-self::persName[parent::head]</String>
 											<String>regKategorie[div]</String>
 										</field>
 										<field name="name">
-											<String>Regest Kategorie</String>
+											<String>Regest Kategorie-alt</String>
 										</field>
 										<field name="description">
 											<String></String>
@@ -2810,9 +2810,10 @@ or ancestor-or-self::persName[parent::head]</String>
 																<String>&lt;div type="regest" xmlns="http://www.tei-c.org/ns/1.0" xml:id="ri_prov_${uuid}">
   &lt;head>
     &lt;persName role="issuer">${RI_NAME}&lt;/persName>
+    &lt;num>&lt;/num>
     &lt;origDate from="$$"Ausstellungsdatum in Normschreibweise(Beginn)":()$$"  to="$$"Ausstellungsdatum in Normschreibweise(Ende)":()$$"> $$"Ausstellungsdatum":()$$&lt;/origDate>
     &lt;origPlace key="noPlace">ohne Ort&lt;/origPlace>
-&lt;regKategorie>$$"Wahlen Sie Kategorie der Regest ein":("Urkundenregest", "Historiographisches Regest", "Deperditum", "Falschung","ohne Kategorie"|"Keine Auswählen")$$&lt;/regKategorie>
+    &lt;regKategorie>$$"Wahlen Sie Kategorie der Regest ein":("Urkundenregest", "Historiographisches Regest", "Deperditum", "Falschung","ohne Kategorie"|"Keine Auswählen")$$&lt;/regKategorie>
   &lt;/head>
    &lt;div type="aussteller">&lt;p>${caret}&lt;/p>&lt;/div> 
   &lt;div type="regestentext">&lt;p>&lt;/p>&lt;/div>

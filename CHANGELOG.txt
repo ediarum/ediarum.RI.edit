@@ -12,6 +12,11 @@ Framework (Dokumenttyp Zuordnung) für Oxygen XML
 
 ------------------------------------------------------------------------------------------------
 
+4.2.3 vom 20.10.2026
+	* HOTFIX: Fehler im Menüpunkt Regest einfügen > Regest Kategorie behoben
+
+------------------------------------------------------------------------------------------------
+
 4.2.2 vom 8.10.2026
 	* UPDATE: Urkundenformulare
 	* UPDATE: Menü-Optimierungen
